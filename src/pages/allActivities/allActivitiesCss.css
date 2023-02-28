@@ -1,5 +1,29 @@
-.frace{
-    color: red;
+ion-content::part(background) {
+    background: #dd0a74;
+  }
+
+ion-col{
+    margin-top: 70%;
+    transition: ease-out 2s;
+}
+
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+
+h1 { 
+	font: bold 190% Consolas, Monaco, monospace;
+	border-right: .2em solid;
+	width: 16.5em; /* fallback */
+	width: 24ch; /* # of chars */
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 2s steps(19, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+}
+
+.button{
+    margin-left: 40%;
+    transition-delay: 4s
 }
 
 

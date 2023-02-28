@@ -4,7 +4,7 @@ import {
   IonContent,
   IonGrid,
   IonPage,
-  IonRow,
+  IonRow
 } from "@ionic/react";
 import React from "react";
 import { AllActivitiesProps } from "../../data/AllActivitiesProps";
@@ -18,7 +18,7 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
           <IonRow class="ion-align-items-center ion-justify-content-center">
             <IonCol size="auto" >
               <h1>{props.tittle}</h1>
-              <IonButton>next</IonButton>
+              <IonButton className="button">next</IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

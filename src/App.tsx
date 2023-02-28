@@ -22,7 +22,6 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import "./theme/variables.css";
 import AllActivities from "./pages/allActivities/AllActivities";
 import { Redirect, Route } from "react-router-dom";
 import AddActivities from "./pages/addActivitie/AddActivitie";
@@ -35,6 +34,11 @@ const App: React.FC = () => {
   //validaciones next
   const [nameVali, setnameVali] = useState<String>("")
   const [NumIteracion, setNumIteracion] = useState<Number>(0)
+  const [message, setmessage] = useState("Hola Miamor como estas?")
+
+  if (NumIteracion) {
+    
+  }
   
 
   return (
@@ -44,7 +48,7 @@ const App: React.FC = () => {
           <Route
             path="/all-activities"
             render={() => {
-              return <AllActivities tittle="all" />;
+              return <AllActivities tittle={message} />;
             }}
             exact
           />
