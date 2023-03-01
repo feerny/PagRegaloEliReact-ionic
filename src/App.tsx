@@ -1,8 +1,4 @@
-import {
-  IonApp,
-  IonRouterOutlet,
-  setupIonicReact,
-} from "@ionic/react";
+import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 
 /* Core CSS required for Ionic components to work properly */
@@ -26,25 +22,23 @@ import AllActivities from "./pages/allActivities/AllActivities";
 import { Redirect, Route } from "react-router-dom";
 import AddActivities from "./pages/addActivitie/AddActivitie";
 import { useState } from "react";
+import InicioApp from "./pages/inicioApp/InicioApp";
 
 setupIonicReact();
 
 const App: React.FC = () => {
-
   //validaciones next
-  const [nameVali, setnameVali] = useState<String>("")
-  const [NumIteracion, setNumIteracion] = useState<Number>(0)
-  const [message, setmessage] = useState("Hola Miamor como estas?")
+  const [nameVali, setnameVali] = useState<String>("");
+  const [NumIteracion, setNumIteracion] = useState<Number>(0);
+  const [message, setmessage] = useState("Hola Miamor como estas?");
 
   if (NumIteracion) {
-    
   }
-  
 
   return (
     <IonApp>
       <IonReactRouter>
-        <IonRouterOutlet >
+        <IonRouterOutlet>
           <Route
             path="/all-activities"
             render={() => {
@@ -52,8 +46,15 @@ const App: React.FC = () => {
             }}
             exact
           />
-          <Route path="/add-activities" component={AddActivities} exact />
-          <Redirect to={"all-activities"} />
+          <Route
+            path="/InicioApp"
+            render={() => {
+              return <InicioApp />;
+            }}
+            exact
+          />
+
+          <Redirect exact from="/" to="/all-activities" />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

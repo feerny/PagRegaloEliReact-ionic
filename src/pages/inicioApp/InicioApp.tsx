@@ -1,20 +1,17 @@
 import React from "react";
 import {
   IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar
+  IonPage
 } from "@ionic/react";
 
-const  ErrorPage: React.FC = () => {
+const  InicioApp: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <h1>Error</h1>
+        <h1>inicia</h1>
       </IonContent>
     </IonPage>
   );
 };
 
-export default  ErrorPage;
+export default  InicioApp;

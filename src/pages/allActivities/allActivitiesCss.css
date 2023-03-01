@@ -1,17 +1,21 @@
 ion-content::part(background) {
-    background: #dd0a74;
+    background: #aa0ed1;
   }
 
+
 ion-col{
-    margin-top: 70%;
-    transition: ease-out 2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes typing { from { width: 0; } }
 @keyframes blink-caret { 50% { border-color: transparent; } }
 
-h1 { 
-	font: bold 190% Consolas, Monaco, monospace;
+.h1Init { 
+    transition: all .5a ease;
+	font: bold 165% Consolas, Monaco, monospace;
 	border-right: .2em solid;
 	width: 16.5em; /* fallback */
 	width: 24ch; /* # of chars */
@@ -20,11 +24,61 @@ h1 {
 	animation: typing 2s steps(19, end), /* # of steps = # of chars */
 	           blink-caret .5s step-end infinite alternate;
 }
-
-.button{
-    margin-left: 40%;
-    transition-delay: 4s
+.h1Init2 { 
+    transition: all .5a ease;
+	font: bold 165% Consolas, Monaco, monospace;
+	border-right: .2em solid;
+	width: 16.5em; /* fallback */
+	width: 19ch; /* # of chars */
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 2s steps(19, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
 }
+
+
+.button1 {
+    font: bold 100% Consolas, Monaco, monospace;
+    --background: #16ce2f;
+    --transition:all 2s ease;
+    --border-radius:5px;
+    cursor: pointer;
+    
+   
+}
+.button2 {
+    font: bold 100% Consolas, Monaco, monospace;
+    --background: #e91a0c;
+    --transition:all 2s ease;
+    --border-radius:5px;
+    cursor: pointer;
+    
+}
+.rowDown{
+    margin-top: 100px;
+}
+
+.disabled2{
+    --color	:#e91a0c;
+    --padding-bottom:50px;
+    --padding-top:50px;
+    --padding-start:20px;
+    --padding-end:20px;
+    --background: #e91a0c;
+    --opacity:0%;
+}
+
+.disabled{
+    --color	:#16ce2f;
+    --padding-bottom:50px;
+    --padding-top:50px;
+    --padding-start:20px;
+    --padding-end:20px;
+    --background: #16ce2f;
+    --opacity:0%;
+}
+
+
 
 
 
