@@ -5,13 +5,13 @@ import {
   IonRouterOutlet,
   IonRow,
 } from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
 import React, { useState } from "react";
 import { Route, Redirect } from "react-router";
 
 import ComoEstas from "../../components/preguntasa/ComoEstas";
+import ComoQueMal from "../../components/preguntasa/ComoQueMal";
+import YaNoEstesMal from "../../components/preguntasa/YaNoEstesMal";
 import { AllActivitiesProps } from "../../data/AllActivitiesProps";
-import InicioApp from "../inicioApp/InicioApp";
 import "./allActivitiesCss.css";
 
 const AllActivities: React.FC<AllActivitiesProps> = (props) => {
@@ -25,16 +25,20 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
       <IonContent>
         <IonGrid>
           <IonRow class="ion-align-items-center ion-justify-content-center">
-            <IonReactRouter>
-              <IonRouterOutlet>
-
-                <Route path="/all-activities" exact={true}>
+            <IonRouterOutlet>
+              <Route path="/all-activities/ComoEstas" exact={true}>
                 <ComoEstas clickMalo={clickMalo} tittle={maloText} />
-                </Route>
+              </Route>
 
-                <Redirect exact from="/" to="/all-activities" />
-              </IonRouterOutlet>
-            </IonReactRouter>
+              <Route path="/all-activities/ComoQueMal" exact={true}>
+                <ComoQueMal  />
+              </Route>
+              <Route path="/all-activities/YaNoEstesMal" exact={true}>
+                <YaNoEstesMal  />
+              </Route>
+
+              <Redirect exact from="/" to="/all-activities" />
+            </IonRouterOutlet>
           </IonRow>
         </IonGrid>
       </IonContent>

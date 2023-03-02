@@ -36,6 +36,30 @@ ion-col{
 	           blink-caret .5s step-end infinite alternate;
 }
 
+.h1Init3 { 
+    transition: all .5a ease;
+	font: bold 165% Consolas, Monaco, monospace;
+	border-right: .2em solid;
+	width: 16.5em; /* fallback */
+	width: 14ch; /* # of chars */
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 2s steps(14, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+}
+
+.h1Init4 { 
+    transition: all .5a ease;
+	font: bold 165% Consolas, Monaco, monospace;
+	border-right: .2em solid;
+	width: 16.5em; /* fallback */
+	width: 16ch; /* # of chars */
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 2s steps(16, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+}
+
 
 .button1 {
     font: bold 100% Consolas, Monaco, monospace;

@@ -24,7 +24,7 @@ const ComoEstas: React.FC<ComoEstasProps> = (props) => {
           <IonButton routerLink="/InicioApp" disabled  id="button1" className="disabled">Bien </IonButton>
           </IonCol>
           <IonCol size="5.5" offset="3">
-          <IonButton onClick={()=>{props.clickMalo()}} disabled  id="button2" className="disabled2">Mal </IonButton>
+          <IonButton routerLink="/all-activities/ComoQueMal" onClick={()=>{props.clickMalo()}} disabled  id="button2" className="disabled2">Mal </IonButton>
           </IonCol>
         </IonRow>
       </IonGrid>

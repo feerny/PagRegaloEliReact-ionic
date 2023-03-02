@@ -20,7 +20,6 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import AllActivities from "./pages/allActivities/AllActivities";
 import { Redirect, Route } from "react-router-dom";
-import AddActivities from "./pages/addActivitie/AddActivitie";
 import { useState } from "react";
 import InicioApp from "./pages/inicioApp/InicioApp";
 
@@ -40,7 +39,7 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           <Route
-            path="/all-activities"
+            path="/all-activities/:id"
             render={() => {
               return <AllActivities tittle={message} />;
             }}
