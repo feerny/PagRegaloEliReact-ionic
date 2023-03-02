@@ -14,7 +14,7 @@ const ComoEstas: React.FC<ComoEstasProps> = (props) => {
       document.getElementById("button2")?.classList.add("button2")
 
     }
-    window.setTimeout(showButtons,4000);
+    window.setTimeout(showButtons,3000);
   return (
     <IonCol size="auto">
       {props.tittle?<h1 id="h1Init2" className="h1Init2">Como que mal?</h1>:<h1 id="h1Init" className="h1Init">Hola Miamor como estas?</h1>}

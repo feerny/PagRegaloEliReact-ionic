@@ -1,26 +1,35 @@
 import React from "react";
-import {
-    IonButton,
-    IonCol,
-  IonGrid,
-  IonIcon,
-  IonRow,
-} from "@ionic/react";
+import { IonButton, IonCol, IonGrid, IonIcon, IonRow } from "@ionic/react";
+import { happy} from "ionicons/icons";
 
-const  YaNoEstesMal: React.FC = () => {
+const YaNoEstesMal: React.FC = () => {
+    const showButtons=()=>{
+
+        document.getElementById("button3")?.removeAttribute("disabled");
+        document.getElementById("button3")?.classList.remove("disabled3");
+        document.getElementById("button3")?.classList.add("button3");
+  
+  
+      }
+      window.setTimeout(showButtons,3000);
   return (
-
     <IonCol size="auto">
-    <h1 id="h1Init4" className="h1Init4">Mira Tu Email <IonIcon /> </h1>
-    <IonGrid>
-      <IonRow class="ion-justify-content-center rowDown">
-        <IonCol size="11" >
-        <IonButton  disabled  id="button1" className="disabled">Shi </IonButton>
-        </IonCol>
-      </IonRow>
-    </IonGrid>
-  </IonCol>
+      <h1 id="h1Init4" className="h1Init4">
+        Mira Tu Email
+        <IonIcon className="iconHappyBlack"   icon={happy} />
+      </h1>
+      <IonGrid>
+
+        <IonRow class="rowDown2">
+          <IonCol size="11">
+            <IonButton routerLink="/InicioApp" disabled id="button3" className="disabled3">
+              Next
+            </IonButton>
+          </IonCol>
+        </IonRow>
+      </IonGrid>
+    </IonCol>
   );
 };
 
-export default  YaNoEstesMal;
+export default YaNoEstesMal;

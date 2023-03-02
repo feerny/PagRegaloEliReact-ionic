@@ -37,7 +37,7 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
                 <YaNoEstesMal  />
               </Route>
 
-              <Redirect exact from="/" to="/all-activities" />
+              <Redirect exact from="/" to="/all-activities/ComoEstas" />
             </IonRouterOutlet>
           </IonRow>
         </IonGrid>

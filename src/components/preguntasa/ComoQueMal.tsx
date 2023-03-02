@@ -17,7 +17,7 @@ const  ComoQueMal: React.FC = () => {
         document.getElementById("button2")?.classList.add("button2")
   
       }
-      window.setTimeout(showButtons,4000);
+      window.setTimeout(showButtons,3000);
     return (
       <IonCol size="auto">
         <h1 id="h1Init2" className="h1Init3">Como que mal?</h1>
@@ -26,7 +26,7 @@ const  ComoQueMal: React.FC = () => {
             <IonCol size="11" >
             <IonButton routerLink="/all-activities/YaNoEstesMal"  disabled  id="button1" className="disabled">Shi </IonButton>
             </IonCol>
-            <IonCol size="11" offset="6">
+            <IonCol size="9" offset="3">
             <IonButton routerLink="/InicioApp" disabled  id="button2" className="disabled2">Mentiris </IonButton>
             </IonCol>
           </IonRow>

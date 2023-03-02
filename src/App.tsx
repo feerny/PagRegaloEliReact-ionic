@@ -53,7 +53,8 @@ const App: React.FC = () => {
             exact
           />
 
-          <Redirect exact from="/" to="/all-activities" />
+          <Redirect exact from="/" to="/all-activities/ComoEstas" />
+          <Redirect exact from="/all-activities" to="/all-activities/ComoEstas" />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
