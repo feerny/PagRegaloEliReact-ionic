@@ -1,17 +1,16 @@
 import React from "react";
 import { IonButton, IonCol, IonGrid, IonIcon, IonRow } from "@ionic/react";
-import { happy } from "ionicons/icons";
-
+import { happy, arrowForwardOutline } from "ionicons/icons";
 
 const YaNoEstesMal: React.FC = () => {
-
-
   const showButtons = () => {
     document.getElementById("button3")?.removeAttribute("disabled");
     document.getElementById("button3")?.classList.remove("disabled3");
     document.getElementById("button3")?.classList.add("button3");
   };
-  window.setTimeout(()=>{showButtons()}, 3000);
+  window.setTimeout(() => {
+    showButtons();
+  }, 3000);
   return (
     <IonCol size="auto">
       <h1 id="h1Init4" className="h1Init4">
@@ -28,6 +27,7 @@ const YaNoEstesMal: React.FC = () => {
               className="disabled3"
             >
               Next
+              <IonIcon icon={arrowForwardOutline} />
             </IonButton>
           </IonCol>
         </IonRow>
