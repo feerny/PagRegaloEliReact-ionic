@@ -12,14 +12,14 @@ const YaNoEstesMal: React.FC = () => {
     showButtons();
   }, 3000);
   return (
-    <IonCol size="auto">
+    <IonCol className="ion-col" size="auto">
       <h1 id="h1Init4" className="h1Init4">
         Mira Tu Email
         <IonIcon className="iconHappyBlack" icon={happy} />
       </h1>
       <IonGrid>
         <IonRow class="rowDown2">
-          <IonCol size="11">
+          <IonCol className="ion-col" size="11">
             <IonButton
               routerLink="/InicioApp"
               disabled

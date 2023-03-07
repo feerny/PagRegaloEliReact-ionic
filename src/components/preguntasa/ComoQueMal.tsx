@@ -43,14 +43,14 @@ const  ComoQueMal: React.FC = () => {
       }
       window.setTimeout(showButtons,3000);
     return (
-      <IonCol size="auto">
+      <IonCol className="ion-col" size="auto">
         <h1 id="h1Init2" className="h1Init3">Como que mal?</h1>
         <IonGrid>
           <IonRow class="ion-justify-content-center rowDown">
-            <IonCol size="11" >
+            <IonCol className="ion-col" size="11" >
             <IonButton onClick={()=>{sendEmail()}} routerLink="/all-activities/YaNoEstesMal"  disabled  id="button1" className="disabled">Shi </IonButton>
             </IonCol>
-            <IonCol size="9" offset="3">
+            <IonCol className="ion-col" size="9" offset="3">
             <IonButton routerLink="/InicioApp" disabled  id="button2" className="disabled2">Mentiris </IonButton>
             </IonCol>
           </IonRow>

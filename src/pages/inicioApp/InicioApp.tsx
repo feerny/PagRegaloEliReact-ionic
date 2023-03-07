@@ -2,19 +2,30 @@ import React from "react";
 import { IonButton, IonContent, IonIcon, IonPage } from "@ionic/react";
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
+import "./inicioAppCss.css";
 
 const InicioApp: React.FC = () => {
+  const showButtons=()=>{
+    document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+    document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+    document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss");
+
+  }
+  window.setTimeout(showButtons,3000);
 
 
   return (
     <IonPage>
-      <IonContent>
+      <IonContent className="ion-content1">
+        <div className="CenterContent">
         <h1>inicia</h1>
-        <IonButton routerLink="/InicioApp" disabled id="button3">
+        <IonButton className="disabled" disabled id="buttonInicioApp">
           Next
           <IonIcon icon={arrowForwardOutline} />
         </IonButton>
-        <ReactAudioPlayer src="https://www.bensound.com/bensound-music/bensound-memories.mp3" autoPlay={false} controls={true}  />
+        </div>
+
+        <ReactAudioPlayer src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3" autoPlay muted loop  />
       </IonContent>
     </IonPage>
   );

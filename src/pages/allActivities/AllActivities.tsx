@@ -22,7 +22,7 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
 
   return (
     <IonPage>
-      <IonContent>
+      <IonContent className="ion-content">
         <IonGrid>
           <IonRow class="ion-align-items-center ion-justify-content-center">
             <IonRouterOutlet>
