@@ -28,11 +28,6 @@ setupIonicReact();
 const App: React.FC = () => {
   //validaciones next
   const [nameVali, setnameVali] = useState<String>("");
-  const [NumIteracion, setNumIteracion] = useState<Number>(0);
-  const [message, setmessage] = useState("Hola Miamor como estas?");
-
-  if (NumIteracion) {
-  }
 
   return (
     <IonApp>
@@ -41,7 +36,7 @@ const App: React.FC = () => {
           <Route
             path="/all-activities/:id"
             render={() => {
-              return <AllActivities tittle={message} />;
+              return <AllActivities tittle={"Hola Miamor como estas?"} />;
             }}
             exact
           />

@@ -1,38 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 .ion-content1 {
     --background: #dd0a9e;
+}
+.ion-content2 {
+    --background: #db0f42;
+    transition: all 3s ease;
+}
+.ion-content2::part(background) {
+    transition: all 3s ease;
   }
 
+/* esta es la animacion del texto */
+@keyframes slidein {
+    from {
+        margin-top: -300%;
 
+    }
 
+    to {
+        margin-top: 11%;
 
-.disabled{
-    --color	:#16ce2f;
-    --padding-bottom:50px;
-    --padding-top:50px;
-    --padding-start:20px;
-    --padding-end:20px;
-    --background: #16ce2f;
-    --opacity:0%;
+    }
 }
 
-.CenterContent{
+@keyframes slideinDisabled {
+    from {
+        margin-top: 11%;
+    }
+
+    to {
+        margin-top: -300%;
+    }
+}
+
+.titledisabled {
+    animation-duration: 3s;
+    animation-name: slideinDisabled;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 30px;
+}
+
+.tittle1 {
+
+    animation-duration: 5s;
+    animation-name: slidein;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 30px;
+}
+
+
+.disabled {
+    --color: #16ce2f;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #16ce2f;
+    --opacity: 0%;
+}
+
+.CenterContent {
     position: absolute;
-    top: 45%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
 }
 
 .buttonInicioAppCss {
-
-    font: bold 100% Consolas, Monaco, monospace;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
     --background: #b80783;
-    --transition:all 2s ease;
+    --transition: all 6s ease;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    
+
 }
+
 .buttonInicioAppCss:hover {
     --background: #8a0963;
-    --box-shadow: 0px  20px 5px 0 rgba(0, 0, 0, 0.25);
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
+.buttonInicioAppCss2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --background: #bb0e39;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+}
+.buttonInicioAppCss2:hover {
+    --background: #8d0a2b;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
