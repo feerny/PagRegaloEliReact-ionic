@@ -100,3 +100,27 @@
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
+/* estilos iteracion 2 */
+.ion-content3 {
+    --background: #4c0ddf;
+    transition: all 3s ease;
+}
+.ion-content3::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --background: #3f0cb8;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss3:hover {
+    --background: #320a8d;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
