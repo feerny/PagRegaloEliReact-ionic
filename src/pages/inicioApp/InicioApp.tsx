@@ -24,7 +24,7 @@ const InicioApp: React.FC = () => {
         break;
       case 1:
         //agrega estilos iniciales para transicion
-        document.getElementById("tittleApp")?.classList.remove("tittle1");
+        document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
         document.getElementById("ionContent")?.classList.remove("ion-content1");
         document.getElementById("ionContent")?.classList.add("ion-content2");
         document.getElementById("tittleApp")?.classList.add("titledisabled");
@@ -35,7 +35,7 @@ const InicioApp: React.FC = () => {
         const addAnimation = () => {
           setmessage("por eso te queria dar un regalito diferente");
           document.getElementById("tittleApp")?.classList.remove("titledisabled");
-          document.getElementById("tittleApp")?.classList.add("tittle1");
+          document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
         };
         //funcion para mostrar boton
         const showButtons2=()=>{
@@ -57,7 +57,7 @@ const InicioApp: React.FC = () => {
     <IonPage>
       <IonContent id="ionContent" className="ion-content1">
         <div className="CenterContent">
-          <h1 id="tittleApp" className="tittle1">
+          <h1 id="tittleApp" className="tittleInicioApp">
             {message}
           </h1>
         </div>

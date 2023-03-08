@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
-.ion-content1 {
-    --background: #dd0a9e;
-}
-.ion-content2 {
-    --background: #db0f42;
-    transition: all 3s ease;
-}
-.ion-content2::part(background) {
-    transition: all 3s ease;
-  }
-
+/*estilos generales*/
 /* esta es la animacion del texto */
 @keyframes slidein {
     from {
@@ -23,7 +13,6 @@
 
     }
 }
-
 @keyframes slideinDisabled {
     from {
         margin-top: 11%;
@@ -33,7 +22,12 @@
         margin-top: -300%;
     }
 }
-
+.CenterContent {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
 .titledisabled {
     animation-duration: 3s;
     animation-name: slideinDisabled;
@@ -41,34 +35,27 @@
     font-family: 'Concert One', cursive;
     font-size: 30px;
 }
-
-.tittle1 {
-
+.tittleInicioApp {
     animation-duration: 5s;
     animation-name: slidein;
     text-align: center;
     font-family: 'Concert One', cursive;
     font-size: 30px;
 }
-
-
 .disabled {
-    --color: #16ce2f;
+    --color: #000000;
     --padding-bottom: 50px;
     --padding-top: 50px;
     --padding-start: 20px;
     --padding-end: 20px;
-    --background: #16ce2f;
+    --background: #070606;
     --opacity: 0%;
 }
 
-.CenterContent {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -35%);
+/* estilos iteracion 0 */
+.ion-content1 {
+    --background: #dd0a9e;
 }
-
 .buttonInicioAppCss {
     position: absolute;
     top: 55%;
@@ -87,6 +74,15 @@
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
+
+/* estilos iteracion 1 */
+.ion-content2 {
+    --background: #db0f42;
+    transition: all 3s ease;
+}
+.ion-content2::part(background) {
+    transition: all 3s ease;
+  }
 .buttonInicioAppCss2 {
     position: absolute;
     top: 55%;
