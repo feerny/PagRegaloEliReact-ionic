@@ -5,7 +5,7 @@ import ReactAudioPlayer from "react-audio-player";
 import "./inicioAppCss.css";
 
 const InicioApp: React.FC = () => {
-  const [NumIteracion, setNumIteracion] = useState<number>(0);
+  const [NumIteracion, setNumIteracion] = useState<number>(3);
   const [message, setmessage] = useState<string>();
 
   //al cambiar el numero de iteraccion se ejecuta el useEffect
@@ -73,6 +73,31 @@ const InicioApp: React.FC = () => {
         window.setTimeout(addAnimation3, 3000);
         window.setTimeout(showButtons3, 6000);
         break;
+        case 3:
+          //agrega y elimina estilos iniciales para transicion hacia arriba
+          document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+          document.getElementById("ionContent")?.classList.remove("ion-content3");
+          document.getElementById("ionContent")?.classList.add("ion-content4");
+          document.getElementById("tittleApp")?.classList.add("titledisabled");
+          document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+          document.getElementById("buttonInicioApp")?.classList.add("disabled");
+          document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss3");
+          //funcion traer texto de arriba
+          const addAnimation4 = () => {
+            setmessage("pero antes tienes que responder una pregunta para saber que eres tu");
+            document.getElementById("tittleApp")?.classList.remove("titledisabled");
+            document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+          };
+          //funcion para mostrar boton
+          const showButtons4=()=>{
+            document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+            document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+            document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss4");
+          }
+          //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+          window.setTimeout(addAnimation4, 3000);
+          window.setTimeout(showButtons4, 6000);
+          break;
 
       default:
         break;
@@ -98,6 +123,8 @@ const InicioApp: React.FC = () => {
           Next
           <IonIcon icon={arrowForwardOutline} />
         </IonButton>
+        {/* solo muestra la img en la 3 iteracion */}
+        {NumIteracion===3?<img className="imgEmoji" src="/assets/images/emoji.png" alt="emoji"/>:null}
 
         <ReactAudioPlayer
           src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"
