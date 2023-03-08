@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IonButton, IonContent, IonIcon, IonPage } from "@ionic/react";
+import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage } from "@ionic/react";
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
 import "./inicioAppCss.css";
@@ -98,6 +98,31 @@ const InicioApp: React.FC = () => {
           window.setTimeout(addAnimation4, 3000);
           window.setTimeout(showButtons4, 6000);
           break;
+        case 4:
+          //agrega y elimina estilos iniciales para transicion hacia arriba
+          document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+          document.getElementById("ionContent")?.classList.remove("ion-content4");
+          document.getElementById("ionContent")?.classList.add("ion-content5");
+          document.getElementById("tittleApp")?.classList.add("titledisabled");
+          document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+          document.getElementById("buttonInicioApp")?.classList.add("disabled");
+          document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss4");
+          //funcion traer texto de arriba
+          const addAnimation5 = () => {
+            setmessage("una sola palabra, que fue lo que te dije que me regalaras cuando nos conocimos?");
+            document.getElementById("tittleApp")?.classList.remove("titledisabled");
+            document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+          };
+          //funcion para mostrar boton
+          const showButtons5=()=>{
+            document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+            document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+            document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss5");
+          }
+          //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+          window.setTimeout(addAnimation5, 3000);
+          window.setTimeout(showButtons5, 6000);
+          break;
 
       default:
         break;
@@ -112,6 +137,8 @@ const InicioApp: React.FC = () => {
             {message}
           </h1>
         </div>
+        
+        {NumIteracion===4?<IonItem className="inputApp"><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark" placeholder="Enter text"></IonInput></IonItem>:null}
         <IonButton
           onClick={(e) => {
             setNumIteracion(NumIteracion + 1);
