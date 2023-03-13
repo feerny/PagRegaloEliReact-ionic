@@ -45,6 +45,12 @@
     font-size: 30px;
 }
 .disabled {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
     --color: #000000;
     --padding-bottom: 50px;
     --padding-top: 50px;
@@ -199,16 +205,25 @@
 
 }
 
+.disabledInputApp {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    opacity: 0%;
+
+}
+
 .inputApp{
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -65%);
     font-family: 'Concert One', cursive;
+    text-align: center;
     --background: #be620b;
-    --color:#000000;
     --placeholder-color:#000000;
-    --transition: all 6s ease;
-    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    transition: all 4s ease;
+    box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }

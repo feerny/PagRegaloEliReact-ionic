@@ -3,16 +3,20 @@ import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage } 
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
 import "./inicioAppCss.css";
+import { InicioAppProps } from "../../data/InicioAppProps";
 
-const InicioApp: React.FC = () => {
-  const [NumIteracion, setNumIteracion] = useState<number>(3);
+const InicioApp: React.FC<InicioAppProps> = (props) => {
+  const [NumIteracion, setNumIteracion] = useState<number>(0);
   const [message, setmessage] = useState<string>();
+  const [valueInputApp, setvalueInputApp] = useState<string>("")
 
   //al cambiar el numero de iteraccion se ejecuta el useEffect
   useEffect(() => {
     //dependiendo de la iteraccion envia atrivutos diferentes
     switch (NumIteracion) {
       case 0:
+        document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+        document.getElementById("buttonInicioApp")?.classList.add("disabled");
         setmessage("Bueno miamor este es un dia muy especial");
           //remueve atributo disabled y agrega clase para transicion
         const showButtons = () => {
@@ -25,6 +29,8 @@ const InicioApp: React.FC = () => {
         break;
       case 1:
         //agrega y elimina estilos iniciales para transicion hacia arriba
+        document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+        document.getElementById("buttonInicioApp")?.classList.add("disabled");
         document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
         document.getElementById("ionContent")?.classList.remove("ion-content1");
         document.getElementById("ionContent")?.classList.add("ion-content2");
@@ -50,6 +56,8 @@ const InicioApp: React.FC = () => {
         break;
       case 2:
         //agrega y elimina estilos iniciales para transicion hacia arriba
+        document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+        document.getElementById("buttonInicioApp")?.classList.add("disabled");
         document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
         document.getElementById("ionContent")?.classList.remove("ion-content2");
         document.getElementById("ionContent")?.classList.add("ion-content3");
@@ -75,6 +83,8 @@ const InicioApp: React.FC = () => {
         break;
         case 3:
           //agrega y elimina estilos iniciales para transicion hacia arriba
+          document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+          document.getElementById("buttonInicioApp")?.classList.add("disabled");
           document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
           document.getElementById("ionContent")?.classList.remove("ion-content3");
           document.getElementById("ionContent")?.classList.add("ion-content4");
@@ -100,6 +110,9 @@ const InicioApp: React.FC = () => {
           break;
         case 4:
           //agrega y elimina estilos iniciales para transicion hacia arriba
+          document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+          document.getElementById("buttonInicioApp")?.classList.add("disabled");
+          document.getElementById("inputidapp")?.classList.add("disabledInputApp");
           document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
           document.getElementById("ionContent")?.classList.remove("ion-content4");
           document.getElementById("ionContent")?.classList.add("ion-content5");
@@ -119,15 +132,45 @@ const InicioApp: React.FC = () => {
             document.getElementById("buttonInicioApp")?.classList.remove("disabled");
             document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss5");
           }
+          const showInput5=()=>{
+            document.getElementById("inputidapp")?.classList.remove("disabledInputApp");
+            document.getElementById("inputidapp")?.classList.add("inputApp");
+          }
           //ejecuta las funciones depues de x tiempo para aplicar las animaciones
           window.setTimeout(addAnimation5, 3000);
           window.setTimeout(showButtons5, 6000);
+          window.setTimeout(showInput5, 6000);
           break;
 
       default:
+        
         break;
     }
   }, [NumIteracion]);
+
+  //controla los cambios del input y los guarda en variable
+  const onChange=(e:any)=>{
+    e.stopPropagation();
+    setvalueInputApp(e.target.value);
+  }
+
+  const clickAppValidation=()=>{
+    if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
+      console.log("validacion completa");
+      console.log(valueInputApp.toLowerCase());
+      setvalueInputApp("")
+      
+    }else{
+      console.log("mala la res");
+      console.log(valueInputApp.toLowerCase());
+      setvalueInputApp("")
+    }
+    props.setvalidationRoutes()
+
+    
+  }
+
+  
 
   return (
     <IonPage>
@@ -138,13 +181,10 @@ const InicioApp: React.FC = () => {
           </h1>
         </div>
         
-        {NumIteracion===4?<IonItem className="inputApp"><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark" placeholder="Enter text"></IonInput></IonItem>:null}
+        {NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark"  onIonInput={onChange} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
         <IonButton
-          onClick={(e) => {
-            setNumIteracion(NumIteracion + 1);
-          }}
-          className="disabled"
-          disabled
+          onClick={(e) => NumIteracion===4?clickAppValidation():setNumIteracion(NumIteracion + 1)}
+          
           id="buttonInicioApp"
         >
           Next

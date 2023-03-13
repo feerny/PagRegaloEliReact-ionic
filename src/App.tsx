@@ -27,7 +27,7 @@ setupIonicReact();
 
 const App: React.FC = () => {
   //validaciones next
-  const [nameVali, setnameVali] = useState<String>("");
+  const [validationRoutes, setvalidationRoutes] = useState<number>(0);
 
   return (
     <IonApp>
@@ -43,7 +43,7 @@ const App: React.FC = () => {
           <Route
             path="/InicioApp"
             render={() => {
-              return <InicioApp />;
+              return <InicioApp setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
             }}
             exact
           />
