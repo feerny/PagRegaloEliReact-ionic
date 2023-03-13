@@ -3,7 +3,6 @@ import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage } 
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
 
-
 import "./inicioAppCss.css";
 import { InicioAppProps } from "../../data/InicioAppProps";
 
@@ -161,13 +160,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
       console.log("validacion completa");
 
-      setvalueInputApp("")
       props.setvalidationRoutes(1)
       
     //si no entra redireciona a la pagina de fallo
     }else{
       console.log("mala la res");
-      setvalueInputApp("")
       props.setvalidationRoutes(2)
     }
 
