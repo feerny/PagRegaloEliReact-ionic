@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage } from "@ionic/react";
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
+
+
 import "./inicioAppCss.css";
 import { InicioAppProps } from "../../data/InicioAppProps";
 
@@ -12,7 +14,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
 
   //al cambiar el numero de iteraccion se ejecuta el useEffect
   useEffect(() => {
-    //dependiendo de la iteraccion envia atrivutos diferentes
+    //dependiendo de la iteraccion envia atributos diferentes
     switch (NumIteracion) {
       case 0:
         document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
@@ -153,19 +155,21 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     e.stopPropagation();
     setvalueInputApp(e.target.value);
   }
-
+  //compara la respuesta del input con las respuestas validas guardadas en variables de entorno .env
   const clickAppValidation=()=>{
+    //si entra redireciona a la pagina principal
     if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
       console.log("validacion completa");
-      console.log(valueInputApp.toLowerCase());
+
       setvalueInputApp("")
+      props.setvalidationRoutes(1)
       
+    //si no entra redireciona a la pagina de fallo
     }else{
       console.log("mala la res");
-      console.log(valueInputApp.toLowerCase());
       setvalueInputApp("")
+      props.setvalidationRoutes(2)
     }
-    props.setvalidationRoutes()
 
     
   }
@@ -187,7 +191,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           
           id="buttonInicioApp"
         >
-          Next
+          {NumIteracion===4?"Enviar":"Next"}
           <IonIcon icon={arrowForwardOutline} />
         </IonButton>
         {/* solo muestra la img en la 3 iteracion */}
