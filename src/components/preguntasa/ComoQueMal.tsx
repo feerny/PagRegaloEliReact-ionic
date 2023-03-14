@@ -5,7 +5,6 @@ import {
   IonGrid,
   IonRow,
 } from "@ionic/react";
-import emailjs from "@emailjs/browser";
 
 const  ComoQueMal: React.FC = () => {
   const sendEmail=()=>{
