@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage } from "@ionic/react";
+import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage, useIonAlert  } from "@ionic/react";
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
-
 import "./inicioAppCss.css";
 import { InicioAppProps } from "../../data/InicioAppProps";
 
 const InicioApp: React.FC<InicioAppProps> = (props) => {
-  const [NumIteracion, setNumIteracion] = useState<number>(0);
+  const [NumIteracion, setNumIteracion] = useState<number>(4);
   const [message, setmessage] = useState<string>();
   const [valueInputApp, setvalueInputApp] = useState<string>("")
 
@@ -149,23 +148,46 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     }
   }, [NumIteracion]);
 
-  //controla los cambios del input y los guarda en variable
-  const onChange=(e:any)=>{
-    e.stopPropagation();
-    setvalueInputApp(e.target.value);
-  }
+
   //compara la respuesta del input con las respuestas validas guardadas en variables de entorno .env
+  const onChangeValidation=(e:any)=>{
+        //controla los cambios del input y los guarda en variable
+        e.stopPropagation();
+        setvalueInputApp(e.target.value);
+        //si entra pasa link pag principal
+        if (e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
+    
+          props.setvalidationRoutes(1)
+          console.log("entro1");
+          
+          
+        //si no entra pasa link a la pagina de fallo
+        }else if(e.target.value===""){
+          props.setvalidationRoutes(0)
+        }else{
+          props.setvalidationRoutes(2)
+        }
+  }
+  const [presentAlert] = useIonAlert();
   const clickAppValidation=()=>{
+    //si no hay texto en el input mustra alerta
+    if (props.validationRoutes===0) {
+      presentAlert({
+        header: '.-.',
+        cssClass: 'custom-alert',
+        subHeader: 'Que Pasa?',
+        message: 'Escriba algo pendeja',
+        buttons: [{text:'Weno :c',cssClass:"buttonAlert"}],
+      })
+    }
+
     //si entra redireciona a la pagina principal
     if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
       console.log("validacion completa");
-
-      props.setvalidationRoutes(1)
       
     //si no entra redireciona a la pagina de fallo
     }else{
       console.log("mala la res");
-      props.setvalidationRoutes(2)
     }
 
     
@@ -182,8 +204,9 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           </h1>
         </div>
         
-        {NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark"  onIonInput={onChange} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
+        {NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark"  onIonInput={onChangeValidation} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
         <IonButton
+        // routerLink={props.validationRoutes===1?"/appRegalo":"/appFallo"}
           onClick={(e) => NumIteracion===4?clickAppValidation():setNumIteracion(NumIteracion + 1)}
           
           id="buttonInicioApp"

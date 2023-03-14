@@ -227,3 +227,25 @@
     box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
+.custom-alert{
+    --background: #ff6600;
+}
+
+.custom-alert .alert-title {
+    font-weight: bold;
+}
+
+.custom-alert .alert-sub-title{
+    font-weight: bold;
+}
+
+
+.custom-alert .alert-message{
+color: #000000;
+
+}
+
+.custom-alert .buttonAlert{
+    color: white;
+}
