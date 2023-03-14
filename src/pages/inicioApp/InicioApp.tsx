@@ -213,7 +213,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
   return (
     <IonPage>
       <head>
-      <meta name="theme-color" content="#dd0a9e" />
+      <meta name="theme-color" content={themeColor} />
       </head>
 
       <IonContent id="ionContent" className="ion-content1">
