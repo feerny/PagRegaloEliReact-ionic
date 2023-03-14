@@ -6,7 +6,7 @@ import "./inicioAppCss.css";
 import { InicioAppProps } from "../../data/InicioAppProps";
 
 const InicioApp: React.FC<InicioAppProps> = (props) => {
-  const [NumIteracion, setNumIteracion] = useState<number>(4);
+  const [NumIteracion, setNumIteracion] = useState<number>(0);
   const [message, setmessage] = useState<string>();
   const [valueInputApp, setvalueInputApp] = useState<string>("")
 
