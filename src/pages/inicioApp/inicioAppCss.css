@@ -23,6 +23,15 @@
         margin-top: -300%;
     }
 }
+
+.backfocusinput{
+    transition: all 2s ease;
+    filter: blur(10px);
+}
+.backfocus{
+    transition: all 2s ease;
+    backdrop-filter: blur(10px);
+}
 .CenterContent {
     position: absolute;
     top: 35%;
@@ -37,7 +46,7 @@
     font-size: 30px;
 }
 .tittleInicioApp {
-
+    transition: all 2s ease;
     animation-duration: 5s;
     animation-name: slidein;
     text-align: center;

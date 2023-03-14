@@ -154,6 +154,17 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     }
   }, [NumIteracion]);
 
+  //cuando esta enfocado el input desenfoca el fondo
+  const onfocusapp=()=>{
+    document.getElementById("tittleApp")?.classList.add("backfocusinput");
+    document.getElementById("ionContent")?.classList.add("backfocus");
+  }
+  //cuando se desenfoca el input enfoca el fondo
+  const onblurapp=()=>{
+    document.getElementById("tittleApp")?.classList.remove("backfocusinput");
+    document.getElementById("ionContent")?.classList.remove("backfocus");
+  }
+
 
   //compara la respuesta del input con las respuestas validas guardadas en variables de entorno .env
   const onChangeValidation=(e:any)=>{
@@ -226,7 +237,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           </h1>
         </div>
         
-        {NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark"  onIonInput={onChangeValidation} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
+        {NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark" onIonBlur={onblurapp} onIonFocus={onfocusapp}  onIonInput={onChangeValidation} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
         <IonButton
         // routerLink={props.validationRoutes===1?"/appRegalo":"/appFallo"}
           onClick={(e) => NumIteracion===4?clickAppValidation():setNumIteracion(NumIteracion + 1)}
