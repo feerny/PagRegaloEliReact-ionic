@@ -9,12 +9,14 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
   const [NumIteracion, setNumIteracion] = useState<number>(0);
   const [message, setmessage] = useState<string>();
   const [valueInputApp, setvalueInputApp] = useState<string>("")
+  const [themeColor, setthemeColor] = useState("")
 
   //al cambiar el numero de iteraccion se ejecuta el useEffect
   useEffect(() => {
     //dependiendo de la iteraccion envia atributos diferentes
     switch (NumIteracion) {
       case 0:
+        setthemeColor("#dd0a9e")
         document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
         document.getElementById("buttonInicioApp")?.classList.add("disabled");
         setmessage("Bueno miamor este es un dia muy especial");
@@ -28,6 +30,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         window.setTimeout(showButtons, 3000);
         break;
       case 1:
+        setthemeColor("#db0f42")
         //agrega y elimina estilos iniciales para transicion hacia arriba
         document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
         document.getElementById("buttonInicioApp")?.classList.add("disabled");
@@ -55,6 +58,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         window.setTimeout(showButtons2, 6000);
         break;
       case 2:
+        setthemeColor("#4c0ddf")
         //agrega y elimina estilos iniciales para transicion hacia arriba
         document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
         document.getElementById("buttonInicioApp")?.classList.add("disabled");
@@ -82,6 +86,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         window.setTimeout(showButtons3, 6000);
         break;
         case 3:
+          setthemeColor("#0fe42b")
           //agrega y elimina estilos iniciales para transicion hacia arriba
           document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
           document.getElementById("buttonInicioApp")?.classList.add("disabled");
@@ -109,6 +114,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           window.setTimeout(showButtons4, 6000);
           break;
         case 4:
+          setthemeColor("#e45d0f")
           //agrega y elimina estilos iniciales para transicion hacia arriba
           document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
           document.getElementById("buttonInicioApp")?.classList.add("disabled");

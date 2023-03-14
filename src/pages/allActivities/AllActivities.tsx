@@ -23,21 +23,24 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
     setmaloText("mal");
   };
 
-    //funcion para refrescar la pagina
+  //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
     setTimeout(() => {
       // Any calls to load data go here
-      window.location.reload()
+      window.location.reload();
       event.detail.complete();
     }, 1000);
   }
 
   return (
     <IonPage>
+      <head>
+        <meta name="theme-color" content="#aa0ed1" />
+      </head>
       <IonContent className="ion-content">
-      <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+        <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent></IonRefresherContent>
-      </IonRefresher>
+        </IonRefresher>
         <IonGrid>
           <IonRow class="ion-align-items-center ion-justify-content-center">
             <IonRouterOutlet>
@@ -46,10 +49,10 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
               </Route>
 
               <Route path="/all-activities/ComoQueMal" exact={true}>
-                <ComoQueMal  />
+                <ComoQueMal />
               </Route>
               <Route path="/all-activities/YaNoEstesMal" exact={true}>
-                <YaNoEstesMal  />
+                <YaNoEstesMal />
               </Route>
 
               <Redirect exact from="/" to="/all-activities/ComoEstas" />
