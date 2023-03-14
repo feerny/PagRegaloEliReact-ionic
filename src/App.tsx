@@ -29,8 +29,10 @@ const App: React.FC = () => {
   //validaciones next
   const [validationRoutes, setvalidationRoutes] = useState<number>(0);
 
+
   return (
     <IonApp>
+
       <IonReactRouter>
         <IonRouterOutlet>
           <Route
@@ -52,6 +54,7 @@ const App: React.FC = () => {
           <Redirect exact from="/all-activities" to="/all-activities/ComoEstas" />
         </IonRouterOutlet>
       </IonReactRouter>
+
     </IonApp>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage, useIonAlert  } from "@ionic/react";
+import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage, IonRefresher, IonRefresherContent, RefresherEventDetail, useIonAlert  } from "@ionic/react";
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
 import "./inicioAppCss.css";
@@ -193,11 +193,23 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     
   }
 
+  //funcion para refrescar la pagina
+  function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      window.location.reload()
+      event.detail.complete();
+    }, 1000);
+  }
+
   
 
   return (
     <IonPage>
       <IonContent id="ionContent" className="ion-content1">
+      <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+          <IonRefresherContent></IonRefresherContent>
+      </IonRefresher>
         <div className="CenterContent">
           <h1 id="tittleApp" className="tittleInicioApp">
             {message}

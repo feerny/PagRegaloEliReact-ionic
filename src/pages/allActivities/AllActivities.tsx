@@ -2,8 +2,11 @@ import {
   IonContent,
   IonGrid,
   IonPage,
+  IonRefresher,
+  IonRefresherContent,
   IonRouterOutlet,
   IonRow,
+  RefresherEventDetail,
 } from "@ionic/react";
 import React, { useState } from "react";
 import { Route, Redirect } from "react-router";
@@ -20,9 +23,21 @@ const AllActivities: React.FC<AllActivitiesProps> = (props) => {
     setmaloText("mal");
   };
 
+    //funcion para refrescar la pagina
+  function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      window.location.reload()
+      event.detail.complete();
+    }, 1000);
+  }
+
   return (
     <IonPage>
       <IonContent className="ion-content">
+      <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+          <IonRefresherContent></IonRefresherContent>
+      </IonRefresher>
         <IonGrid>
           <IonRow class="ion-align-items-center ion-justify-content-center">
             <IonRouterOutlet>
