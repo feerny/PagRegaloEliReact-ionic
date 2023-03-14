@@ -11,6 +11,9 @@ const YaNoEstesMal: React.FC = () => {
   window.setTimeout(() => {
     showButtons();
   }, 3000);
+  const refresh=()=>{
+    window.location.reload()
+  }
   return (
     <IonCol className="ion-col" size="auto">
       <h1 id="h1Init4" className="h1Init4">
@@ -21,6 +24,7 @@ const YaNoEstesMal: React.FC = () => {
         <IonRow class="rowDown2">
           <IonCol className="ion-col" size="11">
             <IonButton
+              onClick={()=>{window.setTimeout(refresh, 100)}}
               routerLink="/InicioApp"
               disabled
               id="button3"

@@ -203,7 +203,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
     setTimeout(() => {
       // Any calls to load data go here
-      window.location.reload()
+      window.location.reload();
       event.detail.complete();
     }, 1000);
   }

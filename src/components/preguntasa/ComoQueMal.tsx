@@ -41,6 +41,9 @@ const  ComoQueMal: React.FC = () => {
   
       }
       window.setTimeout(showButtons,3000);
+      const refresh=()=>{
+        window.location.reload()
+      }
     return (
       <IonCol className="ion-col" size="auto">
         <h1 id="h1Init2" className="h1Init3">Como que mal?</h1>
@@ -50,7 +53,7 @@ const  ComoQueMal: React.FC = () => {
             <IonButton onClick={()=>{sendEmail()}} routerLink="/all-activities/YaNoEstesMal"  disabled  id="button1" className="disabled">Shi </IonButton>
             </IonCol>
             <IonCol className="ion-col" size="9" offset="3">
-            <IonButton routerLink="/InicioApp" disabled  id="button2" className="disabled2">Mentiris </IonButton>
+            <IonButton routerLink="/InicioApp" onClick={()=>{window.setTimeout(refresh, 100)}} disabled  id="button2" className="disabled2">Mentiris </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
