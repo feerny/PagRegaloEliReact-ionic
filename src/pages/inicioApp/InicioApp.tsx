@@ -173,12 +173,16 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         setvalueInputApp(e.target.value);
         //si entra pasa link pag principal
         if (e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
-          props.setvalidationRoutes(1);          
+          props.setvalidationRoutes(1);      
+          
+          localStorage.setItem('number', "1") 
         //si no entra pasa link a la pagina de fallo
         }else if(e.target.value===""){
           props.setvalidationRoutes(0)
         }else{
-          props.setvalidationRoutes(2)
+          localStorage.setItem('number', "2") 
+          props.setvalidationRoutes(2);
+          console.log("malo");
         }
   }
   const [presentAlert] = useIonAlert();
@@ -197,11 +201,14 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     //si entra redireciona a la pagina principal
     if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
       console.log("validacion completa");
+      console.log(props.validationRoutes);
+      
       setvalueInputApp("")
       
     //si no entra redireciona a la pagina de fallo
     }else{
       console.log("mala la res");
+      console.log(props.validationRoutes);
       setvalueInputApp("")
     }
 

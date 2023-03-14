@@ -20,15 +20,22 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import AllActivities from "./pages/allActivities/AllActivities";
 import { Redirect, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InicioApp from "./pages/inicioApp/InicioApp";
+import PagFallo from "./pages/pagFallo/PagFallo";
 
 setupIonicReact();
 
 const App: React.FC = () => {
   //validaciones next
-  const [validationRoutes, setvalidationRoutes] = useState<number>(0);
+  const [validationRoutes, setvalidationRoutes] = useState<number>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
 
+
+  useEffect(() => {
+    console.log(validationRoutes);
+    
+  }, [validationRoutes])
+  
 
   return (
     <IonApp>
@@ -49,6 +56,19 @@ const App: React.FC = () => {
             }}
             exact
           />
+          <Route
+            path="/FalloApp"
+            render={() => {
+              console.log(validationRoutes);
+              if (validationRoutes===2) {
+                return <PagFallo />;
+              }else if (validationRoutes!==2) {
+                return <Redirect  to="/all-activities/ComoEstas" />;
+              } 
+            }}
+            exact
+          />
+          
 
           <Redirect exact from="/" to="/all-activities/ComoEstas" />
           <Redirect exact from="/all-activities" to="/all-activities/ComoEstas" />
