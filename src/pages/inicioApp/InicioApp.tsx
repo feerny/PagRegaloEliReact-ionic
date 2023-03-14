@@ -206,6 +206,10 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
 
   return (
     <IonPage>
+      <head>
+      <meta name="theme-color" content="#dd0a9e" />
+      </head>
+
       <IonContent id="ionContent" className="ion-content1">
       <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent></IonRefresherContent>
@@ -232,6 +236,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         <ReactAudioPlayer
           src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"
           autoPlay
+          muted
           loop
         />
       </IonContent>
