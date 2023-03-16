@@ -9,7 +9,6 @@ import {
   RefresherEventDetail,
 } from "@ionic/react";
 import "./pagFalloCss.css";
-import ReactAudioPlayer from "react-audio-player";
 import { arrowBackOutline } from "ionicons/icons";
 import { PagFalloProps } from "../../data/PagFalloProps";
 
@@ -60,10 +59,6 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
           volver
         </IonButton>
       </IonContent>
-      <ReactAudioPlayer
-        src="http://www.sonidosmp3gratis.com/sounds/error-fallo%203.mp3"
-        autoPlay
-      />
     </IonPage>
   );
 };
