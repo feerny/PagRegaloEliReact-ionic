@@ -18,7 +18,7 @@
 	width: 10.5ch; /* # of chars */
 	white-space: nowrap;
 	overflow: hidden;
-	animation: typing 5s steps(10, end), /* # of steps = # of chars */
+	animation: typing 4.5s steps(10, end), /* # of steps = # of chars */
 	           blink-caret .5s step-end infinite alternate;
 }
 
