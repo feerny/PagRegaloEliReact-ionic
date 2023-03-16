@@ -33,7 +33,6 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
     localStorage.setItem("number", "0");
     props.setvalidationRoutes(0);
     props.setNumIteracion(4);
-    console.log("back");
   };
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
@@ -67,7 +66,7 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
         </IonButton>
       </IonContent>
       <ReactAudioPlayer id="audioFallo"
-        src="http://www.sonidosmp3gratis.com/sounds/error-fallo%203.mp3"
+        src="https://cdn.pixabay.com/audio/2022/01/17/audio_1fded3844a.mp3"
         autoPlay
         muted={props.validMuteFallo===1?false:true}
       />
