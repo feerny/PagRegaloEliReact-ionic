@@ -1,0 +1,66 @@
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+
+.ion-content-fallo::part(background) {
+    --background: #000000;
+  }
+
+.h1InitFallo { 
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -45%);
+    transition: all .5a ease;
+	font: bold 165% Consolas, Monaco, monospace;
+	border-right: .2em solid;
+	width: 16.5em; /* fallback */
+	width: 10.5ch; /* # of chars */
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 5s steps(10, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+}
+
+.backButtonFallo{
+    position: absolute;
+    top: 60%;
+    left: 50%; 
+    transform: translate(-50%, -60%);
+
+}
+
+.buttonInicioAppCssFallo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --background: #4b4549;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(190, 184, 184, 0.25);
+    cursor: pointer;
+
+}
+
+.buttonInicioAppCssFallo:hover {
+    --background: #8b878a;
+    --box-shadow: 0px 20px 5px 0 rgba(240, 234, 234, 0.25);
+
+}
+
+.disabledFallo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}

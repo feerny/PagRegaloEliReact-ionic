@@ -6,7 +6,7 @@ import "./inicioAppCss.css";
 import { InicioAppProps } from "../../data/InicioAppProps";
 
 const InicioApp: React.FC<InicioAppProps> = (props) => {
-  const [NumIteracion, setNumIteracion] = useState<number>(0);
+
   const [message, setmessage] = useState<string>();
   const [valueInputApp, setvalueInputApp] = useState<string>("")
   const [themeColor, setthemeColor] = useState("")
@@ -14,7 +14,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
   //al cambiar el numero de iteraccion se ejecuta el useEffect
   useEffect(() => {
     //dependiendo de la iteraccion envia atributos diferentes
-    switch (NumIteracion) {
+    switch (props.NumIteracion) {
       case 0:
         setthemeColor("#dd0a9e")
         document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
@@ -152,7 +152,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         
         break;
     }
-  }, [NumIteracion]);
+  }, [props.NumIteracion]);
 
   //cuando esta enfocado el input desenfoca el fondo
   const onfocusapp=()=>{
@@ -173,16 +173,16 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         setvalueInputApp(e.target.value);
         //si entra pasa link pag principal
         if (e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
-          props.setvalidationRoutes(1);      
+          props.setvalidationRoutes(process.env.REACT_APP_NUMVALID);      
           
-          localStorage.setItem('number', "1") 
+          localStorage.setItem('number', `${process.env.REACT_APP_NUMVALID}`) 
         //si no entra pasa link a la pagina de fallo
         }else if(e.target.value===""){
+          localStorage.setItem('number', "0") 
           props.setvalidationRoutes(0)
         }else{
           localStorage.setItem('number', "2") 
           props.setvalidationRoutes(2);
-          console.log("malo");
         }
   }
   const [presentAlert] = useIonAlert();
@@ -200,19 +200,16 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
 
     //si entra redireciona a la pagina principal
     if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
-      console.log("validacion completa");
-      console.log(props.validationRoutes);
-      
       setvalueInputApp("")
       
     //si no entra redireciona a la pagina de fallo
-    }else{
-      console.log("mala la res");
-      console.log(props.validationRoutes);
+    }else if(props.validationRoutes===2){
+      const refresh=()=>{
+        window.location.reload()
+      }
+      window.setTimeout(refresh, 100)
       setvalueInputApp("")
-    }
-
-    
+    } 
   }
 
   //funcion para refrescar la pagina
@@ -242,18 +239,17 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           </h1>
         </div>
         
-        {NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark" onIonBlur={onblurapp} onIonFocus={onfocusapp}  onIonInput={onChangeValidation} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
+        {props.NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark" onIonBlur={onblurapp} onIonFocus={onfocusapp}  onIonInput={onChangeValidation} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
         <IonButton
-        // routerLink={props.validationRoutes===1?"/appRegalo":"/appFallo"}
-          onClick={(e) => NumIteracion===4?clickAppValidation():setNumIteracion(NumIteracion + 1)}
-          
-          id="buttonInicioApp"
+        routerLink={props.validationRoutes===0?"/InicioApp":props.validationRoutes===1?"/appRegalo":props.validationRoutes===2?"/FalloApp":"/InicioApp"}
+        onClick={(e) => props.NumIteracion===4?clickAppValidation():props.setNumIteracion(props.NumIteracion + 1)}
+        id="buttonInicioApp"
         >
-          {NumIteracion===4?"Enviar":"Next"}
+          {props.NumIteracion===4?"Enviar":"Next"}
           <IonIcon icon={arrowForwardOutline} />
         </IonButton>
         {/* solo muestra la img en la 3 iteracion */}
-        {NumIteracion===3?<img className="imgEmoji" src="/assets/images/emoji.png" alt="emoji"/>:null}
+        {props.NumIteracion===3?<img className="imgEmoji" src="/assets/images/emoji.png" alt="emoji"/>:null}
 
         <ReactAudioPlayer
           src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"

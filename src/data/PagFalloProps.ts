@@ -1,9 +1,7 @@
 import React from "react";
 
-export interface InicioAppProps{
-    validationRoutes:number;
+export interface PagFalloProps{
     setvalidationRoutes:Function;
-    NumIteracion:number;
     setNumIteracion:Function;
 
 }

@@ -20,7 +20,7 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import AllActivities from "./pages/allActivities/AllActivities";
 import { Redirect, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InicioApp from "./pages/inicioApp/InicioApp";
 import PagFallo from "./pages/pagFallo/PagFallo";
 
@@ -28,15 +28,8 @@ setupIonicReact();
 
 const App: React.FC = () => {
   //validaciones next
+  const [NumIteracion, setNumIteracion] = useState<number>(0);
   const [validationRoutes, setvalidationRoutes] = useState<number>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
-
-
-  useEffect(() => {
-    console.log(validationRoutes);
-    
-  }, [validationRoutes])
-  
-
   return (
     <IonApp>
 
@@ -52,18 +45,17 @@ const App: React.FC = () => {
           <Route
             path="/InicioApp"
             render={() => {
-              return <InicioApp setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
+              return <InicioApp setNumIteracion={setNumIteracion} NumIteracion={NumIteracion} setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
             }}
             exact
           />
           <Route
             path="/FalloApp"
             render={() => {
-              console.log(validationRoutes);
               if (validationRoutes===2) {
-                return <PagFallo />;
+                return <PagFallo setvalidationRoutes={setvalidationRoutes} setNumIteracion={setNumIteracion}/>;
               }else if (validationRoutes!==2) {
-                return <Redirect  to="/all-activities/ComoEstas" />;
+                return <Redirect  to="/InicioApp" />;
               } 
             }}
             exact

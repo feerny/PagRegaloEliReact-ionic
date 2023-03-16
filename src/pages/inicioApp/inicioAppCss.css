@@ -46,7 +46,7 @@
     font-size: 30px;
 }
 .tittleInicioApp {
-    transition: all 2s ease;
+    transition: all 1s ease;
     animation-duration: 5s;
     animation-name: slidein;
     text-align: center;
