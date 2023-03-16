@@ -28,6 +28,7 @@ setupIonicReact();
 
 const App: React.FC = () => {
   //validaciones next
+  const [validMuteFallo, setvalidMuteFallo] = useState(1)
   const [NumIteracion, setNumIteracion] = useState<number>(0);
   const [validationRoutes, setvalidationRoutes] = useState<number>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
   return (
@@ -45,18 +46,16 @@ const App: React.FC = () => {
           <Route
             path="/InicioApp"
             render={() => {
-              return <InicioApp setNumIteracion={setNumIteracion} NumIteracion={NumIteracion} setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
+              return <InicioApp  setNumIteracion={setNumIteracion} NumIteracion={NumIteracion} setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
             }}
             exact
           />
           <Route
             path="/FalloApp"
             render={() => {
-              if (validationRoutes===2) {
-                return <PagFallo setvalidationRoutes={setvalidationRoutes} setNumIteracion={setNumIteracion}/>;
-              }else if (validationRoutes!==2) {
-                return <Redirect  to="/InicioApp" />;
-              } 
+
+                return validationRoutes===2?  <PagFallo validMuteFallo={validMuteFallo} setvalidMuteFallo={setvalidMuteFallo} setvalidationRoutes={setvalidationRoutes} setNumIteracion={setNumIteracion}/>:<Redirect  to="/InicioApp" />;
+          
             }}
             exact
           />

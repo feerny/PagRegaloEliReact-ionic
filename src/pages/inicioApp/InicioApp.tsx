@@ -168,6 +168,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
 
   //compara la respuesta del input con las respuestas validas guardadas en variables de entorno .env
   const onChangeValidation=(e:any)=>{
+    document.getElementById("audioFallo")?.setAttribute("muted","true")
         //controla los cambios del input y los guarda en variable
         e.stopPropagation();
         setvalueInputApp(e.target.value);
@@ -207,7 +208,9 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
       const refresh=()=>{
         window.location.reload()
       }
+
       window.setTimeout(refresh, 100)
+      
       setvalueInputApp("")
     } 
   }

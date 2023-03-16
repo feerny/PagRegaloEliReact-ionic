@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IonButton,
   IonContent,
@@ -9,6 +9,7 @@ import {
   RefresherEventDetail,
 } from "@ionic/react";
 import "./pagFalloCss.css";
+import ReactAudioPlayer from "react-audio-player";
 import { arrowBackOutline } from "ionicons/icons";
 import { PagFalloProps } from "../../data/PagFalloProps";
 
@@ -27,6 +28,8 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
   //ejecuta funcion despues de 3 segundos para mostrar los botones
   window.setTimeout(showButtons, 5000);
   const clickBack = () => {
+    //mutea el audio para que no intervenga con los demas 
+    props.setvalidMuteFallo(0)
     localStorage.setItem("number", "0");
     props.setvalidationRoutes(0);
     props.setNumIteracion(4);
@@ -39,9 +42,12 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
       window.location.reload();
       event.detail.complete();
     }, 1000);
+
   }
+
+
   return (
-    <IonPage>
+    <IonPage >
       <head>
         <meta name="theme-color" content="#000000" />
       </head>
@@ -51,14 +57,20 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
         </IonRefresher>
         <h1 className="h1InitFallo">. . . khe?</h1>
         <IonButton
-          routerLink="/InicioApp"
           onClick={() => clickBack()}
+          routerLink="/InicioApp"
+          
           id="buttonPagFallo"
         >
           <IonIcon icon={arrowBackOutline} />
           volver
         </IonButton>
       </IonContent>
+      <ReactAudioPlayer id="audioFallo"
+        src="http://www.sonidosmp3gratis.com/sounds/error-fallo%203.mp3"
+        autoPlay
+        muted={props.validMuteFallo===1?false:true}
+      />
     </IonPage>
   );
 };
