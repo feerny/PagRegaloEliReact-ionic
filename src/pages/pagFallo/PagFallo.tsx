@@ -14,18 +14,22 @@ import { arrowBackOutline } from "ionicons/icons";
 import { PagFalloProps } from "../../data/PagFalloProps";
 
 const PagFallo: React.FC<PagFalloProps> = (props) => {
-  document.getElementById("buttonPagFallo")?.setAttribute("disabled","true")
+  document.getElementById("buttonPagFallo")?.setAttribute("disabled", "true");
   document.getElementById("buttonPagFallo")?.classList.add("disabledFallo");
   const showButtons = () => {
     document.getElementById("buttonPagFallo")?.removeAttribute("disabled");
-    document.getElementById("buttonPagFallo")?.classList.remove("disabledFallo");
-    document.getElementById("buttonPagFallo")?.classList.add("buttonInicioAppCssFallo");
+    document
+      .getElementById("buttonPagFallo")
+      ?.classList.remove("disabledFallo");
+    document
+      .getElementById("buttonPagFallo")
+      ?.classList.add("buttonInicioAppCssFallo");
   };
   //ejecuta funcion despues de 3 segundos para mostrar los botones
   window.setTimeout(showButtons, 5000);
   const clickBack = () => {
-    localStorage.setItem('number', "0") 
-    props.setvalidationRoutes(0)
+    localStorage.setItem("number", "0");
+    props.setvalidationRoutes(0);
     props.setNumIteracion(4);
     console.log("back");
   };
@@ -39,6 +43,9 @@ const PagFallo: React.FC<PagFalloProps> = (props) => {
   }
   return (
     <IonPage>
+      <head>
+        <meta name="theme-color" content="#000000" />
+      </head>
       <IonContent className="ion-content-fallo">
         <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent></IonRefresherContent>
