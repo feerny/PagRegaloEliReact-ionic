@@ -254,7 +254,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         <ReactAudioPlayer
           src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"
           autoPlay
-          muted
+          
           loop
         />
       </IonContent>
