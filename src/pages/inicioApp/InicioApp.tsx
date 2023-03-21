@@ -316,7 +316,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         //cambia de musica dependiendo de la iteracion
           src={props.NumIteracion===5?"https://cdn.pixabay.com/audio/2021/08/09/audio_364cfa6e8b.mp3":props.NumIteracion>5?"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3":"https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"}
           autoPlay
-          muted
+          
           loop={props.NumIteracion===5?false:true}
         />
       </IonContent>
