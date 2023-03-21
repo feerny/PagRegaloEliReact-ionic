@@ -5,5 +5,6 @@ export interface InicioAppProps{
     setvalidationRoutes:Function;
     NumIteracion:number;
     setNumIteracion:Function;
+    setvalidationTrue:Function;
 
 }

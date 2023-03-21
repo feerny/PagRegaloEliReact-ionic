@@ -20,7 +20,7 @@
     }
 
     to {
-        margin-top: -300%;
+        margin-top: -350%;
     }
 }
 
@@ -308,3 +308,100 @@ color: #000000;
 
 }
 
+/* estilos iteracion 7 */
+.ion-content8 {
+    --background: #5d09fa;
+    transition: all 3s ease;
+}
+.ion-content8::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss8 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-family: 'Concert One', cursive;
+    --background: #4309c9;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss8:hover {
+    --background: #260977;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
+/* estilos iteracion 8 */
+.ion-content9 {
+    --background: #fa0909;
+    transition: all 3s ease;
+}
+.ion-content9::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss9 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    font-family: 'Concert One', cursive;
+    --background: #c90909;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss9:hover {
+    --background: #770909;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
+/* estilos iteracion 9 */
+.ion-content10 {
+    --background: #fa09b2;
+    transition: all 3s ease;
+}
+.ion-content10::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss10 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    font-family: 'Concert One', cursive;
+    --background: #b10a7f;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss10:hover {
+    --background: #69084c;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
+
+/* estilos iteracion 10 */
+.ion-content11 {
+    --background: #c8ff00;
+    transition: all 3s ease;
+}
+.ion-content11::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss11 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --background: #84a50b;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss11:hover {
+    --background: #516606;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}

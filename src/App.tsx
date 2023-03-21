@@ -23,6 +23,7 @@ import { Redirect, Route } from "react-router-dom";
 import { useState } from "react";
 import InicioApp from "./pages/inicioApp/InicioApp";
 import PagFallo from "./pages/pagFallo/PagFallo";
+import AppRegalo from "./pages/appRegalo/AppRegalo";
 
 setupIonicReact();
 
@@ -30,7 +31,8 @@ const App: React.FC = () => {
   //validaciones next
   const [validMuteFallo, setvalidMuteFallo] = useState(1)
   const [NumIteracion, setNumIteracion] = useState<number>(0);
-  const [validationRoutes, setvalidationRoutes] = useState<any>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
+  const [validationRoutes, setvalidationRoutes] = useState<number>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
+  const [validationTrue, setvalidationTrue] = useState<string>(localStorage.getItem("ValiSesion")?localStorage.getItem("ValiSesion") || "":"0")
   return (
     <IonApp>
 
@@ -39,14 +41,14 @@ const App: React.FC = () => {
           <Route
             path="/all-activities/:id"
             render={() => {
-              return <AllActivities tittle={"Hola Miamor como estas?"} />;
+              return validationTrue===process.env.REACT_APP_NUMVALID?  <Redirect  to="/AppRegalo" />:<AllActivities tittle={"Hola Miamor como estas?"} />;
             }}
             exact
           />
           <Route
             path="/InicioApp"
             render={() => {
-              return <InicioApp  setNumIteracion={setNumIteracion} NumIteracion={NumIteracion} setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
+              return validationTrue===process.env.REACT_APP_NUMVALID?  <Redirect  to="/AppRegalo" />:<InicioApp setvalidationTrue={setvalidationTrue}  setNumIteracion={setNumIteracion} NumIteracion={NumIteracion} setvalidationRoutes={setvalidationRoutes} validationRoutes={validationRoutes} />;
             }}
             exact
           />
@@ -55,6 +57,15 @@ const App: React.FC = () => {
             render={() => {
 
                 return validationRoutes===2?  <PagFallo validMuteFallo={validMuteFallo} setvalidMuteFallo={setvalidMuteFallo} setvalidationRoutes={setvalidationRoutes} setNumIteracion={setNumIteracion}/>:<Redirect  to="/InicioApp" />;
+          
+            }}
+            exact
+          />
+          <Route
+            path="/AppRegalo"
+            render={() => {
+
+                return validationTrue===process.env.REACT_APP_NUMVALID?  <AppRegalo />:<Redirect  to="/InicioApp" />;
           
             }}
             exact

@@ -176,7 +176,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
             window.setTimeout(showButtons6, 6000);
             break;
           case 6:
-              setthemeColor("#09fafa")
+              setthemeColor("#d6fa09")
               //agrega y elimina estilos iniciales para transicion hacia arriba
               document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
               document.getElementById("buttonInicioApp")?.classList.add("disabled");
@@ -203,8 +203,119 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               window.setTimeout(addAnimation7, 3000);
               window.setTimeout(showButtons7, 6000);
               break;
-  
+            case 7:
+              setthemeColor("#5d09fa")
+              //agrega y elimina estilos iniciales para transicion hacia arriba
+              document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+              document.getElementById("ionContent")?.classList.remove("ion-content7");
+              document.getElementById("ionContent")?.classList.add("ion-content8");
+              document.getElementById("tittleApp")?.classList.add("titledisabled");
+              document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss7");
+              //funcion traer texto de arriba
+              const addAnimation8 = () => {
+                setmessage("esta es una pagina con algunos recuerdos que tenemos juntos:3");
+                document.getElementById("tittleApp")?.classList.remove("titledisabled");
+                document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+              };
+              //funcion para mostrar boton
+              const showButtons8=()=>{
+                document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss8");
+              }
+              //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+              window.setTimeout(addAnimation8, 3000);
+              window.setTimeout(showButtons8, 6000);
+              break;
+            case 8:
+              setthemeColor("#fa0909")
+              //agrega y elimina estilos iniciales para transicion hacia arriba
+              document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+              document.getElementById("ionContent")?.classList.remove("ion-content8");
+              document.getElementById("ionContent")?.classList.add("ion-content9");
+              document.getElementById("tittleApp")?.classList.add("titledisabled");
+              document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss8");
+              //funcion traer texto de arriba
+              const addAnimation9 = () => {
+                setmessage("la dividi en varias secciones a las cuales puedes acceder con los botones de abajo");
+                document.getElementById("tittleApp")?.classList.remove("titledisabled");
+                document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+              };
+              //funcion para mostrar boton
+              const showButtons9=()=>{
+                document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss9");
+              }
+              //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+              window.setTimeout(addAnimation9, 3000);
+              window.setTimeout(showButtons9, 6000);
+              break;
 
+            case 9:
+                setthemeColor("#fa09b2")
+                //agrega y elimina estilos iniciales para transicion hacia arriba
+                document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+                document.getElementById("buttonInicioApp")?.classList.add("disabled");
+                document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+                document.getElementById("ionContent")?.classList.remove("ion-content9");
+                document.getElementById("ionContent")?.classList.add("ion-content10");
+                document.getElementById("tittleApp")?.classList.add("titledisabled");
+                document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+                document.getElementById("buttonInicioApp")?.classList.add("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss9");
+                //funcion traer texto de arriba
+                const addAnimation10 = () => {
+                  setmessage("y podras volver a repetir esto en el menu de la esquina superior donde tendras otras funciones");
+                  document.getElementById("tittleApp")?.classList.remove("titledisabled");
+                  document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+                };
+                //funcion para mostrar boton
+                const showButtons10=()=>{
+                  document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+                  document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                  document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss10");
+                }
+                //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+                window.setTimeout(addAnimation10, 3000);
+                window.setTimeout(showButtons10, 6000);
+                break;
+              case 10:
+                setthemeColor("#c8ff00")
+                //agrega y elimina estilos iniciales para transicion hacia arriba
+                document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+                document.getElementById("buttonInicioApp")?.classList.add("disabled");
+                document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+                document.getElementById("ionContent")?.classList.remove("ion-content10");
+                document.getElementById("ionContent")?.classList.add("ion-content11");
+                document.getElementById("tittleApp")?.classList.add("titledisabled");
+                document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+                document.getElementById("buttonInicioApp")?.classList.add("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss10");
+                //funcion traer texto de arriba
+                const addAnimation11 = () => {
+                  setmessage("bueno, ya te dejo ir a ver tu pequeño regalo<3");
+                  document.getElementById("tittleApp")?.classList.remove("titledisabled");
+                  document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+                };
+                //funcion para mostrar boton
+                const showButtons11=()=>{
+                  document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+                  document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                  document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss11");
+                }
+                //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+                window.setTimeout(addAnimation11, 3000);
+                window.setTimeout(showButtons11, 6000);
+                break;
       default:
         
         break;
@@ -231,9 +342,9 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         setvalueInputApp(e.target.value);
         //si entra pasa link pag principal
         if (e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
-          props.setvalidationRoutes(process.env.REACT_APP_NUMVALID);      
+          props.setvalidationRoutes(1);      
           
-          localStorage.setItem('number', `${process.env.REACT_APP_NUMVALID}`) 
+          localStorage.setItem('number', `${1}`) 
         //si no entra pasa link a la pagina de fallo
         }else if(e.target.value===""){
           localStorage.setItem('number', "0") 
@@ -282,6 +393,15 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     }, 1000);
   }
 
+  const clickFinalValidation=()=>{
+    props.setvalidationTrue(process.env.REACT_APP_NUMVALID);      
+    localStorage.setItem('ValiSesion', `${process.env.REACT_APP_NUMVALID}`) 
+    const refresh=()=>{
+      window.location.reload()
+    }
+    window.setTimeout(refresh, 100)
+  }
+
   
 
   return (
@@ -302,8 +422,8 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         
         {props.NumIteracion===4?<IonItem id="inputidapp" ><IonLabel color="dark"  position="floating">Responde</IonLabel><IonInput color="dark" onIonBlur={onblurapp} onIonFocus={onfocusapp}  onIonInput={onChangeValidation} value={valueInputApp}  placeholder="Enter text"></IonInput></IonItem>:null}
         <IonButton
-        routerLink={props.validationRoutes===0?"/InicioApp":props.validationRoutes===1?"/appRegalo":props.validationRoutes===2?"/FalloApp":"/InicioApp"}
-        onClick={(e) => props.NumIteracion===4?clickAppValidation():props.setNumIteracion(props.NumIteracion + 1)}
+        routerLink={props.validationRoutes===0?"/InicioApp":props.NumIteracion===10?"/appRegalo":props.validationRoutes===2?"/FalloApp":"/InicioApp"}
+        onClick={(e) => props.NumIteracion===4?clickAppValidation():props.NumIteracion===10?clickFinalValidation():props.setNumIteracion(props.NumIteracion + 1)}
         id="buttonInicioApp"
         >
           {props.NumIteracion===4?"Enviar":"Next"}
@@ -316,7 +436,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         //cambia de musica dependiendo de la iteracion
           src={props.NumIteracion===5?"https://cdn.pixabay.com/audio/2021/08/09/audio_364cfa6e8b.mp3":props.NumIteracion>5?"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3":"https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"}
           autoPlay
-          
+          muted
           loop={props.NumIteracion===5?false:true}
         />
       </IonContent>
