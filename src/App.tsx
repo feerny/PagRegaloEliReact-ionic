@@ -30,7 +30,7 @@ const App: React.FC = () => {
   //validaciones next
   const [validMuteFallo, setvalidMuteFallo] = useState(1)
   const [NumIteracion, setNumIteracion] = useState<number>(0);
-  const [validationRoutes, setvalidationRoutes] = useState<number>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
+  const [validationRoutes, setvalidationRoutes] = useState<any>(localStorage.getItem("number")?parseInt(localStorage.getItem("number") || ""):0);
   return (
     <IonApp>
 
