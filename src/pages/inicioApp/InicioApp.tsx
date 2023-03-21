@@ -147,6 +147,63 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           window.setTimeout(showButtons5, 6000);
           window.setTimeout(showInput5, 6000);
           break;
+        case 5:
+            setthemeColor("#09fafa")
+            //agrega y elimina estilos iniciales para transicion hacia arriba
+            document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+            document.getElementById("buttonInicioApp")?.classList.add("disabled");
+            document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+            document.getElementById("ionContent")?.classList.remove("ion-content5");
+            document.getElementById("ionContent")?.classList.add("ion-content6");
+            document.getElementById("tittleApp")?.classList.add("titledisabled");
+            document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+            document.getElementById("buttonInicioApp")?.classList.add("disabled");
+            document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss5");
+            //funcion traer texto de arriba
+            const addAnimation6 = () => {
+              setmessage("muuuuuuuuuy bien miamooor");
+              document.getElementById("tittleApp")?.classList.remove("titledisabled");
+              document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+            };
+            //funcion para mostrar boton
+            const showButtons6=()=>{
+              document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+              document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+              document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss6");
+            }
+            //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+            window.setTimeout(addAnimation6, 3000);
+            window.setTimeout(showButtons6, 6000);
+            break;
+          case 6:
+              setthemeColor("#09fafa")
+              //agrega y elimina estilos iniciales para transicion hacia arriba
+              document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
+              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
+              document.getElementById("ionContent")?.classList.remove("ion-content6");
+              document.getElementById("ionContent")?.classList.add("ion-content7");
+              document.getElementById("tittleApp")?.classList.add("titledisabled");
+              document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
+              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss6");
+              //funcion traer texto de arriba
+              const addAnimation7 = () => {
+                setmessage("ahora si vamos a pasar a lo principal");
+                document.getElementById("tittleApp")?.classList.remove("titledisabled");
+                document.getElementById("tittleApp")?.classList.add("tittleInicioApp");
+              };
+              //funcion para mostrar boton
+              const showButtons7=()=>{
+                document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss7");
+              }
+              //ejecuta las funciones depues de x tiempo para aplicar las animaciones
+              window.setTimeout(addAnimation7, 3000);
+              window.setTimeout(showButtons7, 6000);
+              break;
+  
 
       default:
         
@@ -202,6 +259,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     //si entra redireciona a la pagina principal
     if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
       setvalueInputApp("")
+      props.setNumIteracion(props.NumIteracion + 1)
       
     //si no entra redireciona a la pagina de fallo
     }else if(props.validationRoutes===2){
@@ -255,10 +313,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         {props.NumIteracion===3?<img className="imgEmoji" src="/assets/images/emoji.png" alt="emoji"/>:null}
 
         <ReactAudioPlayer
-          src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"
+        //cambia de musica dependiendo de la iteracion
+          src={props.NumIteracion===5?"https://cdn.pixabay.com/audio/2021/08/09/audio_364cfa6e8b.mp3":props.NumIteracion>5?"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3":"https://www.bensound.com/bensound-music/bensound-pianomoment.mp3"}
           autoPlay
-          
-          loop
+          muted
+          loop={props.NumIteracion===5?false:true}
         />
       </IonContent>
     </IonPage>

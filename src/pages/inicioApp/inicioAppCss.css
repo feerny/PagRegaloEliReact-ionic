@@ -47,7 +47,7 @@
 }
 .tittleInicioApp {
     transition: all 1s ease;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-name: slidein;
     text-align: center;
     font-family: 'Concert One', cursive;
@@ -256,5 +256,55 @@ color: #000000;
 }
 
 .custom-alert .buttonAlert{
-    color: white;
+    color: #ffffff;
 }
+/* estilos iteracion 5 */
+.ion-content6 {
+    --background: #09fafa;
+    transition: all 3s ease;
+}
+.ion-content6::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss6 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --background: #09c3c9;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss6:hover {
+    --background: #097765;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
+
+/* estilos iteracion 6 */
+.ion-content7 {
+    --background: #d6fa09;
+    transition: all 3s ease;
+}
+.ion-content7::part(background) {
+    transition: all 3s ease;
+  }
+  .buttonInicioAppCss7 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --background: #c6c909;
+    --transition: all 6s ease;
+    --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.buttonInicioAppCss7:hover {
+    --background: #777009;
+    --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
+
+}
+
