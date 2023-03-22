@@ -62,7 +62,7 @@ const App: React.FC = () => {
             exact
           />
           <Route
-            path="/AppRegalo"
+            path="/AppRegalo/:id"
             render={() => {
 
                 return validationTrue===process.env.REACT_APP_NUMVALID?  <AppRegalo />:<Redirect  to="/InicioApp" />;
@@ -74,6 +74,7 @@ const App: React.FC = () => {
 
           <Redirect exact from="/" to="/all-activities/ComoEstas" />
           <Redirect exact from="/all-activities" to="/all-activities/ComoEstas" />
+          <Redirect exact from="/AppRegalo" to="/AppRegalo/home" />
         </IonRouterOutlet>
       </IonReactRouter>
 
