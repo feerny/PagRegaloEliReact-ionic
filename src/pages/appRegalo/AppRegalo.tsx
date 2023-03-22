@@ -8,7 +8,6 @@ import {
   IonList,
   IonMenu,
   IonMenuToggle,
-  IonPage,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
