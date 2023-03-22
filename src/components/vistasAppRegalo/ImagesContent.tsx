@@ -11,7 +11,7 @@ import {
 
 const ImagesContent: React.FC = () => {
   return (
-    <IonContent>
+    <>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -23,7 +23,7 @@ const ImagesContent: React.FC = () => {
       <IonContent>
         <IonText>Nuestros Momentos Content</IonText>
       </IonContent>
-    </IonContent>
+    </>
   );
 };
 

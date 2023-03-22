@@ -10,7 +10,7 @@ import {
 
 const Regalo: React.FC = () => {
   return (
-    <IonContent>
+    <>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -20,7 +20,7 @@ const Regalo: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>Regalo Content</IonContent>
-    </IonContent>
+    </>
   );
 };
 

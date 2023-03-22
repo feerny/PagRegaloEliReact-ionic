@@ -35,7 +35,6 @@ const App: React.FC = () => {
   const [validationTrue, setvalidationTrue] = useState<string>(localStorage.getItem("ValiSesion")?localStorage.getItem("ValiSesion") || "":"0")
   return (
     <IonApp>
-
       <IonReactRouter>
         <IonRouterOutlet>
           <Route
