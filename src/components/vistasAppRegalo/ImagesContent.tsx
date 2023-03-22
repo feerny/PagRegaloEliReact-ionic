@@ -12,7 +12,7 @@ import {
 
 const ImagesContent: React.FC = () => {
   return (
-    <IonPage>
+    <IonContent>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -24,7 +24,7 @@ const ImagesContent: React.FC = () => {
       <IonContent>
         <IonText>Nuestros Momentos Content</IonText>
       </IonContent>
-    </IonPage>
+    </IonContent>
   );
 };
 

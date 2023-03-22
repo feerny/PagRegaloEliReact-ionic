@@ -11,7 +11,7 @@ import {
 
 const Regalo: React.FC = () => {
   return (
-    <IonPage>
+    <IonContent>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -21,7 +21,7 @@ const Regalo: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>Regalo Content</IonContent>
-    </IonPage>
+    </IonContent>
   );
 };
 

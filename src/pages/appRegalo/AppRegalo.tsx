@@ -53,15 +53,21 @@ const AppRegalo: React.FC = () => {
         </IonMenu>
         <IonTabs>
           <IonRouterOutlet id="main-content">
-          <Route path="/AppRegalo/home" exact={true}>
-            <Regalo />
-          </Route>
-          <Route  path="/AppRegalo/nosotros" exact={true}>
-            <ImagesContent />
-          </Route>
-          <Route  path="/AppRegalo/casts" exact={true}>
-            <RandomCats />
-          </Route>
+            <Route
+              path="/AppRegalo/home"
+              render={() => <Regalo />}
+              exact={true}
+            />
+            <Route
+              path="/AppRegalo/nosotros"
+              render={() => <ImagesContent />}
+              exact={true}
+            />
+            <Route
+              path="/AppRegalo/casts"
+              render={() => <RandomCats />}
+              exact={true}
+            />
             <Redirect exact from="/" to="/AppRegalo/home" />
           </IonRouterOutlet>
 
