@@ -32,7 +32,7 @@ const AppRegalo: React.FC = () => {
         window.setTimeout(refreshAppRegalo,100);
     }
   return (
-    <IonPage>
+    <>
       <IonReactRouter>
         <IonMenu contentId="main-content">
           <IonHeader>
@@ -89,7 +89,7 @@ const AppRegalo: React.FC = () => {
           </IonTabBar>
         </IonTabs>
       </IonReactRouter>
-    </IonPage>
+    </>
   );
 };
 
