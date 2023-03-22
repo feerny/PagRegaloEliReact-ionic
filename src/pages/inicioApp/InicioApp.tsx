@@ -38,8 +38,6 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         document.getElementById("ionContent")?.classList.remove("ion-content1");
         document.getElementById("ionContent")?.classList.add("ion-content2");
         document.getElementById("tittleApp")?.classList.add("titledisabled");
-        document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-        document.getElementById("buttonInicioApp")?.classList.add("disabled");
         document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss");
         //funcion traer texto de arriba
         const addAnimation = () => {
@@ -61,13 +59,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         setthemeColor("#4c0ddf")
         //agrega y elimina estilos iniciales para transicion hacia arriba
         document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-        document.getElementById("buttonInicioApp")?.classList.add("disabled");
+        document.getElementById("buttonInicioApp")?.classList.add("disabled2");
         document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
         document.getElementById("ionContent")?.classList.remove("ion-content2");
         document.getElementById("ionContent")?.classList.add("ion-content3");
         document.getElementById("tittleApp")?.classList.add("titledisabled");
-        document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-        document.getElementById("buttonInicioApp")?.classList.add("disabled");
         document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss2");
         //funcion traer texto de arriba
         const addAnimation3 = () => {
@@ -78,7 +74,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         //funcion para mostrar boton
         const showButtons3=()=>{
           document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-          document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+          document.getElementById("buttonInicioApp")?.classList.remove("disabled2");
           document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss3");
         }
         //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -89,13 +85,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           setthemeColor("#0fe42b")
           //agrega y elimina estilos iniciales para transicion hacia arriba
           document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-          document.getElementById("buttonInicioApp")?.classList.add("disabled");
+          document.getElementById("buttonInicioApp")?.classList.add("disabled3");
           document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
           document.getElementById("ionContent")?.classList.remove("ion-content3");
           document.getElementById("ionContent")?.classList.add("ion-content4");
           document.getElementById("tittleApp")?.classList.add("titledisabled");
-          document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-          document.getElementById("buttonInicioApp")?.classList.add("disabled");
           document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss3");
           //funcion traer texto de arriba
           const addAnimation4 = () => {
@@ -106,7 +100,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           //funcion para mostrar boton
           const showButtons4=()=>{
             document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-            document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+            document.getElementById("buttonInicioApp")?.classList.remove("disabled3");
             document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss4");
           }
           //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -117,14 +111,12 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           setthemeColor("#e45d0f")
           //agrega y elimina estilos iniciales para transicion hacia arriba
           document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-          document.getElementById("buttonInicioApp")?.classList.add("disabled");
+          document.getElementById("buttonInicioApp")?.classList.add("disabled4");
           document.getElementById("inputidapp")?.classList.add("disabledInputApp");
           document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
           document.getElementById("ionContent")?.classList.remove("ion-content4");
           document.getElementById("ionContent")?.classList.add("ion-content5");
           document.getElementById("tittleApp")?.classList.add("titledisabled");
-          document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-          document.getElementById("buttonInicioApp")?.classList.add("disabled");
           document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss4");
           //funcion traer texto de arriba
           const addAnimation5 = () => {
@@ -135,7 +127,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           //funcion para mostrar boton
           const showButtons5=()=>{
             document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-            document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+            document.getElementById("buttonInicioApp")?.classList.remove("disabled4");
             document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss5");
           }
           const showInput5=()=>{
@@ -151,13 +143,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
             setthemeColor("#09fafa")
             //agrega y elimina estilos iniciales para transicion hacia arriba
             document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-            document.getElementById("buttonInicioApp")?.classList.add("disabled");
+            document.getElementById("buttonInicioApp")?.classList.add("disabled5");
             document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
             document.getElementById("ionContent")?.classList.remove("ion-content5");
             document.getElementById("ionContent")?.classList.add("ion-content6");
             document.getElementById("tittleApp")?.classList.add("titledisabled");
-            document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-            document.getElementById("buttonInicioApp")?.classList.add("disabled");
             document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss5");
             //funcion traer texto de arriba
             const addAnimation6 = () => {
@@ -168,7 +158,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
             //funcion para mostrar boton
             const showButtons6=()=>{
               document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-              document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+              document.getElementById("buttonInicioApp")?.classList.remove("disabled5");
               document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss6");
             }
             //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -179,13 +169,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               setthemeColor("#d6fa09")
               //agrega y elimina estilos iniciales para transicion hacia arriba
               document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("buttonInicioApp")?.classList.add("disabled6");
               document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
               document.getElementById("ionContent")?.classList.remove("ion-content6");
               document.getElementById("ionContent")?.classList.add("ion-content7");
               document.getElementById("tittleApp")?.classList.add("titledisabled");
-              document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-              document.getElementById("buttonInicioApp")?.classList.add("disabled");
               document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss6");
               //funcion traer texto de arriba
               const addAnimation7 = () => {
@@ -196,7 +184,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               //funcion para mostrar boton
               const showButtons7=()=>{
                 document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-                document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("disabled6");
                 document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss7");
               }
               //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -207,13 +195,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               setthemeColor("#5d09fa")
               //agrega y elimina estilos iniciales para transicion hacia arriba
               document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("buttonInicioApp")?.classList.add("disabled7");
               document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
               document.getElementById("ionContent")?.classList.remove("ion-content7");
               document.getElementById("ionContent")?.classList.add("ion-content8");
               document.getElementById("tittleApp")?.classList.add("titledisabled");
-              document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-              document.getElementById("buttonInicioApp")?.classList.add("disabled");
               document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss7");
               //funcion traer texto de arriba
               const addAnimation8 = () => {
@@ -224,7 +210,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               //funcion para mostrar boton
               const showButtons8=()=>{
                 document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-                document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("disabled7");
                 document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss8");
               }
               //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -235,13 +221,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               setthemeColor("#fa0909")
               //agrega y elimina estilos iniciales para transicion hacia arriba
               document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-              document.getElementById("buttonInicioApp")?.classList.add("disabled");
+              document.getElementById("buttonInicioApp")?.classList.add("disabled8");
               document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
               document.getElementById("ionContent")?.classList.remove("ion-content8");
               document.getElementById("ionContent")?.classList.add("ion-content9");
               document.getElementById("tittleApp")?.classList.add("titledisabled");
-              document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-              document.getElementById("buttonInicioApp")?.classList.add("disabled");
               document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss8");
               //funcion traer texto de arriba
               const addAnimation9 = () => {
@@ -252,7 +236,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
               //funcion para mostrar boton
               const showButtons9=()=>{
                 document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-                document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                document.getElementById("buttonInicioApp")?.classList.remove("disabled8");
                 document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss9");
               }
               //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -264,13 +248,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
                 setthemeColor("#fa09b2")
                 //agrega y elimina estilos iniciales para transicion hacia arriba
                 document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-                document.getElementById("buttonInicioApp")?.classList.add("disabled");
+                document.getElementById("buttonInicioApp")?.classList.add("disabled9");
                 document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
                 document.getElementById("ionContent")?.classList.remove("ion-content9");
                 document.getElementById("ionContent")?.classList.add("ion-content10");
                 document.getElementById("tittleApp")?.classList.add("titledisabled");
-                document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-                document.getElementById("buttonInicioApp")?.classList.add("disabled");
                 document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss9");
                 //funcion traer texto de arriba
                 const addAnimation10 = () => {
@@ -281,7 +263,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
                 //funcion para mostrar boton
                 const showButtons10=()=>{
                   document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-                  document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                  document.getElementById("buttonInicioApp")?.classList.remove("disabled9");
                   document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss10");
                 }
                 //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -292,13 +274,11 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
                 setthemeColor("#c8ff00")
                 //agrega y elimina estilos iniciales para transicion hacia arriba
                 document.getElementById("buttonInicioApp")?.setAttribute("disabled","true")
-                document.getElementById("buttonInicioApp")?.classList.add("disabled");
+                document.getElementById("buttonInicioApp")?.classList.add("disabled10");
                 document.getElementById("tittleApp")?.classList.remove("tittleInicioApp");
                 document.getElementById("ionContent")?.classList.remove("ion-content10");
                 document.getElementById("ionContent")?.classList.add("ion-content11");
                 document.getElementById("tittleApp")?.classList.add("titledisabled");
-                document.getElementById("buttonInicioApp")?.setAttribute("disabled", "true");
-                document.getElementById("buttonInicioApp")?.classList.add("disabled");
                 document.getElementById("buttonInicioApp")?.classList.remove("buttonInicioAppCss10");
                 //funcion traer texto de arriba
                 const addAnimation11 = () => {
@@ -309,7 +289,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
                 //funcion para mostrar boton
                 const showButtons11=()=>{
                   document.getElementById("buttonInicioApp")?.removeAttribute("disabled");
-                  document.getElementById("buttonInicioApp")?.classList.remove("disabled");
+                  document.getElementById("buttonInicioApp")?.classList.remove("disabled10");
                   document.getElementById("buttonInicioApp")?.classList.add("buttonInicioAppCss11");
                 }
                 //ejecuta las funciones depues de x tiempo para aplicar las animaciones
@@ -394,12 +374,18 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
   }
 
   const clickFinalValidation=()=>{
-    props.setvalidationTrue(process.env.REACT_APP_NUMVALID);      
-    localStorage.setItem('ValiSesion', `${process.env.REACT_APP_NUMVALID}`) 
-    const refresh=()=>{
+    if (props.validationRoutes===1) {
+      props.setvalidationTrue(process.env.REACT_APP_NUMVALID);      
+      localStorage.setItem('ValiSesion', `${process.env.REACT_APP_NUMVALID}`) 
+      const refresh=()=>{
+        window.location.reload()
+      }
+      window.setTimeout(refresh, 100)
+    }else{
+      alert("completa la validacion")
       window.location.reload()
     }
-    window.setTimeout(refresh, 100)
+
   }
 
   

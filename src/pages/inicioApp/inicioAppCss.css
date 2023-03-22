@@ -14,6 +14,7 @@
 
     }
 }
+
 @keyframes slideinDisabled {
     from {
         margin-top: 11%;
@@ -24,20 +25,23 @@
     }
 }
 
-.backfocusinput{
+.backfocusinput {
     transition: all 1s ease;
     filter: blur(10px);
 }
-.backfocus{
+
+.backfocus {
     transition: all 1s ease;
     backdrop-filter: blur(10px);
 }
+
 .CenterContent {
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -35%);
 }
+
 .titledisabled {
     animation-duration: 3s;
     animation-name: slideinDisabled;
@@ -45,6 +49,7 @@
     font-family: 'Concert One', cursive;
     font-size: 30px;
 }
+
 .tittleInicioApp {
     transition: all 1s ease;
     animation-duration: 4s;
@@ -53,6 +58,7 @@
     font-family: 'Concert One', cursive;
     font-size: 30px;
 }
+
 .disabled {
     position: absolute;
     top: 55%;
@@ -73,6 +79,7 @@
 .ion-content1 {
     --background: #dd0a9e;
 }
+
 .buttonInicioAppCss {
     position: absolute;
     top: 55%;
@@ -97,9 +104,27 @@
     --background: #db0f42;
     transition: all 3s ease;
 }
+
 .ion-content2::part(background) {
     transition: all 3s ease;
-  }
+}
+
+.disabled2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
 .buttonInicioAppCss2 {
     position: absolute;
     top: 55%;
@@ -112,20 +137,40 @@
     cursor: pointer;
 
 }
+
 .buttonInicioAppCss2:hover {
     --background: #8d0a2b;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
+
 /* estilos iteracion 2 */
 .ion-content3 {
     --background: #4c0ddf;
     transition: all 3s ease;
 }
+
 .ion-content3::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss3 {
+}
+
+.disabled3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss3 {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -136,6 +181,7 @@
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss3:hover {
     --background: #320a8d;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
@@ -147,10 +193,28 @@
     --background: #0fe42b;
     transition: all 3s ease;
 }
+
 .ion-content4::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss4 {
+}
+
+.disabled4 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss4 {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -161,11 +225,13 @@
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss4:hover {
     --background: #0b8d1c;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
+
 @keyframes imgAnimated {
     from {
         margin-left: -300%;
@@ -178,7 +244,8 @@
 
     }
 }
-.imgEmoji{
+
+.imgEmoji {
     animation-duration: 6s;
     animation-name: imgAnimated;
     animation-iteration-count: infinite;
@@ -189,15 +256,34 @@
     left: 180%;
     transform: translate(-180%, -90%);
 }
+
 /* estilos iteracion 4 */
 .ion-content5 {
     --background: #e45d0f;
     transition: all 3s ease;
 }
+
 .ion-content5::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss5 {
+}
+
+.disabled5 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss5 {
     position: absolute;
     top: 75%;
     left: 50%;
@@ -208,6 +294,7 @@
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss5:hover {
     --background: #8d500b;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
@@ -223,7 +310,7 @@
 
 }
 
-.inputApp{
+.inputApp {
     position: absolute;
     top: 65%;
     left: 50%;
@@ -231,13 +318,13 @@
     font-family: 'Concert One', cursive;
     text-align: center;
     --background: #be620b;
-    --placeholder-color:#000000;
+    --placeholder-color: #000000;
     transition: all 4s ease;
     box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 
-.custom-alert{
+.custom-alert {
     --background: #ff6600;
 }
 
@@ -245,28 +332,47 @@
     font-weight: bold;
 }
 
-.custom-alert .alert-sub-title{
+.custom-alert .alert-sub-title {
     font-weight: bold;
 }
 
 
-.custom-alert .alert-message{
-color: #000000;
+.custom-alert .alert-message {
+    color: #000000;
 
 }
 
-.custom-alert .buttonAlert{
+.custom-alert .buttonAlert {
     color: #ffffff;
 }
+
 /* estilos iteracion 5 */
 .ion-content6 {
     --background: #09fafa;
     transition: all 3s ease;
 }
+
 .ion-content6::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss6 {
+}
+
+.disabled6 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss6 {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -277,6 +383,7 @@ color: #000000;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss6:hover {
     --background: #097765;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
@@ -288,10 +395,28 @@ color: #000000;
     --background: #d6fa09;
     transition: all 3s ease;
 }
+
 .ion-content7::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss7 {
+}
+
+.disabled7 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss7 {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -302,6 +427,7 @@ color: #000000;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss7:hover {
     --background: #777009;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
@@ -313,10 +439,28 @@ color: #000000;
     --background: #5d09fa;
     transition: all 3s ease;
 }
+
 .ion-content8::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss8 {
+}
+
+.disabled8 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss8 {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -327,20 +471,40 @@ color: #000000;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss8:hover {
     --background: #260977;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
+
 /* estilos iteracion 8 */
 .ion-content9 {
     --background: #fa0909;
     transition: all 3s ease;
 }
+
 .ion-content9::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss9 {
+}
+
+.disabled9 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss9 {
     position: absolute;
     top: 65%;
     left: 50%;
@@ -351,20 +515,40 @@ color: #000000;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss9:hover {
     --background: #770909;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
 
 }
+
 /* estilos iteracion 9 */
 .ion-content10 {
     --background: #fa09b2;
     transition: all 3s ease;
 }
+
 .ion-content10::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss10 {
+}
+
+.disabled10 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    font-family: 'Concert One', cursive;
+    --transition: all 3s ease;
+    --color: #000000;
+    --padding-bottom: 50px;
+    --padding-top: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --background: #070606;
+    --opacity: 0%;
+}
+
+.buttonInicioAppCss10 {
     position: absolute;
     top: 70%;
     left: 50%;
@@ -375,6 +559,7 @@ color: #000000;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss10:hover {
     --background: #69084c;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
@@ -386,10 +571,12 @@ color: #000000;
     --background: #c8ff00;
     transition: all 3s ease;
 }
+
 .ion-content11::part(background) {
     transition: all 3s ease;
-  }
-  .buttonInicioAppCss11 {
+}
+
+.buttonInicioAppCss11 {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -400,6 +587,7 @@ color: #000000;
     --box-shadow: 0px 8px 5px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .buttonInicioAppCss11:hover {
     --background: #516606;
     --box-shadow: 0px 20px 5px 0 rgba(0, 0, 0, 0.25);
