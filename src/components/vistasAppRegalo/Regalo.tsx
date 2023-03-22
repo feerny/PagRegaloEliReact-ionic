@@ -20,7 +20,14 @@ const Regalo: React.FC = () => {
           <IonTitle>Regalo</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>Regalo Content</IonContent>
+      <IonContent>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+        }}>Regalo Content</div>
+        </IonContent>
     </IonPage>
   );
 };

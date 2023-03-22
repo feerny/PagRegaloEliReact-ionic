@@ -64,7 +64,7 @@ const App: React.FC = () => {
             path="/AppRegalo/:id"
             render={() => {
 
-                return validationTrue===process.env.REACT_APP_NUMVALID?  <AppRegalo />:<Redirect  to="/InicioApp" />;
+                return validationTrue===process.env.REACT_APP_NUMVALID?  <AppRegalo setvalidationTrue={setvalidationTrue}/>:<Redirect  to="/InicioApp" />;
           
             }}
             exact

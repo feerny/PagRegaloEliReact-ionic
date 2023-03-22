@@ -5,7 +5,6 @@ import {
   IonHeader,
   IonMenuButton,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -22,7 +21,13 @@ const RandomCats: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonText>Generador de gatos Randoms Content</IonText>
+      <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+        }}> Generador de gatos Randoms Content</div>
+    
       </IonContent>
     </IonPage>
   );

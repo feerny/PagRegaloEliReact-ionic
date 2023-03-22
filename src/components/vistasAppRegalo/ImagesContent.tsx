@@ -5,7 +5,6 @@ import {
   IonHeader,
   IonMenuButton,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -22,7 +21,13 @@ const ImagesContent: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonText>Nuestros Momentos Content</IonText>
+      <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+        }}>Nuestros Momentos Content</div>
+        
       </IonContent>
     </IonPage>
   );

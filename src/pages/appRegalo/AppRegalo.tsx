@@ -20,14 +20,13 @@ import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import RandomCats from "../../components/vistasAppRegalo/RandomCats";
+import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
 
-const AppRegalo: React.FC = () => {
+const AppRegalo: React.FC<AppRegaloProps> = (props) => {
     const clearLocalSesion=()=>{
         localStorage.clear();
-        const refreshAppRegalo=()=>{
-            window.location.reload()
-        };
-        window.setTimeout(refreshAppRegalo,100);
+        props.setvalidationTrue("0");
+        window.location.reload();
     }
   return (
     <IonContent>
@@ -39,8 +38,8 @@ const AppRegalo: React.FC = () => {
           </IonHeader>
           <IonContent class="ion-padding">
             <IonList>
-              <IonMenuToggle>
-                <IonItem onClick={()=>clearLocalSesion()} routerLink="/all-activities/ComoEstas">
+              <IonMenuToggle onClick={()=>clearLocalSesion()}  >
+                <IonItem routerLink="/all-activities/ComoEstas" lines="none"  >
                     <IonIcon slot="start" icon={trash} />
                     <IonLabel>Cerrar la sesión</IonLabel>
                 </IonItem>
