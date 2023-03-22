@@ -8,6 +8,7 @@ import {
   IonList,
   IonMenu,
   IonMenuToggle,
+  IonPage,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
@@ -31,8 +32,7 @@ const AppRegalo: React.FC = () => {
         window.setTimeout(refreshAppRegalo,100);
     }
   return (
-    <>
-      <IonReactRouter>
+    <IonPage>
         <IonMenu contentId="main-content">
           <IonHeader>
             <IonToolbar>
@@ -87,8 +87,7 @@ const AppRegalo: React.FC = () => {
             </IonTabButton>
           </IonTabBar>
         </IonTabs>
-      </IonReactRouter>
-    </>
+    </IonPage>
   );
 };
 
