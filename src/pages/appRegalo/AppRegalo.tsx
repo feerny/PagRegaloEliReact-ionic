@@ -16,7 +16,6 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
 import { gift, people, earth, trash } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
