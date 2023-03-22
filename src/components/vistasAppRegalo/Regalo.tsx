@@ -4,13 +4,14 @@ import {
   IonContent,
   IonHeader,
   IonMenuButton,
+  IonPage,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 
 const Regalo: React.FC = () => {
   return (
-    <>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -20,7 +21,7 @@ const Regalo: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>Regalo Content</IonContent>
-    </>
+    </IonPage>
   );
 };
 

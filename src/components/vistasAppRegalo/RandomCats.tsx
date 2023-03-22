@@ -4,6 +4,7 @@ import {
   IonContent,
   IonHeader,
   IonMenuButton,
+  IonPage,
   IonText,
   IonTitle,
   IonToolbar,
@@ -11,7 +12,7 @@ import {
 
 const RandomCats: React.FC = () => {
   return (
-    <>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -23,7 +24,7 @@ const RandomCats: React.FC = () => {
       <IonContent>
         <IonText>Generador de gatos Randoms Content</IonText>
       </IonContent>
-    </>
+    </IonPage>
   );
 };
 
