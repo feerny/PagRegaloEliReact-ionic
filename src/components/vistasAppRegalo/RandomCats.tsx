@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
-    IonButtons,
+  IonButton,
+  IonButtons,
   IonContent,
   IonHeader,
   IonMenuButton,
@@ -10,6 +11,14 @@ import {
 } from "@ionic/react";
 
 const RandomCats: React.FC = () => {
+  const generateCat = () => {
+    console.log("generado");
+  };
+
+  useEffect(() => {
+    generateCat()
+  },[])
+  
   return (
     <IonPage>
       <IonHeader>
@@ -21,13 +30,18 @@ const RandomCats: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-      <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-        }}> Generador de gatos Randoms Content</div>
-    
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+          }}
+        >
+          
+          
+          <IonButton onClick={()=>generateCat()}>Generate</IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
