@@ -21,6 +21,7 @@ import Regalo from "../../components/vistasAppRegalo/Regalo";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import RandomCats from "../../components/vistasAppRegalo/RandomCats";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
+import "./appRegaloCss.css"
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //limpia datos de localStorage y vuelve a vista inicial
