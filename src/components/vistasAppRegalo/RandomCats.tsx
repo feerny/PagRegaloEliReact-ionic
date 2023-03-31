@@ -8,6 +8,8 @@ import {
   IonImg,
   IonMenuButton,
   IonPage,
+  IonProgressBar,
+  IonSpinner,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -62,6 +64,7 @@ const RandomCats: React.FC = () => {
             <IonMenuButton></IonMenuButton>
           </IonButtons>
           <IonTitle>Generador de Gatos randoms</IonTitle>
+          {isLoading?<IonProgressBar type="indeterminate"></IonProgressBar>:null}
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -73,9 +76,9 @@ const RandomCats: React.FC = () => {
             height: "100%",
           }}
         >
-          <div >
+          <div className="spinnerCats">
            {/* si el estado es loading muestra un loading */}
-          {isLoading?<IonImg className="imgCats" src={"https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif"} alt={"loading..."}></IonImg>:<IonImg className="imgCats" src={imgUrl} alt={idImg}></IonImg>}
+          {isLoading?<IonSpinner  name="bubbles"/>:<IonImg className="imgCats" src={imgUrl} alt={idImg}></IonImg>}
           <IonButton color="dark" fill="outline" expand="block" onClick={()=>generateCat()}>Dame Otro Gato<IonIcon slot="end" icon={paw}></IonIcon></IonButton>
           </div>
         </div>
