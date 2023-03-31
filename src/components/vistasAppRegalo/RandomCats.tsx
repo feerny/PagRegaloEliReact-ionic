@@ -8,7 +8,6 @@ import {
   IonImg,
   IonMenuButton,
   IonPage,
-  IonRefresherContent,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -76,7 +75,7 @@ const RandomCats: React.FC = () => {
         >
           <div >
            {/* si el estado es loading muestra un loading */}
-          {isLoading?<IonRefresherContent/>:<IonImg className="imgCats" src={imgUrl} alt={idImg}></IonImg>}
+          {isLoading?<IonImg className="imgCats" src={"https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif"} alt={"loading..."}></IonImg>:<IonImg className="imgCats" src={imgUrl} alt={idImg}></IonImg>}
           <IonButton color="dark" fill="outline" expand="block" onClick={()=>generateCat()}>Dame Otro Gato<IonIcon slot="end" icon={paw}></IonIcon></IonButton>
           </div>
         </div>

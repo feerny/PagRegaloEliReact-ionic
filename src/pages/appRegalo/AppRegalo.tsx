@@ -8,12 +8,15 @@ import {
   IonList,
   IonMenu,
   IonMenuToggle,
+  IonRefresher,
+  IonRefresherContent,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
   IonTitle,
   IonToolbar,
+  RefresherEventDetail,
 } from "@ionic/react";
 import { gift, people, earth, trash } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
@@ -30,8 +33,19 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         props.setvalidationTrue("0");
         window.location.reload();
     }
+      //funcion para refrescar la pagina
+  function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      window.location.reload();
+      event.detail.complete();
+    }, 1000);
+  }
   return (
     <IonContent>
+        <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+          <IonRefresherContent></IonRefresherContent>
+        </IonRefresher>
         <IonMenu contentId="main-content">
           <IonHeader>
             <IonToolbar>
