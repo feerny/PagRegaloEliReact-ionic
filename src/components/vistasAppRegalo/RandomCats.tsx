@@ -64,7 +64,7 @@ const RandomCats: React.FC = () => {
             <IonMenuButton></IonMenuButton>
           </IonButtons>
           <IonTitle>Generador de Gatos randoms</IonTitle>
-          {isLoading?<IonProgressBar type="indeterminate"></IonProgressBar>:null}
+          {isLoading?<IonProgressBar color="dark" type="indeterminate"></IonProgressBar>:null}
         </IonToolbar>
       </IonHeader>
       <IonContent>
