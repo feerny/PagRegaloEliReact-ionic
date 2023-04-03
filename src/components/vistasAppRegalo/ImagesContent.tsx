@@ -47,7 +47,7 @@ const ImagesContent: React.FC = () => {
         <div>
           <IonList>
             {dataCards.map((item, index) => (
-              <IonCard>
+              <IonCard id={`section${index}`}>
                 { index===9 || index===5? (
                   <video width="360rem" controls>
                     <source src={item.image} type="video/mp4" />
@@ -57,7 +57,7 @@ const ImagesContent: React.FC = () => {
                 )}
                 <IonCardHeader>
                   <IonCardTitle>{item.title}</IonCardTitle>
-                  <IonCardSubtitle>{item.date}</IonCardSubtitle>
+                  {item.date!==""?<IonCardSubtitle>{item.date}</IonCardSubtitle>:null}
                 </IonCardHeader>
 
                 <IonCardContent>{item.description}</IonCardContent>

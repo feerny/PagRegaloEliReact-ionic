@@ -61,5 +61,25 @@ export const dataCards: DataCards[] = [
     date: "MARZO 2022",
     description:
       "Mi meta simpre fue morderte un muslo y lo logre >:)",
+  },  {
+    image: "/assets/images/img10Marzo-2022.jpg",
+    title: "JIJIJIJIJIJIJI",
+    date: "MARZO 2022",
+    description:
+      "Toda hermosa ahhhhhhhhh como la amoooooooooooooooooo",
+  }, {
+    image: "/assets/images/img11Marzo-2022.jpg",
+    title: "GRRRRRR",
+    date: "MARZO 2022",
+    description:
+      "De uste si me dejo morder miamor",
   },
+  {
+    image: "/assets/images/img12Marzo-2022.jpg",
+    title: "Tirando facha",
+    date: "MARZO 2022",
+    description:
+      "Tremenda facha simpre te has cargado cielo",
+  },
+  
 ];

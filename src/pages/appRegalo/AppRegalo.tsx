@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  IonAccordion,
+  IonAccordionGroup,
   IonContent,
   IonHeader,
   IonIcon,
@@ -15,13 +17,14 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { gift, people, earth, trash } from "ionicons/icons";
+import { gift, people, earth, trash, list } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import RandomCats from "../../components/vistasAppRegalo/RandomCats";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
 import "./appRegaloCss.css";
+
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //limpia datos de localStorage y vuelve a vista inicial
@@ -47,6 +50,21 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                 <IonLabel>Cerrar la sesión</IonLabel>
               </IonItem>
             </IonMenuToggle>
+            <IonItem lines="none">
+            <IonIcon slot="start" icon={list} />
+              <IonAccordionGroup>
+                <IonAccordion value="first">
+                  <IonItem lines="none" slot="header" color="light">
+                    <IonLabel>Secciones</IonLabel>
+                  </IonItem>
+                  <div className="ion-padding" slot="content">
+                    <IonMenuToggle >
+                      <IonItem href="/AppRegalo/nosotros#section0">Antes de conocernos</IonItem>
+                    </IonMenuToggle>
+                  </div>
+                </IonAccordion>
+                </IonAccordionGroup>
+            </IonItem>
           </IonList>
         </IonContent>
       </IonMenu>
