@@ -7,9 +7,11 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+
 } from "@ionic/react";
 
 const Regalo: React.FC = () => {
+
   return (
     <IonPage>
       <IonHeader>
@@ -21,13 +23,18 @@ const Regalo: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-        }}>Regalo Content</div>
-        </IonContent>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+          }}
+        >
+          Regalo Content{" "}
+          
+        </div>
+      </IonContent>
     </IonPage>
   );
 };

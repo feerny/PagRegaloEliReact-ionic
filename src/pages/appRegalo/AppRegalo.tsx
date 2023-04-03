@@ -8,15 +8,12 @@ import {
   IonList,
   IonMenu,
   IonMenuToggle,
-  IonRefresher,
-  IonRefresherContent,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
   IonTitle,
   IonToolbar,
-  RefresherEventDetail,
 } from "@ionic/react";
 import { gift, people, earth, trash } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
@@ -24,82 +21,72 @@ import Regalo from "../../components/vistasAppRegalo/Regalo";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import RandomCats from "../../components/vistasAppRegalo/RandomCats";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
-import "./appRegaloCss.css"
+import "./appRegaloCss.css";
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //limpia datos de localStorage y vuelve a vista inicial
-    const clearLocalSesion=()=>{
-        localStorage.clear();
-        props.setvalidationTrue("0");
-        window.location.reload();
-    }
-      //funcion para refrescar la pagina
-  function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
-    setTimeout(() => {
-      // Any calls to load data go here
-      window.location.reload();
-      event.detail.complete();
-    }, 1000);
-  }
+  const clearLocalSesion = () => {
+    localStorage.clear();
+    props.setvalidationTrue("0");
+    window.location.reload();
+  };
+
   return (
     <IonContent>
-        <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
-          <IonRefresherContent></IonRefresherContent>
-        </IonRefresher>
-        <IonMenu contentId="main-content">
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle>Menu Content</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-          <IonContent class="ion-padding">
-            <IonList>
-              <IonMenuToggle onClick={()=>clearLocalSesion()}  >
-                <IonItem routerLink="/all-activities/ComoEstas" lines="none"  >
-                    <IonIcon slot="start" icon={trash} />
-                    <IonLabel>Cerrar la sesión</IonLabel>
-                </IonItem>
-              </IonMenuToggle>
-            </IonList>
-          </IonContent>
-        </IonMenu>
-        <IonTabs>
-          <IonRouterOutlet id="main-content">
-            <Route
-              path="/AppRegalo/home"
-              render={() => <Regalo />}
-              exact={true}
-            />
-            <Route
-              path="/AppRegalo/nosotros"
-              render={() => <ImagesContent />}
-              exact={true}
-            />
-            <Route
-              path="/AppRegalo/casts"
-              render={() => <RandomCats />}
-              exact={true}
-            />
-            <Redirect exact from="/" to="/AppRegalo/home" />
-          </IonRouterOutlet>
+      <IonMenu contentId="main-content">
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Menu Content</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent class="ion-padding">
+          <IonList>
+            <IonMenuToggle onClick={() => clearLocalSesion()}>
+              <IonItem routerLink="/all-activities/ComoEstas" lines="none">
+                <IonIcon slot="start" icon={trash} />
+                <IonLabel>Cerrar la sesión</IonLabel>
+              </IonItem>
+            </IonMenuToggle>
+          </IonList>
+        </IonContent>
+      </IonMenu>
+      <IonTabs>
+        <IonRouterOutlet id="main-content">
+          <Route
+            path="/AppRegalo/home"
+            render={() => <Regalo />}
+            exact={true}
+          />
+          <Route
+            path="/AppRegalo/nosotros"
+            render={() => <ImagesContent />}
+            exact={true}
+          />
+          <Route
+            path="/AppRegalo/casts"
+            render={() => <RandomCats />}
+            exact={true}
+          />
+          <Redirect exact from="/" to="/AppRegalo/home" />
+        </IonRouterOutlet>
 
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="home" href="/AppRegalo/home">
-              <IonIcon icon={gift} />
-              <IonLabel>Regalito</IonLabel>
-            </IonTabButton>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="home" href="/AppRegalo/home">
+            <IonIcon icon={gift} />
+            <IonLabel>Regalito</IonLabel>
+          </IonTabButton>
 
-            <IonTabButton tab="nosotros" href="/AppRegalo/nosotros">
-              <IonIcon icon={people} />
-              <IonLabel>Nosotros</IonLabel>
-            </IonTabButton>
+          <IonTabButton tab="nosotros" href="/AppRegalo/nosotros">
+            <IonIcon icon={people} />
+            <IonLabel>Nosotros</IonLabel>
+          </IonTabButton>
 
-            <IonTabButton tab="casts" href="/AppRegalo/casts">
-              <IonIcon icon={earth} />
-              <IonLabel>Gatitos</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
+          <IonTabButton tab="casts" href="/AppRegalo/casts">
+            <IonIcon icon={earth} />
+            <IonLabel>Gatitos</IonLabel>
+          </IonTabButton>
+        </IonTabBar>
+      </IonTabs>
     </IonContent>
   );
 };
