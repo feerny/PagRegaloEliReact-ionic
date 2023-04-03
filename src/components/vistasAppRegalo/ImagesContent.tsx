@@ -48,7 +48,7 @@ const ImagesContent: React.FC = () => {
           <IonList>
             {dataCards.map((item, index) => (
               <IonCard>
-                {index === 4 || index===8? (
+                { index===9 || index===5? (
                   <video width="360rem" controls>
                     <source src={item.image} type="video/mp4" />
                   </video>
