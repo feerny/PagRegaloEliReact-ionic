@@ -19,8 +19,13 @@ import {
 } from "@ionic/react";
 
 import { dataCards } from "../../data/dataCards/DataCards";
+import { ImagesContentProps } from "../../data/imagesContentProps/ImagesContentProps";
 
-const ImagesContent: React.FC = () => {
+const ImagesContent: React.FC<ImagesContentProps> = (props) => {
+  //funcion para enviar estado de video(si se reproduce o no)
+  const videoPlayOrNot=(validation:boolean)=>{
+    props.setisOnPlayVideo(validation)
+  }
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
     setTimeout(() => {
@@ -47,9 +52,9 @@ const ImagesContent: React.FC = () => {
         <div>
           <IonList>
             {dataCards.map((item, index) => (
-              <IonCard id={`section${index}`}>
-                { index===9 || index===5? (
-                  <video width="360rem" controls>
+              <IonCard key={index} id={`section${index}`}>
+                { item.image.split(".")[1]==="mp4"? (
+                  <video onPause={()=>videoPlayOrNot(false)} onPlay={()=>videoPlayOrNot(true)}  width="370rem" controls>
                     <source src={item.image} type="video/mp4" />
                   </video>
                 ) : (

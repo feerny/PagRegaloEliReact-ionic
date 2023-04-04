@@ -18,7 +18,7 @@ export const dataCards: DataCards[] = [
     title: "Primer edit",
     date: "FEBRERO DE 2022",
     description:
-      "La primera foto que edite de tu jeta, ome si que estaba enamorado nopuedeser",
+      "La primera foto que edite de tu jeta, ome si que estoy enamorado nopuedeser",
   },  {
     image: "/assets/images/img3Febrero-2022.jpg",
     title: "Llamada en pijama",
@@ -73,13 +73,80 @@ export const dataCards: DataCards[] = [
     date: "MARZO 2022",
     description:
       "De uste si me dejo morder miamor",
-  },
-  {
+  }, {
     image: "/assets/images/img12Marzo-2022.jpg",
     title: "Tirando facha",
     date: "MARZO 2022",
     description:
       "Tremenda facha simpre te has cargado cielo",
+  }, {
+    image: "/assets/images/img13Abril-2022.jpg",
+    title: "Mas facha aun",
+    date: "ABRIL 2022",
+    description:
+      "Mientras mas pasa el tiempo mas facha te vuelves cielo",
+  }, {
+    image: "/assets/images/img14Mayo-2022.mp4",
+    title: "Que flow",
+    date: "MAYO 2022",
+    description:
+      "Y el tuyo tambien cielo toda estilosa",
+  },{
+    image: "/assets/images/img15Mayo-2022.jpg",
+    title: "Con gafas:o",
+    date: "MAYO 2022",
+    description:
+      "Me di cuenta que las gafas te re lucen",
+  },{
+    image: "/assets/images/img16Mayo-2022.mp4",
+    title: "Estilo nivel God",
+    date: "MAYO 2022",
+    description:
+      "Todos tus estilos son god miamor",
+  },{
+    image: "/assets/images/img17Mayo-2022.jpg",
+    title: "Mmmmm muslos",
+    date: "MAYO 2022",
+    description:
+      "Con maya fuaaaa me re encantan tus piernas",
+  },{
+    image: "/assets/images/img18Mayo-2022.jpg",
+    title: "Mera gotica",
+    date: "MAYO 2022",
+    description:
+      "Tu con esas mayas me encantaaaaaaasssss",
+  },{
+    image: "/assets/images/img19Mayo-2022.jpg",
+    title: "Mera linda",
+    date: "MAYO 2022",
+    description:
+      "Y con ese saco te ves re linda y cute, ese es con el que dormiste la primera vez que nos vimos jiji",
+  },{
+    image: "/assets/images/img20Mayo-2022.jpg",
+    title: "Ojo",
+    date: "MAYO 2022",
+    description:
+      "Ojo",
+  },{
+    image: "/assets/images/img21Junio-2022.jpg",
+    title: "Con la chaqueta del prom",
+    date: "Junio 2022",
+    description:
+      "Toda bella ya con la chaqueta faltando poco pa graduarte",
+  },{
+    image: "/assets/images/img22Junio-2022.mp4",
+    title: "Me seduceeeee",
+    date: "Junio 2022",
+    description:
+      "Omg me esta seduciendo",
+  },{
+    image: "/assets/images/img23Junio-2022.jpg",
+    title: "Modo Diva",
+    date: "Junio 2022",
+    description:
+      "Te veias toda diva miamor, perfecta pa una pintura de esas famosas",
   },
+  
+  
   
 ];

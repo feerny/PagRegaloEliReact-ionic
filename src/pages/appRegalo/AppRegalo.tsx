@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   IonAccordion,
   IonAccordionGroup,
@@ -17,16 +17,31 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { gift, people, earth, trash, list } from "ionicons/icons";
+import { gift, people, earth, trash, list, heart } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import RandomCats from "../../components/vistasAppRegalo/RandomCats";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
 import "./appRegaloCss.css";
-
+import ReactAudioPlayer from "react-audio-player";
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
+  //controla si el video se reproduce o no
+  const [isOnPlayVideo, setisOnPlayVideo] = useState<boolean>(false)
+  //agarra los elementos del acordeon
+  const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
+  //funcion para cerrar acordeon al dar clik en uno de sus hijos
+  const toggleAccordion = () => {
+    //valida no es null
+    if (!accordionGroup.current) {
+      return;
+    }
+    //cierra el acordeon
+    const nativeEl = accordionGroup.current;
+    nativeEl.value = undefined;
+
+  };
   //limpia datos de localStorage y vuelve a vista inicial
   const clearLocalSesion = () => {
     localStorage.clear();
@@ -39,7 +54,10 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
       <IonMenu contentId="main-content">
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Menu Content</IonTitle>
+            <IonItem>
+            <IonIcon color="red" icon={heart} slot="start"/>
+            <IonTitle color="red">Menu Eli</IonTitle>
+           </IonItem>
           </IonToolbar>
         </IonHeader>
         <IonContent class="ion-padding">
@@ -51,19 +69,21 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
               </IonItem>
             </IonMenuToggle>
             <IonItem lines="none">
-            <IonIcon slot="start" icon={list} />
-              <IonAccordionGroup>
+              <IonIcon slot="start" icon={list} />
+              <IonAccordionGroup ref={accordionGroup}>
                 <IonAccordion value="first">
                   <IonItem lines="none" slot="header" color="light">
                     <IonLabel>Secciones</IonLabel>
                   </IonItem>
                   <div className="ion-padding" slot="content">
-                    <IonMenuToggle >
-                      <IonItem href="/AppRegalo/nosotros#section0">Antes de conocernos</IonItem>
+                    <IonMenuToggle>
+                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros#section0">
+                        Antes de conocernos
+                      </IonItem>
                     </IonMenuToggle>
                   </div>
                 </IonAccordion>
-                </IonAccordionGroup>
+              </IonAccordionGroup>
             </IonItem>
           </IonList>
         </IonContent>
@@ -77,7 +97,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() => <ImagesContent />}
+            render={() => <ImagesContent setisOnPlayVideo={setisOnPlayVideo}/>}
             exact={true}
           />
           <Route
@@ -105,6 +125,13 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      <ReactAudioPlayer
+        //cambia de musica dependiendo de la iteracion
+          src={"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3"}
+          autoPlay
+          muted={isOnPlayVideo?true:true}
+          loop
+        />
     </IonContent>
   );
 };
