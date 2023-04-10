@@ -91,6 +91,11 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                         Cita en museo
                       </IonItem>
                     </IonMenuToggle>
+                    <IonMenuToggle>
+                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section66">
+                        Año nuevo juntos
+                      </IonItem>
+                    </IonMenuToggle>
                   </div>
                 </IonAccordion>
               </IonAccordionGroup>

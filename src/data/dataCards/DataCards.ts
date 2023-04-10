@@ -379,6 +379,31 @@ export const dataCards: DataCards[] = [
     date: "Septiembre 2022",
     description:
       "Ese es el primer paso para recuperar panama",
-  },
+  },{
+    image: "/assets/images/img61Octubre-2022.jpg",
+    title: "Tu linda sonrisa ",
+    date: "Octubre 2022",
+    description:
+      "Tu hermosa sonrisa miamor como te amo",
+  },{
+    image: "/assets/images/img62Octubre-2022.jpg",
+    title: "Diva con uniforme",
+    date: "Octubre 2022",
+    description:
+      "Re diva mi novia con ese uniforme",
+  },{
+    image: "/assets/images/img63Octubre-2022.jpg",
+    title: "Diva con uniforme",
+    date: "Mira feo",
+    description:
+      "Uste a mi me puede mirar como quiera mivida",
+  },{
+    image: "",
+    title: "Año nuevo Juntos",
+    date: "",
+    description:
+      "Fotitos de año nuevo con mi novia hermosaaaaa",
+  }, 
+
 
 ];
