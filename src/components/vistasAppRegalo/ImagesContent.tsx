@@ -49,8 +49,8 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
 
-        <div>
-          <IonList>
+        
+          <IonList className="listContent">
             {dataCards.map((item, index) => (
               // es mala practica poner el index como key pero ya que no se agregaran mas ni se modificaran lo deje asi
               <IonCard key={index} id={`section${index}`}>
@@ -71,7 +71,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
               </IonCard>
             ))}
           </IonList>
-        </div>
+        
       </IonContent>
     </IonPage>
   );
