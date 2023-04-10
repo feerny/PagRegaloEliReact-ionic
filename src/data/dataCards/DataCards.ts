@@ -393,8 +393,8 @@ export const dataCards: DataCards[] = [
       "Re diva mi novia con ese uniforme",
   },{
     image: "/assets/images/img63Octubre-2022.jpg",
-    title: "Diva con uniforme",
-    date: "Mira feo",
+    title: "Mira feo",
+    date: "Octubre 2022",
     description:
       "Uste a mi me puede mirar como quiera mivida",
   },{
@@ -403,7 +403,202 @@ export const dataCards: DataCards[] = [
     date: "",
     description:
       "Fotitos de año nuevo con mi novia hermosaaaaa",
-  }, 
+  }, {
+    image: "/assets/images/img64Diciembre-2022.mp4",
+    title: "Un dia antes de viajar",
+    date: "Diciembre 2022",
+    description:
+      "Ya faltaba solo un dia pa vernos otravez, feli",
+  },{
+    image: "/assets/images/img65Diciembre-2022.jpg",
+    title: "Prendoo",
+    date: "Diciembre 2022",
+    description:
+      "Yo todo prendo agarrandote jajdjsaha",
+  },{
+    image: "/assets/images/img66Diciembre-2022.mp4",
+    title: "Comidita",
+    date: "Diciembre 2022",
+    description:
+      "Toda linda comiendo la salchipapa jajaja<3",
+  },{
+    image: "/assets/images/img67Diciembre-2022.mp4",
+    title: "Maquinitas",
+    date: "Diciembre 2022",
+    description:
+      "Toda pro jugando(aunque perdieron dasjhasdjas)",
+  },{
+    image: "/assets/images/img68Diciembre-2022.jpg",
+    title: "Solo miaaaa",
+    date: "Diciembre 2022",
+    description:
+      "Solo mia mi novia linda",
+  },{
+    image: "/assets/images/img69Diciembre-2022.jpg",
+    title: "Namorao",
+    date: "Diciembre 2022",
+    description:
+      "Yo todo enamorado de esta linda mujer",
+  },{
+    image: "/assets/images/img70Diciembre-2022.jpg",
+    title: "Facha en una foto",
+    date: "Diciembre 2022",
+    description:
+      "Mira que lindos",
+  },{
+    image: "/assets/images/img71Diciembre-2022.jpg",
+    title: "Quien es esa?",
+    date: "Diciembre 2022",
+    description:
+      "Quien es la pendeja que esta contigo en la foto",
+  },{
+    image: "/assets/images/img72Diciembre-2022.jpg",
+    title: "Papa noel:o",
+    date: "Diciembre 2022",
+    description:
+      "Mi cara AJdhajDHSaJSHj",
+  },{
+    image: "/assets/images/img73Diciembre-2022.mp4",
+    title: "Me robo un beso:o",
+    date: "Diciembre 2022",
+    description:
+      "Oiga me robo un beso >: pero igual son tuyos",
+  },{
+    image: "/assets/images/img74Diciembre-2022.jpg",
+    title: "Noche linda",
+    date: "Diciembre 2022",
+    description:
+      "La noche mas linda por que estuviste conmigo<3",
+  },{
+    image: "/assets/images/img75Diciembre-2022.mp4",
+    title: "31 en mi casa",
+    date: "Diciembre 2022",
+    description:
+      "Nosotros juntitos en la casa de mi abue, y yo con cara de sueño jjasjaja",
+  },{
+    image: "/assets/images/img76Enero-2023.jpg",
+    title: "Abrazando a la mas linda",
+    date: "Enero 2023",
+    description:
+      "Despues de una linda noche fuimos a un pueblito bien frio",
+  },{
+    image: "/assets/images/img77Enero-2023.jpg",
+    title: "Yo alto>:)",
+    date: "Enero 2023",
+    description:
+      "Aqui me veo mucho mas alto que tuuuu",
+  },{
+    image: "/assets/images/img78Enero-2023.jpg",
+    title: "Fotito en el mirador",
+    date: "Enero 2023",
+    description:
+      "Que lindo ver el paisaje con una niña tan wapa",
+  },{
+    image: "/assets/images/img79Enero-2023.jpg",
+    title: "Tia?",
+    date: "Enero 2023",
+    description:
+      "Toda linda con ropa de tia",
+  },{
+    image: "/assets/images/img80Enero-2023.jpg",
+    title: "Facheros",
+    date: "Enero 2023",
+    description:
+      "Tirando facha en salento",
+  },{
+    image: "/assets/images/img81Enero-2023.jpg",
+    title: "Hermosos",
+    date: "Enero 2023",
+    description:
+      "Nos vemos muy lindos juntos cielo",
+  },{
+    image: "/assets/images/img82Enero-2023.jpg",
+    title: "Hermosa dama",
+    date: "Enero 2023",
+    description:
+      "Ya en la noche del brazo de esta princesa",
+  },{
+    image: "/assets/images/img83Enero-2023.jpg",
+    title: "Foto nocturna",
+    date: "Enero 2023",
+    description:
+      "Que afortunado que soy al tenerte a mi lado miamor",
+  },{
+    image: "/assets/images/img84Enero-2023.jpg",
+    title: "Fotito en el espejo",
+    date: "Enero 2023",
+    description:
+      "Foto en los baños del centro comercial jahahjas",
+  },{
+    image: "/assets/images/img85Enero-2023.jpg",
+    title: "Abrazoo",
+    date: "Enero 2023",
+    description:
+      "Abrazando a mi mujer",
+  },{
+    image: "/assets/images/img86Enero-2023.jpg",
+    title: "Mi cara XD",
+    date: "Enero 2023",
+    description:
+      "Mi cara XD",
+  },{
+    image: "/assets/images/img87Enero-2023.jpg",
+    title: "Tu, yo y nuestro hijo",
+    date: "Enero 2023",
+    description:
+      "Pochita todo bello",
+  },{
+    image: "/assets/images/img88Enero-2023.jpg",
+    title: "Ahhhhhhhhhhhhhh que lindaaaaaaaa",
+    date: "Enero 2023",
+    description:
+      "Toda hermosa con pochita",
+  },{
+    image: "/assets/images/img89Enero-2023.jpg",
+    title: "Minions",
+    date: "Enero 2023",
+    description:
+      "Dos minions romanticos",
+  },{
+    image: "/assets/images/img90Enero-2023.jpg",
+    title: "Modo tieso",
+    date: "Enero 2023",
+    description:
+      "Yo modo tieso y tu divina",
+  },{
+    image: "/assets/images/img91Enero-2023.jpg",
+    title: "Fotito wapa",
+    date: "Enero 2023",
+    description:
+      "Tu y yo todos hermosos",
+  },{
+    image: "/assets/images/img92Enero-2023.jpg",
+    title: "Ya te devuelves:c",
+    date: "Enero 2023",
+    description:
+      "Ya faltaba una hora para que te fueras:c",
+  },{
+    image: "/assets/images/img93Enero-2023.jpg",
+    title: "Que rico cachete",
+    date: "Enero 2023",
+    description:
+      "me le queria comer esa carita",
+  },{
+    image: "/assets/images/img94Enero-2023.jpg",
+    title: "Miaaaaaaaaaaa",
+    date: "Enero 2023",
+    description:
+      "Mirando feo a todos los que me la quieran quitar",
+  },{
+    image: "",
+    title: "Fin:)",
+    date: "",
+    description:
+      "Pronto tendremos muchos mas recuerdos juntos miamor y podremos compartir muchos mas momentos juntos mi vida, ya llevamos un año juntos y espero que estemos juntos muchos años mas, te amo demasiado mi niña hermosa, eres lo mejor que pudo llegar a mi vida este año ya quiero volver a verte y darte mil besos miamor, TE AMO.",
+  }
+
+
+
 
 
 ];
