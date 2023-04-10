@@ -145,7 +145,98 @@ export const dataCards: DataCards[] = [
     date: "Junio 2022",
     description:
       "Te veias toda diva miamor, perfecta pa una pintura de esas famosas",
+  },{
+    image: "/assets/images/img24Agosto-2022.mp4",
+    title: "Entonada",
+    date: "Agosto 2022",
+    description:
+      "Re entonada mi novia hermosa y dos cositas lindas en el video que belleza",
+  },{
+    image: "",
+    title: "Primer Encuentro",
+    date: "",
+    description:
+      "Nos vimos por primera vez que emocion, sentia que se me salia el corazon",
+  }, {
+    image: "/assets/images/img25Septiembre-2022.mp4",
+    title: "Primer dia en tu casa",
+    date: "Septiembre 2022",
+    description:
+      "yo todo nervioso y tu toda divina con el saco de viejito",
+  },{
+    image: "/assets/images/img26Septiembre-2022.mp4",
+    title: "Vias de tren y niña linda",
+    date: "Septiembre 2022",
+    description:
+      "toda facha tu ese dia y nuestra salidita hacia el parque de los novios",
+  },{
+    image: "/assets/images/img27Septiembre-2022.jpg",
+    title: "Parque de los novios",
+    date: "Septiembre 2022",
+    description:
+      "nosotros parchados en el lago con los patos viendo nuestro gran amor",
+  },{
+    image: "/assets/images/img28Septiembre-2022.jpg",
+    title: "Nuestro collar",
+    date: "Septiembre 2022",
+    description:
+      "mira son dos gatitos lindos como nosotros, ese collar nos tiene unidos aunque estemos lejos miamor",
+  },{
+    image: "/assets/images/img29Septiembre-2022.jpg",
+    title: "Unos randoms",
+    date: "Septiembre 2022",
+    description:
+      "Unos randoms que se aman mucho",
+  },{
+    image: "/assets/images/img30Septiembre-2022.jpg",
+    title: "Besito",
+    date: "Septiembre 2022",
+    description:
+      "Mira esos lindos tan lindos que se aman mucho",
+  },{
+    image: "/assets/images/img31Septiembre-2022.jpg",
+    title: "Esos ojos hermosos",
+    date: "Septiembre 2022",
+    description:
+      "tus ojos se ven lindos en fotos pero en persona se ven 10 veces mas lindos como tu:3",
+  },{
+    image: "/assets/images/img32Septiembre-2022.jpg",
+    title: "Yo todo cute",
+    date: "Septiembre 2022",
+    description:
+      "Esa foto jajajajajaja te amo",
+  },{
+    image: "/assets/images/img33Septiembre-2022.jpg",
+    title: "Lindos y hello Kitty",
+    date: "Septiembre 2022",
+    description:
+      "Somos muy hermosos",
+  },{
+    image: "/assets/images/img34Septiembre-2022.jpg",
+    title: "Besito pa linda",
+    date: "Septiembre 2022",
+    description:
+      "Te mereces mil besos miamor",
+  },{
+    image: "/assets/images/img35Septiembre-2022.jpg",
+    title: "Mommy?",
+    date: "Septiembre 2022",
+    description:
+      "Me veo todo chikito contigo jajsdja",
+  },{
+    image: "/assets/images/img36Septiembre-2022.jpg",
+    title: "Wapos",
+    date: "Septiembre 2022",
+    description:
+      "Wapos nada mas que decir",
+  },{
+    image: "",
+    title: "Cita en el museo",
+    date: "",
+    description:
+      "Nuestra cita en el museo, que mas romantico que esto?",
   },
+  
   
   
   

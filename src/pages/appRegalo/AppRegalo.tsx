@@ -77,8 +77,18 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                   </IonItem>
                   <div className="ion-padding" slot="content">
                     <IonMenuToggle>
-                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros#section0">
+                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section0">
                         Antes de conocernos
+                      </IonItem>
+                    </IonMenuToggle>
+                    <IonMenuToggle>
+                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section25">
+                        Primer Encuentro
+                      </IonItem>
+                    </IonMenuToggle>
+                    <IonMenuToggle>
+                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section38">
+                        Cita en museo
                       </IonItem>
                     </IonMenuToggle>
                   </div>
