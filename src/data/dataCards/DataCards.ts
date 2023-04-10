@@ -235,9 +235,150 @@ export const dataCards: DataCards[] = [
     date: "",
     description:
       "Nuestra cita en el museo, que mas romantico que esto?",
+  },{
+    image: "/assets/images/img37Septiembre-2022.jpg",
+    title: "Entraditas",
+    date: "Septiembre 2022",
+    description:
+      "Listos pa besuquearnos en el museo",
+  },{
+    image: "/assets/images/img38Septiembre-2022.jpg",
+    title: "Cosa rara",
+    date: "Septiembre 2022",
+    description:
+      "No se que sea eso pero estaba pro",
+  },{
+    image: "/assets/images/img39Septiembre-2022.jpg",
+    title: "Orooooooo🤑",
+    date: "Septiembre 2022",
+    description:
+      "Nos llevabamos eso y viviamos bueno",
+  },{
+    image: "/assets/images/img40Septiembre-2022.jpg",
+    title: "Jarron con patas",
+    date: "Septiembre 2022",
+    description:
+      "Ojala saliera corriendo:c",
+  },{
+    image: "/assets/images/img41Septiembre-2022.jpg",
+    title: "Fotito dentro",
+    date: "Septiembre 2022",
+    description:
+      "Dos lindos en un museo donde hay orooo",
+  },{
+    image: "/assets/images/img42Septiembre-2022.jpg",
+    title: "Fotito fuera",
+    date: "Septiembre 2022",
+    description:
+      "Ya salimos de donde habia oro y no sacamos nada:c",
+  },{
+    image: "/assets/images/img43Septiembre-2022.jpg",
+    title: "La mascara:o",
+    date: "Septiembre 2022",
+    description:
+      "Estoy seguro de que si me ponia esa mascara adquiria poderes supremos",
+  },{
+    image: "/assets/images/img44Septiembre-2022.jpg",
+    title: "Figura de accion",
+    date: "Septiembre 2022",
+    description:
+      "De seguro esa era una figurita de esas coleccionables pero del pasado, ahora son monas chinas",
+  },{
+    image: "/assets/images/img45Septiembre-2022.jpg",
+    title: "Aguila:o",
+    date: "Septiembre 2022",
+    description:
+      "Esa se dio duro contra la piedra y quedo ahi:c",
+  },{
+    image: "/assets/images/img46Septiembre-2022.jpg",
+    title: "Collar Aestetik",
+    date: "Septiembre 2022",
+    description:
+      "Mira un collar de esos que usan los punkos",
+  },{
+    image: "/assets/images/img47Septiembre-2022.jpg",
+    title: "Piedra con algo",
+    date: "Septiembre 2022",
+    description:
+      "No je que sea eso",
+  },{
+    image: "/assets/images/img48Septiembre-2022.jpg",
+    title: "Niño gordo",
+    date: "Septiembre 2022",
+    description:
+      "Un niño gordo",
+  },{
+    image: "/assets/images/img49Septiembre-2022.jpg",
+    title: "Mi novia",
+    date: "Septiembre 2022",
+    description:
+      "Mi novia lida mirando al niño gordo",
+  },{
+    image: "/assets/images/img50Septiembre-2022.jpg",
+    title: "Muñeco de año viejo",
+    date: "Septiembre 2022",
+    description:
+      "Un muñeco de año viejo pero del pasado:o",
+  },{
+    image: "/assets/images/img51Septiembre-2022.jpg",
+    title: "Jarron",
+    date: "Septiembre 2022",
+    description:
+      "Jarron pa guardar el ron",
+  },{
+    image: "/assets/images/img52Septiembre-2022.jpg",
+    title: "Foto facha",
+    date: "Septiembre 2022",
+    description:
+      "Yo todo facha con pinturas fachas",
+  },{
+    image: "/assets/images/img53Septiembre-2022.jpg",
+    title: "Mi novia hermosa",
+    date: "Septiembre 2022",
+    description:
+      "Toda linda, esas pinturas de atras quedan opacadas con tu belleza",
+  },{
+    image: "/assets/images/img54Septiembre-2022.jpg",
+    title: "nosotros todos lindos",
+    date: "Septiembre 2022",
+    description:
+      "Solo mia mi novia linda",
+  },{
+    image: "/assets/images/img55Septiembre-2022.jpg",
+    title: "Algo de gsus",
+    date: "Septiembre 2022",
+    description:
+      "No se que es pero seguro con eso encierran a los fantasmas",
+  },{
+    image: "/assets/images/img56Septiembre-2022.jpg",
+    title: "Tapete",
+    date: "Septiembre 2022",
+    description:
+      "Un tapete caro:)",
+  },{
+    image: "/assets/images/img57Septiembre-2022.jpg",
+    title: "Gaitán :o",
+    date: "Septiembre 2022",
+    description:
+      "Lo que tenia Gaitán cuando se lo balearon",
+  },{
+    image: "/assets/images/img58Septiembre-2022.jpg",
+    title: "Lindos reflejados",
+    date: "Septiembre 2022",
+    description:
+      "Reflejandonos en donde balearon a Gaitán ",
+  },{
+    image: "/assets/images/img59Septiembre-2022.jpg",
+    title: "Chiguiro",
+    date: "Septiembre 2022",
+    description:
+      "Un chiguiro:o",
+  },{
+    image: "/assets/images/img60Septiembre-2022.mp4",
+    title: "Modificando el himno",
+    date: "Septiembre 2022",
+    description:
+      "Ese es el primer paso para recuperar panama",
   },
-  
-  
-  
-  
+
 ];

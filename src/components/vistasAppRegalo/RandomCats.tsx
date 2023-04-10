@@ -32,7 +32,6 @@ const RandomCats: React.FC = () => {
     //envia los datos al usestate
     setimgUrl(response.data[0].url)
     setidImg(response.data[0].id)
-    console.log(response);
   })
   .catch(function (error) {
     // handle error
@@ -55,6 +54,9 @@ const RandomCats: React.FC = () => {
       };
     
   },[])
+
+
+  
   
   return (
     <IonPage>
