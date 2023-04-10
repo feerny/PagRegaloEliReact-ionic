@@ -144,7 +144,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         //cambia de musica dependiendo de la iteracion
           src={"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3"}
           autoPlay
-          muted={isOnPlayVideo?true:true}
+          muted={isOnPlayVideo?true:false}
           loop
         />
     </IonContent>
