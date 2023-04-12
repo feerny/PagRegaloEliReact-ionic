@@ -10,3 +10,58 @@
 .listContent{
     text-align: center;
 }
+
+
+@keyframes vibrar {
+    0% {
+        transform: translate(2px, 2px) rotate(3deg);
+    }
+    40% {
+      transform: translate(-2px, -2px) rotate(-3deg);
+    }
+    60% {
+      transform: translate(2px, 2px) rotate(3deg);
+    }
+    80% {
+      transform: translate(-2px, -2px) rotate(-3deg);
+    }
+    100% {
+      transform: translate(2px, 2px) rotate(3deg);
+    }
+  }
+.imgRegalo{
+    transition: all 1s ease;
+    width: 606px;
+    border: solid 9px rgb(213 25 50);
+}
+
+.imgCubiertaRegalo{
+    position: absolute;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: vibrar;
+}
+
+@keyframes mover-y-desvanecer {
+    0% {
+      top: 20%;
+      opacity: 1;
+    }
+    50% {
+      top: -50px;
+      opacity: 1;
+    }
+    100% {
+      top: -100px;
+      opacity: 0;
+      transform: translate(6px, 6px) rotate(6deg);
+    }
+  }
+
+.imgCubiertaRegaloRemove{
+    position: absolute;
+    animation-name: mover-y-desvanecer;
+    animation-delay: .1s;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}

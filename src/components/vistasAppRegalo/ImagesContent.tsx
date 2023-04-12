@@ -45,6 +45,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
+        {/* funcion de ionic para refrescar la pagina al hacer scroll hacia abajo */}
         <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>

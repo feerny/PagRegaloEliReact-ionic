@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   IonButtons,
   IonContent,
   IonHeader,
+  IonImg,
   IonMenuButton,
   IonPage,
   IonTitle,
@@ -11,6 +12,14 @@ import {
 } from "@ionic/react";
 
 const Regalo: React.FC = () => {
+  const [OpenRegalo, setOpenRegalo] = useState<boolean>(false)
+  const [styleTapaRegalo, setstyleTapaRegalo] = useState("imgCubiertaRegalo")
+  function clickOpenRegalo(){
+    setOpenRegalo(true)
+    setstyleTapaRegalo("imgCubiertaRegaloRemove")
+
+  }
+
 
   return (
     <IonPage>
@@ -31,8 +40,8 @@ const Regalo: React.FC = () => {
             height: "100%",
           }}
         >
-          Regalo Content{" "}
-          
+          {OpenRegalo?<IonImg className="imgRegalo" src="/assets/images/imgRegalo.jpg" alt="imageRegalo" />:null}
+          <IonImg onClick={clickOpenRegalo} className={styleTapaRegalo} src="/assets/images/imgTapaRegalo.jpg"></IonImg>
         </div>
       </IonContent>
     </IonPage>
