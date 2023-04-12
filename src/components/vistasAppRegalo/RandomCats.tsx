@@ -17,7 +17,6 @@ import axios from 'axios';
 import { paw } from "ionicons/icons";
 
 const RandomCats: React.FC = () => {
-
   //guardo los datos de la imagen de la api
   const [imgUrl, setimgUrl] = useState<string>("")
   const [idImg, setidImg] = useState<string>("")
@@ -45,19 +44,14 @@ const RandomCats: React.FC = () => {
     console.log("finalizo ok");
   });
   };
-
   //ejecuta el consumo de api en el primer render
   useEffect(() => {
     generateCat()
+  
     return () => {
       console.log("se fue");
-      };
-    
-  },[])
-
-
-  
-  
+    }
+  }, [])
   return (
     <IonPage>
       <IonHeader>
@@ -79,7 +73,7 @@ const RandomCats: React.FC = () => {
           }}
         >
           <div className="spinnerCats">
-           {/* si el estado es loading muestra un loading */}
+           {/* si el estado es loading muestra un spinner */}
           {isLoading?<IonSpinner  name="bubbles"/>:<IonImg className="imgCats" src={imgUrl} alt={idImg}></IonImg>}
           <IonButton color="dark" fill="outline" expand="block" onClick={()=>generateCat()}>Dame Otro Gato<IonIcon slot="end" icon={paw}></IonIcon></IonButton>
           </div>

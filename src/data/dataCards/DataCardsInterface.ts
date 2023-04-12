@@ -1,5 +1,3 @@
-
-
  export interface DataCards{
      image:string;
      title:string;

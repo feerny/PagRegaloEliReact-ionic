@@ -17,7 +17,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { gift, people, earth, trash, list, heart } from "ionicons/icons";
+import { gift, people, earth, trash, list, heart, musicalNotes } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
@@ -32,7 +32,16 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //agarra los elementos del acordeon
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
   //funcion para cerrar acordeon al dar clik en uno de sus hijos
-  const toggleAccordion = () => {
+  const toggleAccordion = (e:any,s:any) => {
+    let href = s;
+    // hace scroll hasta el id dado
+    const scroll=()=>{
+      document.querySelector(href).scrollIntoView({
+        behavior: "smooth"
+    })
+    }
+    setTimeout(scroll,100)
+
     //valida no es null
     if (!accordionGroup.current) {
       return;
@@ -77,22 +86,22 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                   </IonItem>
                   <div className="ion-padding" slot="content">
                     <IonMenuToggle>
-                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section0">
+                      <IonItem onClick={(e,s="#section0")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
                         Antes de conocernos
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section25">
+                      <IonItem onClick={(e,s="#section25")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
                         Primer Encuentro
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section38">
+                      <IonItem onClick={(e,s="#section38")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
                         Cita en museo
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={()=>toggleAccordion()} href="/AppRegalo/nosotros/#section66">
+                      <IonItem onClick={(e,s="#section66")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
                         Año nuevo juntos
                       </IonItem>
                     </IonMenuToggle>
@@ -100,6 +109,12 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                 </IonAccordion>
               </IonAccordionGroup>
             </IonItem>
+            <IonMenuToggle onClick={() => clearLocalSesion()}>
+              <IonItem routerLink="/all-activities/ComoEstas" lines="none">
+                <IonIcon slot="start" icon={musicalNotes} />
+                <IonLabel>Musica</IonLabel>
+              </IonItem>
+            </IonMenuToggle>
           </IonList>
         </IonContent>
       </IonMenu>

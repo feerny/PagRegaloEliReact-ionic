@@ -48,30 +48,28 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
         <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
-
-        
           <IonList className="listContent">
             {dataCards.map((item, index) => (
               // es mala practica poner el index como key pero ya que no se agregaran mas ni se modificaran lo deje asi
               <IonCard key={index} id={`section${index}`}>
                 {/* una validacion simple para saber si es una imagen o un video y elegir que debe usar */}
                 { item.image.split(".")[1]==="mp4"? (
+                  // si el recurso es un video entra y manda los atributos requeridos 
                   <video onPause={()=>videoPlayOrNot(false)} onPlay={()=>videoPlayOrNot(true)}  width="370rem" controls>
                     <source src={item.image} type="video/mp4" />
                   </video>
                 ) : (
+                  // si el recurso es una imagen entra y manda los atributos requeridos
                   item.image!==""?<img alt={"imageNumber " + (index + 1)} src={item.image} />:null
                 )}
                 <IonCardHeader>
                   <IonCardTitle>{item.title}</IonCardTitle>
                   {item.date!==""?<IonCardSubtitle>{item.date}</IonCardSubtitle>:null}
                 </IonCardHeader>
-
                 <IonCardContent>{item.description}</IonCardContent>
               </IonCard>
             ))}
           </IonList>
-        
       </IonContent>
     </IonPage>
   );
