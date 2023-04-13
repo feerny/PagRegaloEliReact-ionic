@@ -16,13 +16,16 @@ import {
   IonTitle,
   IonToolbar,
   RefresherEventDetail,
+  useIonViewDidLeave,
 } from "@ionic/react";
 
 import { dataCards } from "../../data/dataCards/DataCards";
 import { ImagesContentProps } from "../../data/imagesContentProps/ImagesContentProps";
 
 const ImagesContent: React.FC<ImagesContentProps> = (props) => {
-
+  useIonViewDidLeave(() => {
+    props.setisClose(true)
+  });
   //funcion para enviar estado de video(si se reproduce o no)
   const videoPlayOrNot=(validation:boolean)=>{
     props.setisOnPlayVideo(validation)

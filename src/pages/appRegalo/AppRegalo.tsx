@@ -29,12 +29,15 @@ import { lazy, Suspense } from 'react';
 const RandomCats = lazy(() => import('../../components/vistasAppRegalo/RandomCats'));
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
+  //controlla si se cierra la seccion de imagenes para rendimiento
+  const [isClose, setisClose] = useState(true)
   //controla si el video se reproduce o no
   const [isOnPlayVideo, setisOnPlayVideo] = useState<boolean>(false)
   //agarra los elementos del acordeon
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
   //funcion para cerrar acordeon al dar clik en uno de sus hijos
   const toggleAccordion = (e:any,s:any) => {
+     setisClose(false)
     let href = s;
     // hace scroll hasta el id dado
     const scroll=()=>{
@@ -129,7 +132,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() =><ImagesContent setisOnPlayVideo={setisOnPlayVideo}/>}
+            render={() =>isClose?<Redirect to="/AppRegalo/home"></Redirect>:<ImagesContent setisClose={setisClose} setisOnPlayVideo={setisOnPlayVideo}/>}
             exact={true}
           />
           <Route
@@ -151,7 +154,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
             <IonLabel>Regalito</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="nosotros" href="/AppRegalo/nosotros">
+          <IonTabButton onClick={()=>setisClose(false)} tab="nosotros" href="/AppRegalo/nosotros">
             <IonIcon icon={people} />
             <IonLabel>Nosotros</IonLabel>
           </IonTabButton>
