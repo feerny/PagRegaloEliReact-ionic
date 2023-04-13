@@ -421,7 +421,7 @@ export const dataCards: DataCards[] = [
     description:
       "Toda linda comiendo la salchipapa jajaja<3",
   },{
-    image: "/assets/images/img67Diciembre-2022.mp4",
+    image: "",
     title: "Maquinitas",
     date: "Diciembre 2022",
     description:
