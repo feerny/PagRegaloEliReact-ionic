@@ -16,8 +16,8 @@ const Regalo: React.FC = () => {
     console.log("entro regalo");
   
     return () => {
-      console.log("se fue regalo");
-    }
+      alert("se fue regalo");
+    };
   }, [])
   const [OpenRegalo, setOpenRegalo] = useState<boolean>(false)
   const [styleTapaRegalo, setstyleTapaRegalo] = useState("imgCubiertaRegalo")
