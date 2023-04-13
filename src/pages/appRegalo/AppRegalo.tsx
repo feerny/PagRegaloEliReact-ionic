@@ -29,7 +29,6 @@ import { lazy, Suspense } from 'react';
 const RandomCats = lazy(() => import('../../components/vistasAppRegalo/RandomCats'));
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
-  const [valiImagesContent, setvaliImagesContent] = useState(false)
   //controla si el video se reproduce o no
   const [isOnPlayVideo, setisOnPlayVideo] = useState<boolean>(false)
   //agarra los elementos del acordeon
@@ -130,7 +129,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() =>valiImagesContent?<ImagesContent setisOnPlayVideo={setisOnPlayVideo}/>:<Redirect  to="/AppRegalo/home" />}
+            render={() =><ImagesContent setisOnPlayVideo={setisOnPlayVideo}/>}
             exact={true}
           />
           <Route
@@ -147,17 +146,17 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
-          <IonTabButton onClick={()=>setvaliImagesContent(false)} tab="home" href="/AppRegalo/home">
+          <IonTabButton tab="home" href="/AppRegalo/home">
             <IonIcon icon={gift} />
             <IonLabel>Regalito</IonLabel>
           </IonTabButton>
 
-          <IonTabButton onClick={()=>setvaliImagesContent(true)} tab="nosotros" href="/AppRegalo/nosotros">
+          <IonTabButton tab="nosotros" href="/AppRegalo/nosotros">
             <IonIcon icon={people} />
             <IonLabel>Nosotros</IonLabel>
           </IonTabButton>
 
-          <IonTabButton onClick={()=>setvaliImagesContent(false)} tab="casts" href="/AppRegalo/casts">
+          <IonTabButton tab="casts" href="/AppRegalo/casts">
             <IonIcon icon={earth} />
             <IonLabel>Gatitos</IonLabel>
           </IonTabButton>

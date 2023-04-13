@@ -421,7 +421,7 @@ export const dataCards: DataCards[] = [
     description:
       "Toda linda comiendo la salchipapa jajaja<3",
   },{
-    image: "/assets/images/img67Diciembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52815788250/cf6eb8bf16/360p.mp4?s=eyJpIjo1MjgxNTc4ODI1MCwiZSI6MTY4MTQyMjE4NiwicyI6Ijg0ZjFmOGI3NDg1MzM2OTA4NDVhYjIzYzE1MzkwZTYxNmM3MDIwNGIiLCJ2IjoxfQ",
     title: "Maquinitas",
     date: "Diciembre 2022",
     description:

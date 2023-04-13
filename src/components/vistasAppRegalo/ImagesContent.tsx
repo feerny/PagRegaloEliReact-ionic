@@ -55,7 +55,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
               // es mala practica poner el index como key pero ya que no se agregaran mas ni se modificaran lo deje asi
               <IonCard key={index} id={`section${index}`}>
                 {/* una validacion simple para saber si es una imagen o un video y elegir que debe usar */}
-                { item.image.split(".")[1]==="mp4"? (
+                { item.image.split(".")[1]==="mp4" || item.image.split(".")[1]==="staticflickr"? (
                   // si el recurso es un video entra y manda los atributos requeridos 
                   <video onPause={()=>videoPlayOrNot(false)} onPlay={()=>videoPlayOrNot(true)}  width="370rem" controls>
                     <source src={item.image} type="video/mp4" />
