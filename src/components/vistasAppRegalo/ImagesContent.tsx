@@ -61,7 +61,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
                   </video>
                 ) : (
                   // si el recurso es una imagen entra y manda los atributos requeridos
-                  item.image!==""?<img alt={"imageNumber " + (index + 1)} src={item.image} />:null
+                  item.image!==""?<img width="370rem" alt={"imageNumber " + (index + 1)} src={item.image} />:null
                 )}
                 <IonCardHeader>
                   <IonCardTitle>{item.title}</IonCardTitle>
