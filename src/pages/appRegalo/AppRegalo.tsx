@@ -11,7 +11,6 @@ import {
   IonMenu,
   IonMenuToggle,
   IonRouterOutlet,
-  IonSpinner,
   IonTabBar,
   IonTabButton,
   IonTabs,
@@ -23,10 +22,9 @@ import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
 import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
+import RandomCats from "../../components/vistasAppRegalo/RandomCats"
 import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
-import { lazy, Suspense } from 'react';
-const RandomCats = lazy(() => import('../../components/vistasAppRegalo/RandomCats'));
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //controlla si se cierra la seccion de imagenes para rendimiento
@@ -137,12 +135,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/casts"
-            render={() =><Suspense fallback={<div style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-            }}><IonSpinner  name="bubbles"/></div>}> <RandomCats /></Suspense>}
+            render={() => <RandomCats />}
             exact={true}
           />
           <Redirect exact from="/" to="/AppRegalo/home" />
