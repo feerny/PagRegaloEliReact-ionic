@@ -17,6 +17,7 @@ const Regalo: React.FC = () => {
   function clickOpenRegalo(){
     setOpenRegalo(true)
     setstyleTapaRegalo("imgCubiertaRegaloRemove")
+    setTimeout(()=>setstyleTapaRegalo("imgCubiertaRegaloRemoveFinal"),6000);
 
   }
 
@@ -41,7 +42,7 @@ const Regalo: React.FC = () => {
           }}
         >
           {OpenRegalo?<IonImg className="imgRegalo" src="/assets/images/imgRegalo.jpg" alt="imageRegalo" />:null}
-          <IonImg onClick={clickOpenRegalo} className={styleTapaRegalo} src="/assets/images/imgTapaRegalo.jpg"></IonImg>
+          <IonImg onClick={()=>clickOpenRegalo()} className={styleTapaRegalo} src="/assets/images/imgTapaRegalo.jpg"></IonImg>
         </div>
       </IonContent>
     </IonPage>

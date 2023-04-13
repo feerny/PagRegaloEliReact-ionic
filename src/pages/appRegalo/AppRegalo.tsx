@@ -11,6 +11,7 @@ import {
   IonMenu,
   IonMenuToggle,
   IonRouterOutlet,
+  IonSpinner,
   IonTabBar,
   IonTabButton,
   IonTabs,
@@ -20,11 +21,14 @@ import {
 import { gift, people, earth, trash, list, heart, musicalNotes } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
-import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
+
 import RandomCats from "../../components/vistasAppRegalo/RandomCats";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
 import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
+import { lazy, Suspense } from 'react';
+
+const ImagesContent = lazy(() => import('../../components/vistasAppRegalo/ImagesContent'));
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //controla si el video se reproduce o no
@@ -127,7 +131,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() => <ImagesContent setisOnPlayVideo={setisOnPlayVideo}/>}
+            render={() =><Suspense fallback={<div><IonSpinner  name="bubbles"/></div>}><ImagesContent setisOnPlayVideo={setisOnPlayVideo}/></Suspense>}
             exact={true}
           />
           <Route
