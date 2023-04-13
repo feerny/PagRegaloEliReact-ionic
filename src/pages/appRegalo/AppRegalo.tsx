@@ -21,14 +21,13 @@ import {
 import { gift, people, earth, trash, list, heart, musicalNotes } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
-
-import RandomCats from "../../components/vistasAppRegalo/RandomCats";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
 import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
 import { lazy, Suspense } from 'react';
 
 const ImagesContent = lazy(() => import('../../components/vistasAppRegalo/ImagesContent'));
+const RandomCats = lazy(() => import('../../components/vistasAppRegalo/RandomCats'));
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //controla si el video se reproduce o no
@@ -131,12 +130,22 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() =><Suspense fallback={<div><IonSpinner  name="bubbles"/></div>}><ImagesContent setisOnPlayVideo={setisOnPlayVideo}/></Suspense>}
+            render={() =><Suspense fallback={<div style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%",
+            }}><IonSpinner  name="bubbles"/></div>}><ImagesContent setisOnPlayVideo={setisOnPlayVideo}/></Suspense>}
             exact={true}
           />
           <Route
             path="/AppRegalo/casts"
-            render={() => <RandomCats />}
+            render={() =><Suspense fallback={<div style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%",
+            }}><IonSpinner  name="bubbles"/></div>}> <RandomCats /></Suspense>}
             exact={true}
           />
           <Redirect exact from="/" to="/AppRegalo/home" />

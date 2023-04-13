@@ -47,6 +47,7 @@ const RandomCats: React.FC = () => {
   //ejecuta el consumo de api en el primer render
   useEffect(() => {
     generateCat()
+    console.log("entro");
   
     return () => {
       console.log("se fue");
