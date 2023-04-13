@@ -125,7 +125,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         <IonRouterOutlet id="main-content">
           <Route
             path="/AppRegalo/home"
-            render={() => <Regalo />}
+            component={Regalo}
             exact={true}
           />
           <Route

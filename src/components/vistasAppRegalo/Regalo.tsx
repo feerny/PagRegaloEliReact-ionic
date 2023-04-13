@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, {   useState } from "react";
 import {
   IonButtons,
   IonContent,
@@ -6,21 +6,21 @@ import {
   IonImg,
   IonMenuButton,
   IonPage,
+  IonSpinner,
   IonTitle,
   IonToolbar,
 
 } from "@ionic/react";
 
 const Regalo: React.FC = () => {
-  useEffect(() => {
-    console.log("entro regalo");
-  
-    return () => {
-      alert("se fue regalo");
-    };
-  }, [])
   const [OpenRegalo, setOpenRegalo] = useState<boolean>(false)
+  const [imgLoad, setimgLoad] = useState<boolean>(false)
   const [styleTapaRegalo, setstyleTapaRegalo] = useState("imgCubiertaRegalo")
+  const imgLoadClomplet=()=>{
+    console.log("ffssf");
+    
+    setimgLoad(true)
+  }
   function clickOpenRegalo(){
     setOpenRegalo(true)
     setstyleTapaRegalo("imgCubiertaRegaloRemove")
@@ -48,7 +48,8 @@ const Regalo: React.FC = () => {
             height: "100%",
           }}
         >
-          {OpenRegalo?<IonImg className="imgRegalo" src="/assets/images/imgRegalo.jpg" alt="imageRegalo" />:null}
+          {OpenRegalo?(imgLoad?null:<IonSpinner className="imgRegaloSpinner"  name="bubbles"/>):null}
+          {OpenRegalo?<IonImg onIonImgDidLoad={()=>imgLoadClomplet()} className="imgRegalo" src="/assets/images/imgRegalo.jpg" alt="imageRegalo" />:null}
           <IonImg onClick={()=>clickOpenRegalo()} className={styleTapaRegalo} src="/assets/images/imgTapaRegalo.jpg"></IonImg>
         </div>
       </IonContent>

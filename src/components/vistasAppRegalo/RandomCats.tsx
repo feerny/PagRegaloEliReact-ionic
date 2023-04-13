@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import {
   IonButton,
   IonButtons,
@@ -12,6 +12,8 @@ import {
   IonSpinner,
   IonTitle,
   IonToolbar,
+  useIonViewDidEnter,
+  useIonViewDidLeave,
 } from "@ionic/react";
 import axios from 'axios';
 import { paw } from "ionicons/icons";
@@ -45,14 +47,13 @@ const RandomCats: React.FC = () => {
   });
   };
   //ejecuta el consumo de api en el primer render
-  useEffect(() => {
+  useIonViewDidEnter(() => {
     generateCat()
-    console.log("entro");
-  
-    return () => {
-      console.log("se fue");
-    }
-  }, [])
+    console.log("entro a cats");
+  });
+  useIonViewDidLeave(() => {
+    console.log("salio de cats");
+  });
   return (
     <IonPage>
       <IonHeader>

@@ -34,6 +34,9 @@
     width: 606px;
     border: solid 9px rgb(213 25 50);
 }
+.imgRegaloSpinner{
+  position: absolute;
+}
 
 .imgCubiertaRegalo{
     position: absolute;
