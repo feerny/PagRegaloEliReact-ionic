@@ -22,14 +22,14 @@ import { gift, people, earth, trash, list, heart, musicalNotes } from "ionicons/
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
 import { AppRegaloProps } from "../../data/appRegaloProps/AppRegaloProps";
+import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
 import { lazy, Suspense } from 'react';
-
-const ImagesContent = lazy(() => import('../../components/vistasAppRegalo/ImagesContent'));
 const RandomCats = lazy(() => import('../../components/vistasAppRegalo/RandomCats'));
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
+  const [valiImagesContent, setvaliImagesContent] = useState(false)
   //controla si el video se reproduce o no
   const [isOnPlayVideo, setisOnPlayVideo] = useState<boolean>(false)
   //agarra los elementos del acordeon
@@ -130,12 +130,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() =><Suspense fallback={<div style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-            }}><IonSpinner  name="bubbles"/></div>}><ImagesContent setisOnPlayVideo={setisOnPlayVideo}/></Suspense>}
+            render={() =>valiImagesContent?<ImagesContent setisOnPlayVideo={setisOnPlayVideo}/>:<Redirect  to="/AppRegalo/home" />}
             exact={true}
           />
           <Route
@@ -152,17 +147,17 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
-          <IonTabButton tab="home" href="/AppRegalo/home">
+          <IonTabButton onClick={()=>setvaliImagesContent(false)} tab="home" href="/AppRegalo/home">
             <IonIcon icon={gift} />
             <IonLabel>Regalito</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="nosotros" href="/AppRegalo/nosotros">
+          <IonTabButton onClick={()=>setvaliImagesContent(true)} tab="nosotros" href="/AppRegalo/nosotros">
             <IonIcon icon={people} />
             <IonLabel>Nosotros</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="casts" href="/AppRegalo/casts">
+          <IonTabButton onClick={()=>setvaliImagesContent(false)} tab="casts" href="/AppRegalo/casts">
             <IonIcon icon={earth} />
             <IonLabel>Gatitos</IonLabel>
           </IonTabButton>
