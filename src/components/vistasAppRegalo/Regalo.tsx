@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import {
   IonButtons,
   IonContent,
@@ -12,6 +12,13 @@ import {
 } from "@ionic/react";
 
 const Regalo: React.FC = () => {
+  useEffect(() => {
+    console.log("entro regalo");
+  
+    return () => {
+      console.log("se fue regalo");
+    }
+  }, [])
   const [OpenRegalo, setOpenRegalo] = useState<boolean>(false)
   const [styleTapaRegalo, setstyleTapaRegalo] = useState("imgCubiertaRegalo")
   function clickOpenRegalo(){

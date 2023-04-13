@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   IonButtons,
   IonCard,
@@ -22,6 +22,13 @@ import { dataCards } from "../../data/dataCards/DataCards";
 import { ImagesContentProps } from "../../data/imagesContentProps/ImagesContentProps";
 
 const ImagesContent: React.FC<ImagesContentProps> = (props) => {
+  useEffect(() => {
+    console.log("entro images");
+  
+    return () => {
+      console.log("se fue images");
+    }
+  }, [])
   //funcion para enviar estado de video(si se reproduce o no)
   const videoPlayOrNot=(validation:boolean)=>{
     props.setisOnPlayVideo(validation)
