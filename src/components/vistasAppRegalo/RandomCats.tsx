@@ -24,8 +24,8 @@ import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloP
 const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
   // Creamos el controlador para abortar la petición
   const controller = new AbortController();
-    // Recuperamos la señal del controlador
-    const { signal } = controller
+  // Recuperamos la señal del controlador
+  const { signal } = controller;
   //guardo los datos de la imagen de la api
   const [imgUrl, setimgUrl] = useState<string>("");
   const [idImg, setidImg] = useState<string>("");
@@ -54,20 +54,16 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
         console.log("finalizo ok");
       });
   };
-  //ejecuta el consumo de api en el primer render
-  //ejecuta el consumo de api en el primer render
-  useEffect(() => {
-    generateCat()
-  },[])
+
   //al desmontar componente cancela peticion a la api si se sigue ejecutando
   useIonViewDidLeave(() => {
-    controller.abort()
+    controller.abort();
     console.log("salio de cats");
   });
-    //al cargar componente quita el de images comtent para optimizar y rendimiento
-  useIonViewDidEnter(()=>{
-    setTimeout(()=>props.setisClose(true),2000)
-  })
+  //al cargar componente quita el de images comtent para optimizar y rendimiento
+  useIonViewDidEnter(() => {
+    setTimeout(() => props.setisClose(true), 2000);
+  });
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
     setTimeout(() => {
@@ -76,6 +72,11 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
       event.detail.complete();
     }, 1000);
   }
+  //ejecuta el consumo de api en el primer render
+  useEffect(() => {
+    generateCat();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <IonPage>
       <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
