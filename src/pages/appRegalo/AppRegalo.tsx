@@ -80,7 +80,8 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                 <IonLabel>Cerrar la sesión</IonLabel>
               </IonItem>
             </IonMenuToggle>
-            <IonItem lines="none">
+            
+            {isClose?null:<IonItem lines="none">
               <IonIcon slot="start" icon={list} />
               <IonAccordionGroup ref={accordionGroup}>
                 <IonAccordion value="first">
@@ -89,29 +90,29 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                   </IonItem>
                   <div className="ion-padding" slot="content">
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section0")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
+                      <IonItem onClick={(e,s="#section0")=>toggleAccordion(e,s)} >
                         Antes de conocernos
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section25")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
+                      <IonItem onClick={(e,s="#section25")=>toggleAccordion(e,s)} >
                         Primer Encuentro
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section38")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
+                      <IonItem onClick={(e,s="#section38")=>toggleAccordion(e,s)} >
                         Cita en museo
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section66")=>toggleAccordion(e,s)} routerLink="/AppRegalo/nosotros">
+                      <IonItem onClick={(e,s="#section66")=>toggleAccordion(e,s)} >
                         Año nuevo juntos
                       </IonItem>
                     </IonMenuToggle>
                   </div>
                 </IonAccordion>
               </IonAccordionGroup>
-            </IonItem>
+            </IonItem>}
             <IonMenuToggle onClick={() => clearLocalSesion()}>
               <IonItem routerLink="/all-activities/ComoEstas" lines="none">
                 <IonIcon slot="start" icon={musicalNotes} />
@@ -125,17 +126,17 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         <IonRouterOutlet id="main-content">
           <Route
             path="/AppRegalo/home"
-            component={Regalo}
+            render={()=><Regalo setisClose={setisClose}/>}
             exact={true}
           />
           <Route
             path="/AppRegalo/nosotros"
-            render={() =>isClose?<Redirect to="/AppRegalo/home"></Redirect>:<ImagesContent setisClose={setisClose} setisOnPlayVideo={setisOnPlayVideo}/>}
+            render={() =>isClose?null:<ImagesContent setisClose={setisClose}  setisOnPlayVideo={setisOnPlayVideo}/>}
             exact={true}
           />
           <Route
             path="/AppRegalo/casts"
-            render={() => <RandomCats />}
+            render={() => <RandomCats setisClose={setisClose}/>}
             exact={true}
           />
           <Redirect exact from="/" to="/AppRegalo/home" />

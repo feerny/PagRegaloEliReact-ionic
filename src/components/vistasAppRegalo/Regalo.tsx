@@ -12,17 +12,23 @@ import {
   IonTitle,
   IonToolbar,
   RefresherEventDetail,
+  useIonViewDidEnter,
 } from "@ionic/react";
+import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
 
-const Regalo: React.FC = () => {
+const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
+  //al cargar componente quita el de images comtent para optimizar y rendimiento
+  useIonViewDidEnter(()=>{
+    props.setisClose(true)
+  })
   const [OpenRegalo, setOpenRegalo] = useState<boolean>(false);
   const [imgLoad, setimgLoad] = useState<boolean>(false);
   const [styleTapaRegalo, setstyleTapaRegalo] = useState("imgCubiertaRegalo");
+  //carga de la imagen
   const imgLoadClomplet = () => {
-    console.log("ffssf");
-
     setimgLoad(true);
   };
+  //da estilo a la tapa del regalo para animacion
   function clickOpenRegalo() {
     setOpenRegalo(true);
     setstyleTapaRegalo("imgCubiertaRegaloRemove");

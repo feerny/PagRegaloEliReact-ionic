@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   IonButton,
   IonButtons,
@@ -20,8 +20,12 @@ import {
 } from "@ionic/react";
 import axios from "axios";
 import { paw } from "ionicons/icons";
-
-const RandomCats: React.FC = () => {
+import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
+const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
+  // Creamos el controlador para abortar la petición
+  const controller = new AbortController();
+    // Recuperamos la señal del controlador
+    const { signal } = controller
   //guardo los datos de la imagen de la api
   const [imgUrl, setimgUrl] = useState<string>("");
   const [idImg, setidImg] = useState<string>("");
@@ -31,7 +35,7 @@ const RandomCats: React.FC = () => {
     //envia estado cargando y espera a que pase la consulta
     setisLoading(true);
     await axios
-      .get("https://api.thecatapi.com/v1/images/search")
+      .get("https://api.thecatapi.com/v1/images/search", { signal })
       .then(function (response) {
         // handle success
         //envia los datos al usestate
@@ -51,13 +55,19 @@ const RandomCats: React.FC = () => {
       });
   };
   //ejecuta el consumo de api en el primer render
-  useIonViewDidEnter(() => {
-    generateCat();
-    console.log("entro a cats");
-  });
+  //ejecuta el consumo de api en el primer render
+  useEffect(() => {
+    generateCat()
+  },[])
+  //al desmontar componente cancela peticion a la api si se sigue ejecutando
   useIonViewDidLeave(() => {
+    controller.abort()
     console.log("salio de cats");
   });
+    //al cargar componente quita el de images comtent para optimizar y rendimiento
+  useIonViewDidEnter(()=>{
+    setTimeout(()=>props.setisClose(true),2000)
+  })
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
     setTimeout(() => {

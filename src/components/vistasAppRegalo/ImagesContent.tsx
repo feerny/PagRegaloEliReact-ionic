@@ -16,16 +16,14 @@ import {
   IonTitle,
   IonToolbar,
   RefresherEventDetail,
-  useIonViewDidLeave,
 } from "@ionic/react";
 
 import { dataCards } from "../../data/dataCards/DataCards";
 import { ImagesContentProps } from "../../data/imagesContentProps/ImagesContentProps";
+import { useHistory } from "react-router-dom";
 
 const ImagesContent: React.FC<ImagesContentProps> = (props) => {
-  useIonViewDidLeave(() => {
-    props.setisClose(true)
-  });
+  let history=useHistory();
   //funcion para enviar estado de video(si se reproduce o no)
   const videoPlayOrNot=(validation:boolean)=>{
     props.setisOnPlayVideo(validation)
@@ -34,6 +32,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
     setTimeout(() => {
       // Any calls to load data go here
+      history.push("/AppRegalo/home")
       window.location.reload();
       event.detail.complete();
     }, 1000);
@@ -58,7 +57,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
               // es mala practica poner el index como key pero ya que no se agregaran mas ni se modificaran lo deje asi
               <IonCard key={index} id={`section${index}`}>
                 {/* una validacion simple para saber si es una imagen o un video y elegir que debe usar */}
-                { item.image.split(".")[1]==="mp4" || item.image.split(".")[1]==="staticflickr"? (
+                {item.image.split(".")[1]==="staticflickr"? (
                   // si el recurso es un video entra y manda los atributos requeridos 
                   <video onPause={()=>videoPlayOrNot(false)} onPlay={()=>videoPlayOrNot(true)}  width="370rem" controls>
                     <source src={item.image} type="video/mp4" />

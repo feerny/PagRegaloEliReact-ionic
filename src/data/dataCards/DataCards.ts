@@ -5,7 +5,7 @@ export const dataCards: DataCards[] = [
     title: "Antes de vernos",
     date: "",
     description:
-      "Los recuerdos que tengo de ti antes de vernos:3",
+      "Los recuerdos que tengo de ti antes de vernos:3\n(en el menu puedes pasar a las otras secciones rapido)",
   },{
     image: "/assets/images/img1Febrero-6-2022.jpg",
     title: "La Primera fotito",
@@ -31,7 +31,7 @@ export const dataCards: DataCards[] = [
     description:
       "Conoci tu baño >:)",
   },{
-    image: "/assets/images/img5Febrero-2022.mp4",
+    image: "https://live.staticflickr.com/video/52816878674/59b11a04b0/360p.mp4?s=eyJpIjo1MjgxNjg3ODY3NCwiZSI6MTY4MTQ3NjMzOCwicyI6IjBiMWFhNDNlODhlY2IxZjJmZTY1MDgxNmUyYjQ1OWY5MzUwNGIzZGIiLCJ2IjoxfQ",
     title: "Toda dark",
     date: "FEBRERO DE 2022",
     description:
@@ -55,7 +55,7 @@ export const dataCards: DataCards[] = [
     description:
       "Te pereces a mi pana juan :)",
   },{
-    image: "/assets/images/img9Marzo-2022.mp4",
+    image: "https://live.staticflickr.com/video/52816907939/0e1868e24c/720p.mp4?s=eyJpIjo1MjgxNjkwNzkzOSwiZSI6MTY4MTQ3Nzg0MSwicyI6IjFmNzFlN2ZiMmFhODMzOTI2ZjkxMmY4OGNlZGVlMjA2MjhkMGE1OTMiLCJ2IjoxfQ",
     title: "Tremendas piernas",
     date: "MARZO 2022",
     description:
@@ -85,7 +85,7 @@ export const dataCards: DataCards[] = [
     description:
       "Mientras mas pasa el tiempo mas facha te vuelves cielo",
   }, {
-    image: "/assets/images/img14Mayo-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817147555/47943d8a97/360p.mp4?s=eyJpIjo1MjgxNzE0NzU1NSwiZSI6MTY4MTQ3ODM3OSwicyI6ImY1YWZkMjJlZTJkMjZiODVjYmU1OTdlNzkyZjFkZjUwYzYzZGFjYWIiLCJ2IjoxfQ",
     title: "Que flow",
     date: "MAYO 2022",
     description:
@@ -97,7 +97,7 @@ export const dataCards: DataCards[] = [
     description:
       "Me di cuenta que las gafas te re lucen",
   },{
-    image: "/assets/images/img16Mayo-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817192873/2ee6b5b090/360p.mp4?s=eyJpIjo1MjgxNzE5Mjg3MywiZSI6MTY4MTQ3ODc1MywicyI6IjczN2QzNDYxNjc5YzE3ODcwYjM0YmFhNTA5M2U4NzgwNWFmYmEzNjAiLCJ2IjoxfQ",
     title: "Estilo nivel God",
     date: "MAYO 2022",
     description:
@@ -133,7 +133,7 @@ export const dataCards: DataCards[] = [
     description:
       "Toda bella ya con la chaqueta faltando poco pa graduarte",
   },{
-    image: "/assets/images/img22Junio-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817164015/211877dbc7/360p.mp4?s=eyJpIjo1MjgxNzE2NDAxNSwiZSI6MTY4MTQ3ODk4NCwicyI6IjdiNGFlODNlNTE3OTVhZTFhNWFjN2MwNTU3NDFjZjBhNTYyNmIyOTYiLCJ2IjoxfQ",
     title: "Me seduceeeee",
     date: "Junio 2022",
     description:
@@ -145,7 +145,7 @@ export const dataCards: DataCards[] = [
     description:
       "Te veias toda diva miamor, perfecta pa una pintura de esas famosas",
   },{
-    image: "/assets/images/img24Agosto-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817210388/eeeac48481/360p.mp4?s=eyJpIjo1MjgxNzIxMDM4OCwiZSI6MTY4MTQ3OTMwMiwicyI6IjAwMjVkZDkyZTlmOWFjYTU2NTY1NDg3ZTAwMTVmMGViZDkxOTU5MmUiLCJ2IjoxfQ",
     title: "Entonada",
     date: "Agosto 2022",
     description:
@@ -157,13 +157,13 @@ export const dataCards: DataCards[] = [
     description:
       "Nos vimos por primera vez que emocion, sentia que se me salia el corazon",
   }, {
-    image: "/assets/images/img25Septiembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52816963659/5d3ca6361c/720p.mp4?s=eyJpIjo1MjgxNjk2MzY1OSwiZSI6MTY4MTQ3OTQ5NywicyI6ImFjNzM0ZmVlMGUxNTczZTJjYmFjZTNhYTc5YjNkYjYwZTFjMmJmNDYiLCJ2IjoxfQ",
     title: "Primer dia en tu casa",
     date: "Septiembre 2022",
     description:
       "yo todo nervioso y tu toda divina con el saco de viejito",
   },{
-    image: "/assets/images/img26Septiembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52816772916/aa1e298583/720p.mp4?s=eyJpIjo1MjgxNjc3MjkxNiwiZSI6MTY4MTQ3OTY0NSwicyI6ImVmYWFmNTdlNWY5YWFmNjEyYTc2MTRjODc4YjM2Mzk2YWI1MjcwMDYiLCJ2IjoxfQ",
     title: "Vias de tren y niña linda",
     date: "Septiembre 2022",
     description:
@@ -373,7 +373,7 @@ export const dataCards: DataCards[] = [
     description:
       "Un chiguiro:o",
   },{
-    image: "/assets/images/img60Septiembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817229743/af3cf739b1/360p.mp4?s=eyJpIjo1MjgxNzIyOTc0MywiZSI6MTY4MTQ4MDMwOCwicyI6ImJhZmM3NjQ2OTU4ODYzNmZmYjQ1NDAzODg2YmFmNzdlOWMzOWRjNWYiLCJ2IjoxfQ",
     title: "Modificando el himno",
     date: "Septiembre 2022",
     description:
@@ -403,7 +403,7 @@ export const dataCards: DataCards[] = [
     description:
       "Fotitos de año nuevo con mi novia hermosaaaaa",
   }, {
-    image: "/assets/images/img64Diciembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52816996584/1ece1ffb2f/360p.mp4?s=eyJpIjo1MjgxNjk5NjU4NCwiZSI6MTY4MTQ4MDQ4NCwicyI6IjJjNjcyZjU3ZGVlOTQ0ZjIyMjIzM2FkZWY2YjlhMTI2NWU3N2Y1MTQiLCJ2IjoxfQ",
     title: "Un dia antes de viajar",
     date: "Diciembre 2022",
     description:
@@ -415,7 +415,7 @@ export const dataCards: DataCards[] = [
     description:
       "Yo todo prendo agarrandote jajdjsaha",
   },{
-    image: "/assets/images/img66Diciembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52816247452/e3b57623f5/360p.mp4?s=eyJpIjo1MjgxNjI0NzQ1MiwiZSI6MTY4MTQ4MDU4MiwicyI6IjE0NzY5OTBhODE2OTZiYzA2NGUyOGU2NzU2ODAyMjc0ZGUwNTQ5OGEiLCJ2IjoxfQ",
     title: "Comidita",
     date: "Diciembre 2022",
     description:
@@ -457,7 +457,7 @@ export const dataCards: DataCards[] = [
     description:
       "Mi cara AJdhajDHSaJSHj",
   },{
-    image: "/assets/images/img73Diciembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817218195/9267ea728d/360p.mp4?s=eyJpIjo1MjgxNzIxODE5NSwiZSI6MTY4MTQ4MDcxNCwicyI6ImFkNjYwZjY0NjBmNTBhMTM5YjUxYWUyYTIyZGY1YThmYmU1NjIyNTEiLCJ2IjoxfQ",
     title: "Me robo un beso:o",
     date: "Diciembre 2022",
     description:
@@ -469,7 +469,7 @@ export const dataCards: DataCards[] = [
     description:
       "La noche mas linda por que estuviste conmigo<3",
   },{
-    image: "/assets/images/img75Diciembre-2022.mp4",
+    image: "https://live.staticflickr.com/video/52817264233/aa8b226c82/360p.mp4?s=eyJpIjo1MjgxNzI2NDIzMywiZSI6MTY4MTQ4MDg0MywicyI6IjczNmY1OTBmZTMwMjcyNzViNjhmOTFiYThjMzdhYTRmM2QyNDcwMjEiLCJ2IjoxfQ",
     title: "31 en mi casa",
     date: "Diciembre 2022",
     description:
