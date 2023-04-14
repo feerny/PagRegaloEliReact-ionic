@@ -25,8 +25,14 @@ import ImagesContent from "../../components/vistasAppRegalo/ImagesContent";
 import RandomCats from "../../components/vistasAppRegalo/RandomCats"
 import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
+import MusicaControllerLazy from "../../components/modalMusica/MusicaControllerLazy";
+
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
+  const [isPlayMusic, setisPlayMusic] = useState<boolean>(true)
+  //hace la referencia al audio
+  const  [music, setmusic] = useState<any>()
+  const [isOpen, setIsOpen] = useState(false);
   //controlla si se cierra la seccion de imagenes para rendimiento
   const [isClose, setisClose] = useState(true)
   //controla si el video se reproduce o no
@@ -34,7 +40,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //agarra los elementos del acordeon
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
   //funcion para cerrar acordeon al dar clik en uno de sus hijos
-  const toggleAccordion = (e:any,s:any) => {
+  const toggleAccordion = (s:any) => {
      setisClose(false)
     let href = s;
     // hace scroll hasta el id dado
@@ -90,22 +96,22 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                   </IonItem>
                   <div className="ion-padding" slot="content">
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section0")=>toggleAccordion(e,s)} >
+                      <IonItem onClick={(e,s="#section0")=>toggleAccordion(s)} >
                         Antes de conocernos
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section25")=>toggleAccordion(e,s)} >
+                      <IonItem onClick={(e,s="#section25")=>toggleAccordion(s)} >
                         Primer Encuentro
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section38")=>toggleAccordion(e,s)} >
+                      <IonItem onClick={(e,s="#section38")=>toggleAccordion(s)} >
                         Cita en museo
                       </IonItem>
                     </IonMenuToggle>
                     <IonMenuToggle>
-                      <IonItem onClick={(e,s="#section66")=>toggleAccordion(e,s)} >
+                      <IonItem onClick={(e,s="#section66")=>toggleAccordion(s)} >
                         Año nuevo juntos
                       </IonItem>
                     </IonMenuToggle>
@@ -113,8 +119,8 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                 </IonAccordion>
               </IonAccordionGroup>
             </IonItem>}
-            <IonMenuToggle onClick={() => clearLocalSesion()}>
-              <IonItem routerLink="/all-activities/ComoEstas" lines="none">
+            <IonMenuToggle onClick={() => setIsOpen(true)}>
+              <IonItem lines="none">
                 <IonIcon slot="start" icon={musicalNotes} />
                 <IonLabel>Musica</IonLabel>
               </IonItem>
@@ -163,9 +169,13 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         //cambia de musica dependiendo de la iteracion
           src={"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3"}
           autoPlay
-          muted={isOnPlayVideo?true:true}
+          onPlay={()=>setisPlayMusic(true)}
+          onPause={()=>setisPlayMusic(false)}
+          muted={isOnPlayVideo?true:false}
           loop
+          ref={(element) => { setmusic(element); }}
         />
+        <MusicaControllerLazy isPlayMusic={isPlayMusic} music={music} setIsOpen={setIsOpen} isOpen={isOpen} />
     </IonContent>
   );
 };

@@ -71,3 +71,7 @@
 .imgCubiertaRegaloRemoveFinal{
 display: none;
 }
+.iconsControllsMusic{ 
+  display: flex;
+  justify-content: space-evenly;
+}
