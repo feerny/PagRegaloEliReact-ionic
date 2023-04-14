@@ -25,7 +25,8 @@ import { useHistory } from "react-router-dom";
 const ImagesContent: React.FC<ImagesContentProps> = (props) => {
   let history=useHistory();
   //funcion para enviar estado de video(si se reproduce o no)
-  const videoPlayOrNot=(validation:boolean)=>{
+  const videoPlayOrNot=(e:any,validation:boolean)=>{
+    e.preventDefault()
     props.setisOnPlayVideo(validation)
   }
   //funcion para refrescar la pagina
@@ -59,7 +60,7 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
                 {/* una validacion simple para saber si es una imagen o un video y elegir que debe usar */}
                 {item.image.split(".")[1]==="staticflickr"? (
                   // si el recurso es un video entra y manda los atributos requeridos 
-                  <video onPause={()=>videoPlayOrNot(false)} onPlay={()=>videoPlayOrNot(true)}  width="370rem" controls>
+                  <video onPause={(e)=>videoPlayOrNot(e,false)} onPlay={(e)=>videoPlayOrNot(e,true)}  width="370rem" controls>
                     <source src={item.image} type="video/mp4" />
                   </video>
                 ) : (

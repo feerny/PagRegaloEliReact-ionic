@@ -45,9 +45,6 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
 
   return (
     <IonPage>
-      <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
-        <IonRefresherContent></IonRefresherContent>
-      </IonRefresher>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -57,6 +54,9 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
+      <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+        <IonRefresherContent></IonRefresherContent>
+      </IonRefresher>
         <div
           style={{
             display: "flex",
