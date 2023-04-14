@@ -15,8 +15,8 @@ import {
   IonTitle,
   IonToolbar,
   RefresherEventDetail,
-  useIonViewDidEnter,
   useIonViewDidLeave,
+  useIonViewWillEnter,
 } from "@ionic/react";
 import axios from "axios";
 import { paw } from "ionicons/icons";
@@ -61,8 +61,8 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
     console.log("salio de cats");
   });
   //al cargar componente quita el de images comtent para optimizar y rendimiento
-  useIonViewDidEnter(() => {
-    setTimeout(() => props.setisClose(true), 2000);
+  useIonViewWillEnter(() => {
+     props.setisClose(true);
   });
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {

@@ -12,13 +12,13 @@ import {
   IonTitle,
   IonToolbar,
   RefresherEventDetail,
-  useIonViewDidEnter,
+  useIonViewWillEnter,
 } from "@ionic/react";
 import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
 
 const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
   //al cargar componente quita el de images comtent para optimizar y rendimiento
-  useIonViewDidEnter(()=>{
+  useIonViewWillEnter(()=>{
     props.setisClose(true)
   })
   const [OpenRegalo, setOpenRegalo] = useState<boolean>(false);
