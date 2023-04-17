@@ -8,4 +8,7 @@ export interface MusicaControllerProps{
     setnumMusic:Function;
     numMusic:number;
     clickNext:Function;
+    setaleatorioActive:Function;
+    aleatorioActive:Boolean;
+    clickNextAleatorio:Function;
 }
