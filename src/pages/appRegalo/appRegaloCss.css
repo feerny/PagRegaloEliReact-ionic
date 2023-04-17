@@ -75,3 +75,20 @@ display: none;
   display: flex;
   justify-content: space-evenly;
 }
+
+@keyframes sliding {
+  to {
+      background-position: -2000vw;
+  }
+}
+.tittleMusic{
+  color: white;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-image: linear-gradient(to right,orangered,orange,gold,lightgreen,cyan, dodgerblue, mediumpurple, hotpink, orangered);
+  background-size: 110vw;
+  animation: sliding 30s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -3,4 +3,6 @@ export interface MusicaControllerProps{
     setIsOpen:Function;
     music:any
     isPlayMusic:boolean;
+    musicData:String;
+    setmusicData:Function;
 }

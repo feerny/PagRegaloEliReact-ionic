@@ -29,6 +29,8 @@ import MusicaControllerLazy from "../../components/modalMusica/MusicaControllerL
 
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
+  //data de musica
+  const [musicData, setmusicData] = useState({url:"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",title:"Let It Go"})
   const [isPlayMusic, setisPlayMusic] = useState<boolean>(true)
   //hace la referencia al audio
   const  [music, setmusic] = useState<any>()
@@ -72,7 +74,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
       <IonMenu contentId="main-content">
         <IonHeader>
           <IonToolbar>
-            <IonItem>
+            <IonItem lines="none">
             <IonIcon color="red" icon={heart} slot="start"/>
             <IonTitle color="red">Menu Eli</IonTitle>
            </IonItem>
@@ -167,7 +169,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
       </IonTabs>
       <ReactAudioPlayer
         //cambia de musica dependiendo de la iteracion
-          src={"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3"}
+          src={musicData.url}
           autoPlay
           onPlay={()=>setisPlayMusic(true)}
           onPause={()=>setisPlayMusic(false)}
@@ -175,7 +177,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           loop
           ref={(element) => { setmusic(element); }}
         />
-        <MusicaControllerLazy isPlayMusic={isPlayMusic} music={music} setIsOpen={setIsOpen} isOpen={isOpen} />
+        <MusicaControllerLazy musicData={musicData.title} setmusicData={setmusicData} isPlayMusic={isPlayMusic} music={music} setIsOpen={setIsOpen} isOpen={isOpen} />
     </IonContent>
   );
 };
