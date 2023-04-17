@@ -145,7 +145,7 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
 
           <IonFooter>
             <IonToolbar>
-              <IonTitle>Footer</IonTitle>
+              <IonTitle>Musica Obtenida de <a target="__blank" href="https://pixabay.com/es/music/search/lofi/">pixabay</a></IonTitle>
             </IonToolbar>
           </IonFooter>
         </IonContent>
