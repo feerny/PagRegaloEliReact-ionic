@@ -232,7 +232,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         onPlay={() => setisPlayMusic(true)}
         onPause={() => setisPlayMusic(false)}
         muted={isOnPlayVideo ? true : false}
-        onEnded={() =>aleatorioActive?clickNextAleatorio(): clickNext()}
+        onEnded={() => (aleatorioActive ? clickNextAleatorio() : clickNext())}
         ref={(element) => {
           setmusic(element);
         }}

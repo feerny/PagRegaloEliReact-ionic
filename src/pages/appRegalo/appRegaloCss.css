@@ -68,9 +68,6 @@
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
-.imgCubiertaRegaloRemoveFinal{
-display: none;
-}
 .iconsControllsMusic{ 
   display: flex;
   justify-content: space-evenly;

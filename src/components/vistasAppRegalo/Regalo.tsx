@@ -18,10 +18,17 @@ import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloP
 
 const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
   //al cargar componente quita el de images comtent para optimizar y rendimiento
+  const [OpenRegalo, setOpenRegalo] = useState<boolean>(false);
+  let localStorageItem=localStorage.getItem("openRegalo")||null;
   useIonViewWillEnter(()=>{
+    if (localStorage.getItem("openRegalo")) {
+      if (localStorage.getItem("openRegalo")==="true") {
+        setOpenRegalo(true);
+      }
+    }
     props.setisClose(true)
   })
-  const [OpenRegalo, setOpenRegalo] = useState<boolean>(false);
+
   const [imgLoad, setimgLoad] = useState<boolean>(false);
   const [styleTapaRegalo, setstyleTapaRegalo] = useState("imgCubiertaRegalo");
   //carga de la imagen
@@ -30,9 +37,9 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
   };
   //da estilo a la tapa del regalo para animacion
   function clickOpenRegalo() {
+    setTimeout(()=>localStorage.setItem("openRegalo", "true"),6000)
     setOpenRegalo(true);
     setstyleTapaRegalo("imgCubiertaRegaloRemove");
-    setTimeout(() => setstyleTapaRegalo("imgCubiertaRegaloRemoveFinal"), 6000);
   }
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
@@ -78,11 +85,11 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
               alt="imageRegalo"
             />
           ) : null}
-          <IonImg
+          {localStorageItem==="true"?null:<IonImg
             onClick={() => clickOpenRegalo()}
             className={styleTapaRegalo}
             src="/assets/images/imgTapaRegalo.jpg"
-          ></IonImg>
+          ></IonImg>}
         </div>
       </IonContent>
     </IonPage>

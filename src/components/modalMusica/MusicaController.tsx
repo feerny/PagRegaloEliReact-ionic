@@ -63,7 +63,7 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
       <IonModal isOpen={props.isOpen}>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Music</IonTitle>
+            <IonTitle>Music Eli</IonTitle>
             <IonButtons slot="end">
               <IonButton onClick={() => props.setIsOpen(false)}>
                 Close
@@ -99,7 +99,9 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
               )}
               <button
                 onClick={() =>
-                  props.aleatorioActive ? props.clickNextAleatorio() : props.clickNext()
+                  props.aleatorioActive
+                    ? props.clickNextAleatorio()
+                    : props.clickNext()
                 }
                 style={{ background: "none" }}
               >
@@ -131,7 +133,16 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
                 </div>
               </IonAccordion>
             </IonAccordionGroup>
+            <img
+              width="370rem"
+              height="417rem"
+              alt={"imageCatDance"}
+              src={
+                "https://i.pinimg.com/originals/72/77/19/72771935f70719c9d006e4c3f1a8320a.gif"
+              }
+            />
           </div>
+
           <IonFooter>
             <IonToolbar>
               <IonTitle>Footer</IonTitle>
