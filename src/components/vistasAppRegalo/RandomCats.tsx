@@ -5,7 +5,6 @@ import {
   IonContent,
   IonHeader,
   IonIcon,
-  IonImg,
   IonMenuButton,
   IonPage,
   IonProgressBar,
@@ -80,21 +79,22 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar >
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
           </IonButtons>
-          <IonTitle>Generador de Gatos randoms</IonTitle>
+          <IonTitle >Generador de Gatos randoms</IonTitle>
           {isLoading ? (
             <IonProgressBar color="dark" type="indeterminate"></IonProgressBar>
           ) : null}
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+      <IonContent >
       <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
         <IonRefresherContent></IonRefresherContent>
       </IonRefresher>
         <div
+        className="contentCatsRandoms"
           style={{
             display: "flex",
             alignItems: "center",
@@ -107,9 +107,10 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
             {isLoading ? (
               <IonSpinner name="bubbles" />
             ) : (
-              <IonImg className="imgCats" src={imgUrl} alt={idImg}></IonImg>
+              <img width="370rem"  className="imgCats" src={imgUrl} alt={idImg}></img>
             )}
             <IonButton
+            style={{backdropFilter: "blur(10px)"}}
               color="dark"
               fill="outline"
               expand="block"

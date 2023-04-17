@@ -60,11 +60,12 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
           <IonTitle>Regalo</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+      <IonContent >
       <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
         <IonRefresherContent></IonRefresherContent>
       </IonRefresher>
         <div
+        className="fondoRegaloPage"
           style={{
             display: "flex",
             alignItems: "center",

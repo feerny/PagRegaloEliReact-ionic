@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   IonAccordion,
   IonAccordionGroup,
@@ -11,6 +11,7 @@ import {
   IonItem,
   IonLabel,
   IonModal,
+  IonSpinner,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -25,6 +26,8 @@ import {
 import { MusicList } from "../../data/dataMusic/MusicList";
 
 const MusicaController: React.FC<MusicaControllerProps> = (props) => {
+  //valida si ya cargo la imagen
+  const [imgLoad, setimgLoad] = useState(false)
   //agarra los elementos del acordeon
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
   //funcion para cerrar acordeon al dar clik en uno de sus hijos
@@ -133,7 +136,9 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
                 </div>
               </IonAccordion>
             </IonAccordionGroup>
+            {imgLoad?null:<IonSpinner className="imgRegaloSpinner" name="bubbles" />}
             <img
+              onLoad={()=>setimgLoad(true)}
               width="370rem"
               height="417rem"
               alt={"imageCatDance"}
@@ -142,7 +147,6 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
               }
             />
           </div>
-
           <IonFooter>
             <IonToolbar>
               <IonTitle>Musica Obtenida de <a target="__blank" href="https://pixabay.com/es/music/search/lofi/">pixabay</a></IonTitle>

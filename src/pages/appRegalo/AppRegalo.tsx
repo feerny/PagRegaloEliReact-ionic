@@ -15,6 +15,7 @@ import {
   IonTabButton,
   IonTabs,
   IonTitle,
+  IonToggle,
   IonToolbar,
 } from "@ionic/react";
 import {
@@ -25,6 +26,7 @@ import {
   list,
   heart,
   musicalNotes,
+  moon,
 } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
@@ -172,6 +174,13 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
               <IonItem lines="none">
                 <IonIcon slot="start" icon={musicalNotes} />
                 <IonLabel>Musica</IonLabel>
+              </IonItem>
+            </IonMenuToggle>
+            <IonMenuToggle >
+              <IonItem lines="none">
+                <IonIcon slot="start" icon={moon} />
+                <IonLabel>Dark mode</IonLabel>
+                <IonToggle   color="dark"></IonToggle>
               </IonItem>
             </IonMenuToggle>
           </IonList>
