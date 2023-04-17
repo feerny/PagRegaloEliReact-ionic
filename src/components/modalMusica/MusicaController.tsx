@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   IonButton,
   IonButtons,
@@ -16,32 +16,22 @@ import {
   playCircle,
   playSkipBack,
   playSkipForward,
+  shuffle,
 } from "ionicons/icons";
 import {MusicList} from "../../data/dataMusic/MusicList";
 
 const MusicaController: React.FC<MusicaControllerProps> = (props) => {
-  const [numMusic, setnumMusic] = useState(0)
-  const clickNext=()=>{
-    if (numMusic+1===MusicList.length) {
-      console.log(MusicList.length);
-      props.setmusicData({url:MusicList[0].url,title:MusicList[0].tittle})
-      setnumMusic(0)
-    }else{
-      props.setmusicData({url:MusicList[numMusic+1].url,title:MusicList[numMusic+1].tittle})
-      setnumMusic(numMusic+1)
-      console.log(numMusic);
-    }
+  
 
-  }
   const clickPrev=()=>{
-    if (numMusic===0) {
+    if (props.numMusic===0) {
       console.log(MusicList.length);
       props.setmusicData({url:MusicList[MusicList.length-1].url,title:MusicList[MusicList.length-1].tittle})
-      setnumMusic(MusicList.length-1)
+      props.setnumMusic(MusicList.length-1)
     }else{
-      props.setmusicData({url:MusicList[numMusic-1].url,title:MusicList[numMusic-1].tittle})
-      setnumMusic(numMusic-1)
-      console.log(numMusic);
+      props.setmusicData({url:MusicList[props.numMusic-1].url,title:MusicList[props.numMusic-1].tittle})
+      props.setnumMusic(props.numMusic-1)
+      console.log(props.numMusic);
     }
 
   }
@@ -75,8 +65,11 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
               <button onClick={()=>props.music.audioEl.current.play()} style={{ background: "none" }}>
                 <IonIcon size="large" icon={playCircle} />
               </button>}
-              <button onClick={()=>clickNext()} style={{ background: "none" }}>
+              <button onClick={()=>props.clickNext()} style={{ background: "none" }}>
                 <IonIcon size="large" icon={playSkipForward} />
+              </button>
+              <button style={{ background: "none" }}>
+                <IonIcon size="large" icon={shuffle} />
               </button>
             </div>
             <h1 className="tittleMusic">{props.musicData}</h1>

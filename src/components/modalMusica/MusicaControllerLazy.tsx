@@ -20,7 +20,7 @@ const  MusicaControllerLazy: React.FC<MusicaControllerProps> = (props) => {
   return (
     <>
       <Suspense fallback={spinner}>
-        <LazyComponent musicData={props.musicData} setmusicData={props.setmusicData} isPlayMusic={props.isPlayMusic} music={props.music} setIsOpen={props.setIsOpen} isOpen={props.isOpen}/>
+        <LazyComponent numMusic={props.numMusic} setnumMusic={props.setnumMusic} clickNext={props.clickNext} musicData={props.musicData} setmusicData={props.setmusicData} isPlayMusic={props.isPlayMusic} music={props.music} setIsOpen={props.setIsOpen} isOpen={props.isOpen}/>
       </Suspense>
     </>
   );

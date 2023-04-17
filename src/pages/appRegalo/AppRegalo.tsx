@@ -26,11 +26,26 @@ import RandomCats from "../../components/vistasAppRegalo/RandomCats"
 import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
 import MusicaControllerLazy from "../../components/modalMusica/MusicaControllerLazy";
+import {MusicList} from "../../data/dataMusic/MusicList";
 
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
-  //data de musica
-  const [musicData, setmusicData] = useState({url:"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",title:"Let It Go"})
+    //data de musica
+    const [musicData, setmusicData] = useState({url:"https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",title:"Let It Go"})
+  //funcion para cambiar de musica al finalizar
+  const [numMusic, setnumMusic] = useState(0)
+  const clickNext=()=>{
+    if (numMusic+1===MusicList.length) {
+      console.log(MusicList.length);
+      setmusicData({url:MusicList[0].url,title:MusicList[0].tittle})
+      setnumMusic(0)
+    }else{
+      setmusicData({url:MusicList[numMusic+1].url,title:MusicList[numMusic+1].tittle})
+      setnumMusic(numMusic+1)
+      console.log(numMusic);
+    }
+
+  }
   const [isPlayMusic, setisPlayMusic] = useState<boolean>(true)
   //hace la referencia al audio
   const  [music, setmusic] = useState<any>()
@@ -174,10 +189,10 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           onPlay={()=>setisPlayMusic(true)}
           onPause={()=>setisPlayMusic(false)}
           muted={isOnPlayVideo?true:false}
-          loop
+          onEnded={()=>clickNext()}
           ref={(element) => { setmusic(element); }}
         />
-        <MusicaControllerLazy musicData={musicData.title} setmusicData={setmusicData} isPlayMusic={isPlayMusic} music={music} setIsOpen={setIsOpen} isOpen={isOpen} />
+        <MusicaControllerLazy numMusic={numMusic} setnumMusic={setnumMusic} clickNext={clickNext} musicData={musicData.title} setmusicData={setmusicData} isPlayMusic={isPlayMusic} music={music} setIsOpen={setIsOpen} isOpen={isOpen} />
     </IonContent>
   );
 };
