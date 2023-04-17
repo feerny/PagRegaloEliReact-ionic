@@ -31,7 +31,7 @@ export const dataCards: DataCards[] = [
     description:
       "Conoci tu baño >:)",
   },{
-    image: "https://live.staticflickr.com/video/52816878674/59b11a04b0/360p.mp4?s=eyJpIjo1MjgxNjg3ODY3NCwiZSI6MTY4MTQ3NjMzOCwicyI6IjBiMWFhNDNlODhlY2IxZjJmZTY1MDgxNmUyYjQ1OWY5MzUwNGIzZGIiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52816878674/59b11a04b0/360p.mp4?s=eyJpIjo1MjgxNjg3ODY3NCwiZSI6MTY4MTczODc0OCwicyI6ImQ0MjY0N2E5N2ViYWZiMGE0ZTQwNDI1NTQ2MWZiMTAxMDk1ZjJiNDEiLCJ2IjoxfQ",
     title: "Toda dark",
     date: "FEBRERO DE 2022",
     description:
@@ -55,7 +55,7 @@ export const dataCards: DataCards[] = [
     description:
       "Te pereces a mi pana juan :)",
   },{
-    image: "https://live.staticflickr.com/video/52816907939/0e1868e24c/720p.mp4?s=eyJpIjo1MjgxNjkwNzkzOSwiZSI6MTY4MTQ3Nzg0MSwicyI6IjFmNzFlN2ZiMmFhODMzOTI2ZjkxMmY4OGNlZGVlMjA2MjhkMGE1OTMiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52816907939/0e1868e24c/720p.mp4?s=eyJpIjo1MjgxNjkwNzkzOSwiZSI6MTY4MTczOTMzMywicyI6IjJmODk1YmYxNjc1MjdhN2FhMjk4ZjJjOGQ5NjUwMDRhNWMwMjliYjYiLCJ2IjoxfQ",
     title: "Tremendas piernas",
     date: "MARZO 2022",
     description:
@@ -85,7 +85,7 @@ export const dataCards: DataCards[] = [
     description:
       "Mientras mas pasa el tiempo mas facha te vuelves cielo",
   }, {
-    image: "https://live.staticflickr.com/video/52817147555/47943d8a97/360p.mp4?s=eyJpIjo1MjgxNzE0NzU1NSwiZSI6MTY4MTQ3ODM3OSwicyI6ImY1YWZkMjJlZTJkMjZiODVjYmU1OTdlNzkyZjFkZjUwYzYzZGFjYWIiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52817147555/47943d8a97/360p.mp4?s=eyJpIjo1MjgxNzE0NzU1NSwiZSI6MTY4MTczOTYwMCwicyI6IjJkYWIyNWY5NDVkYmU5YTI4MjhiMzFjOWZhNzRjNzM0YmEyZDdkYjciLCJ2IjoxfQ",
     title: "Que flow",
     date: "MAYO 2022",
     description:
@@ -97,7 +97,7 @@ export const dataCards: DataCards[] = [
     description:
       "Me di cuenta que las gafas te re lucen",
   },{
-    image: "https://live.staticflickr.com/video/52817192873/2ee6b5b090/360p.mp4?s=eyJpIjo1MjgxNzE5Mjg3MywiZSI6MTY4MTQ3ODc1MywicyI6IjczN2QzNDYxNjc5YzE3ODcwYjM0YmFhNTA5M2U4NzgwNWFmYmEzNjAiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52817192873/2ee6b5b090/360p.mp4?s=eyJpIjo1MjgxNzE5Mjg3MywiZSI6MTY4MTczOTc5MywicyI6IjkxZGY4MDkyMjE5YThiMDQxMWFlNGJmNmFiY2Y0N2UyZWYxOTg5NjIiLCJ2IjoxfQ",
     title: "Estilo nivel God",
     date: "MAYO 2022",
     description:
@@ -145,7 +145,7 @@ export const dataCards: DataCards[] = [
     description:
       "Te veias toda diva miamor, perfecta pa una pintura de esas famosas",
   },{
-    image: "https://live.staticflickr.com/video/52817210388/eeeac48481/360p.mp4?s=eyJpIjo1MjgxNzIxMDM4OCwiZSI6MTY4MTQ3OTMwMiwicyI6IjAwMjVkZDkyZTlmOWFjYTU2NTY1NDg3ZTAwMTVmMGViZDkxOTU5MmUiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52817210388/eeeac48481/360p.mp4?s=eyJpIjo1MjgxNzIxMDM4OCwiZSI6MTY4MTc0MDQ1NSwicyI6IjFhY2FmODFmYWZlYzE0M2UzODU5NzcxM2U4OGM1MjQ5ZTJjZmQ5MDMiLCJ2IjoxfQ",
     title: "Entonada",
     date: "Agosto 2022",
     description:
@@ -373,7 +373,7 @@ export const dataCards: DataCards[] = [
     description:
       "Un chiguiro:o",
   },{
-    image: "https://live.staticflickr.com/video/52817229743/af3cf739b1/360p.mp4?s=eyJpIjo1MjgxNzIyOTc0MywiZSI6MTY4MTQ4MDMwOCwicyI6ImJhZmM3NjQ2OTU4ODYzNmZmYjQ1NDAzODg2YmFmNzdlOWMzOWRjNWYiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52817229743/af3cf739b1/360p.mp4?s=eyJpIjo1MjgxNzIyOTc0MywiZSI6MTY4MTc0MDYzNywicyI6IjI3NDBhODEzY2VmMWYwNDQyNTdiNjZkOTdlN2QyZWMyZDM0YTNmMzciLCJ2IjoxfQ",
     title: "Modificando el himno",
     date: "Septiembre 2022",
     description:
@@ -415,13 +415,13 @@ export const dataCards: DataCards[] = [
     description:
       "Yo todo prendo agarrandote jajdjsaha",
   },{
-    image: "https://live.staticflickr.com/video/52816247452/e3b57623f5/360p.mp4?s=eyJpIjo1MjgxNjI0NzQ1MiwiZSI6MTY4MTQ4MDU4MiwicyI6IjE0NzY5OTBhODE2OTZiYzA2NGUyOGU2NzU2ODAyMjc0ZGUwNTQ5OGEiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52816247452/e3b57623f5/360p.mp4?s=eyJpIjo1MjgxNjI0NzQ1MiwiZSI6MTY4MTc0MDY5OSwicyI6Ijg0NjBkYjRjOTgzNWZkNzBlMjQ5YmEzM2JiMDA2MzBlNzhiMDRhYzMiLCJ2IjoxfQ",
     title: "Comidita",
     date: "Diciembre 2022",
     description:
       "Toda linda comiendo la salchipapa jajaja<3",
   },{
-    image: "https://live.staticflickr.com/video/52815788250/cf6eb8bf16/360p.mp4?s=eyJpIjo1MjgxNTc4ODI1MCwiZSI6MTY4MTQyMjE4NiwicyI6Ijg0ZjFmOGI3NDg1MzM2OTA4NDVhYjIzYzE1MzkwZTYxNmM3MDIwNGIiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52815788250/cf6eb8bf16/360p.mp4?s=eyJpIjo1MjgxNTc4ODI1MCwiZSI6MTY4MTczODI5NywicyI6IjRiMzMxYjVhMDRhZDk0YjRhZGFhMDg2NDFhZDI4ZjczMTBlMzIzODQiLCJ2IjoxfQ",
     title: "Maquinitas",
     date: "Diciembre 2022",
     description:
@@ -457,7 +457,7 @@ export const dataCards: DataCards[] = [
     description:
       "Mi cara AJdhajDHSaJSHj",
   },{
-    image: "https://live.staticflickr.com/video/52817218195/9267ea728d/360p.mp4?s=eyJpIjo1MjgxNzIxODE5NSwiZSI6MTY4MTQ4MDcxNCwicyI6ImFkNjYwZjY0NjBmNTBhMTM5YjUxYWUyYTIyZGY1YThmYmU1NjIyNTEiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52817218195/9267ea728d/360p.mp4?s=eyJpIjo1MjgxNzIxODE5NSwiZSI6MTY4MTc0MDczOSwicyI6IjJmN2IwZTU4NmQxYzY4NDQwNTY3MmE4YzEwYWE4MzhmYjE5N2Q0MTkiLCJ2IjoxfQ",
     title: "Me robo un beso:o",
     date: "Diciembre 2022",
     description:
@@ -469,7 +469,7 @@ export const dataCards: DataCards[] = [
     description:
       "La noche mas linda por que estuviste conmigo<3",
   },{
-    image: "https://live.staticflickr.com/video/52817264233/aa8b226c82/360p.mp4?s=eyJpIjo1MjgxNzI2NDIzMywiZSI6MTY4MTQ4MDg0MywicyI6IjczNmY1OTBmZTMwMjcyNzViNjhmOTFiYThjMzdhYTRmM2QyNDcwMjEiLCJ2IjoxfQ",
+    image: "https://live.staticflickr.com/video/52817264233/aa8b226c82/360p.mp4?s=eyJpIjo1MjgxNzI2NDIzMywiZSI6MTY4MTc0MDc4MCwicyI6IjkxZWFlY2QzYzczN2NhOTcwNDU2ZTkxM2NhYjI5NTU5YzU1NjI5NGIiLCJ2IjoxfQ",
     title: "31 en mi casa",
     date: "Diciembre 2022",
     description:
