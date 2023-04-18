@@ -53,7 +53,7 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
           </IonButtons>

@@ -41,22 +41,22 @@ const ImagesContent: React.FC<ImagesContentProps> = (props) => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
           </IonButtons>
           <IonTitle>Nuestros Momentos</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+      <IonContent >
         {/* funcion de ionic para refrescar la pagina al hacer scroll hacia abajo */}
         <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
-          <IonList className="listContent">
+          <IonList style={localStorage.getItem("temeDark")==="true"?{backgroundColor:"rgb(56 59 64)"}:{}} className="listContent">
             {dataCards.map((item, index) => (
               // es mala practica poner el index como key pero ya que no se agregaran mas ni se modificaran lo deje asi
-              <IonCard key={index} id={`section${index}`}>
+              <IonCard color={localStorage.getItem("temeDark")==="true"?"dark":""} key={index} id={`section${index}`}>
                 {/* una validacion simple para saber si es una imagen o un video y elegir que debe usar */}
                 {item.image.split(".")[1]==="staticflickr"? (
                   // si el recurso es un video entra y manda los atributos requeridos 

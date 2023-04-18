@@ -21,6 +21,15 @@ import axios from "axios";
 import { paw } from "ionicons/icons";
 import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
 const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
+  //estilo de fondo
+  const contentCatsRandoms={
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100%",
+    backgroundRepeat: 'repeat',
+    backgroundImage: localStorage.getItem("temeDark")==="true"?'url("/assets/images/FondoGatosDark.png")':'url("/assets/images/FondoGatos.png")',
+  }
   // Creamos el controlador para abortar la petición
   const controller = new AbortController();
   // Recuperamos la señal del controlador
@@ -79,7 +88,7 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar >
+        <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
           </IonButtons>
@@ -94,15 +103,10 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
         <IonRefresherContent></IonRefresherContent>
       </IonRefresher>
         <div
-        className="contentCatsRandoms"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-          }}
+        
+          style={contentCatsRandoms}
         >
-          <div className="spinnerCats">
+          <div className="spinnerCats" >
             {/* si el estado es loading muestra un spinner */}
             {isLoading ? (
               <IonSpinner name="bubbles" />

@@ -109,36 +109,37 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   };
 
   return (
-    <IonContent>
-      <IonMenu contentId="main-content">
-        <IonHeader>
-          <IonToolbar>
-            <IonItem lines="none">
-              <IonIcon color="red" icon={heart} slot="start" />
-              <IonTitle color="red">Menu Eli</IonTitle>
+    <IonContent >
+      <IonMenu contentId="main-content" >
+        <IonHeader >
+          <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
+            <IonItem lines="none" color={localStorage.getItem("temeDark")==="true"?"dark":""}>
+              <IonIcon style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}} icon={heart} slot="start" />
+              <IonTitle  color={localStorage.getItem("temeDark")==="true"?"light":""}>Menu Eli</IonTitle>
             </IonItem>
           </IonToolbar>
         </IonHeader>
-        <IonContent class="ion-padding">
-          <IonList>
-            <IonMenuToggle onClick={() => clearLocalSesion()}>
-              <IonItem routerLink="/all-activities/ComoEstas" lines="none">
+        <IonContent class="ion-padding" color={localStorage.getItem("temeDark")==="true"?"dark":""}>
+          <IonList style={localStorage.getItem("temeDark")==="true"?{backgroundColor:"#222428"}:{}} >
+            <IonMenuToggle  onClick={() => clearLocalSesion()} >
+              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} routerLink="/all-activities/ComoEstas" lines="none">
                 <IonIcon slot="start" icon={trash} />
                 <IonLabel>Cerrar la sesión</IonLabel>
               </IonItem>
             </IonMenuToggle>
 
             {isClose ? null : (
-              <IonItem lines="none">
+              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
                 <IonIcon slot="start" icon={list} />
-                <IonAccordionGroup ref={accordionGroup}>
-                  <IonAccordion value="first">
-                    <IonItem lines="none" slot="header" color="light">
+                <IonAccordionGroup  ref={accordionGroup}>
+                  <IonAccordion style={localStorage.getItem("temeDark")==="true"?{backgroundColor:"#222428"}:{}}  value="first">
+                    <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none" slot="header" >
                       <IonLabel>Secciones</IonLabel>
                     </IonItem>
                     <div className="ion-padding" slot="content">
                       <IonMenuToggle>
-                        <IonItem
+                        <IonItem 
+                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
                           onClick={(e, s = "#section0") => toggleAccordion(s)}
                         >
                           Antes de conocernos
@@ -146,6 +147,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                       </IonMenuToggle>
                       <IonMenuToggle>
                         <IonItem
+                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
                           onClick={(e, s = "#section25") => toggleAccordion(s)}
                         >
                           Primer Encuentro
@@ -153,6 +155,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                       </IonMenuToggle>
                       <IonMenuToggle>
                         <IonItem
+                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
                           onClick={(e, s = "#section38") => toggleAccordion(s)}
                         >
                           Cita en museo
@@ -160,6 +163,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                       </IonMenuToggle>
                       <IonMenuToggle>
                         <IonItem
+                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
                           onClick={(e, s = "#section66") => toggleAccordion(s)}
                         >
                           Año nuevo juntos
@@ -171,22 +175,23 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
               </IonItem>
             )}
             <IonMenuToggle onClick={() => setIsOpen(true)}>
-              <IonItem lines="none">
+              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
                 <IonIcon slot="start" icon={musicalNotes} />
                 <IonLabel>Musica</IonLabel>
               </IonItem>
             </IonMenuToggle>
             <IonMenuToggle >
-              <IonItem lines="none">
+              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
                 <IonIcon slot="start" icon={moon} />
                 <IonLabel>Dark mode</IonLabel>
-                <IonToggle   color="dark"></IonToggle>
+                <IonToggle checked={localStorage.getItem("temeDark")==="true"?true:false} onIonChange={(t)=>localStorage.setItem("temeDark",`${t.detail.checked}`)
+                }  color="medium"></IonToggle>
               </IonItem>
             </IonMenuToggle>
           </IonList>
         </IonContent>
       </IonMenu>
-      <IonTabs>
+      <IonTabs >
         <IonRouterOutlet id="main-content">
           <Route
             path="/AppRegalo/home"
@@ -213,7 +218,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           <Redirect exact from="/" to="/AppRegalo/home" />
         </IonRouterOutlet>
 
-        <IonTabBar slot="bottom">
+        <IonTabBar color={localStorage.getItem("temeDark")==="true"?"dark":""}  slot="bottom">
           <IonTabButton tab="home" href="/AppRegalo/home">
             <IonIcon icon={gift} />
             <IonLabel>Regalito</IonLabel>
@@ -240,7 +245,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         autoPlay
         onPlay={() => setisPlayMusic(true)}
         onPause={() => setisPlayMusic(false)}
-        muted={isOnPlayVideo ? true : false}
+        muted={isOnPlayVideo ? true : true}
         onEnded={() => (aleatorioActive ? clickNextAleatorio() : clickNext())}
         ref={(element) => {
           setmusic(element);

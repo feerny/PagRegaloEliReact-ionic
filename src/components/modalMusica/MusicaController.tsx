@@ -65,8 +65,8 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
     <>
       <IonModal isOpen={props.isOpen}>
         <IonHeader>
-          <IonToolbar>
-            <IonTitle>Music Eli</IonTitle>
+          <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
+            <IonTitle>Musica pa Eli</IonTitle>
             <IonButtons slot="end">
               <IonButton onClick={() => props.setIsOpen(false)}>
                 Close
@@ -74,7 +74,7 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
             </IonButtons>
           </IonToolbar>
         </IonHeader>
-        <IonContent>
+        <IonContent color={localStorage.getItem("temeDark")==="true"?"dark":""}>
           <div style={{ textAlign: "center", marginTop: "20px" }}>
             <IonTitle>Controles para la musica</IonTitle>
             <div style={{ marginTop: "20px" }} className="iconsControllsMusic">
@@ -82,7 +82,7 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
                 onClick={() => clickPrev()}
                 style={{ background: "none" }}
               >
-                <IonIcon size="large" icon={playSkipBack} />
+                <IonIcon style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}} size="large" icon={playSkipBack} />
               </button>
               {/* validacion para saber si mostrar el icono de pausa o play y su funcionalidad */}
               {props.isPlayMusic ? (
@@ -90,14 +90,14 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
                   onClick={() => props.music.audioEl.current.pause()}
                   style={{ background: "none" }}
                 >
-                  <IonIcon size="large" icon={pauseCircle} />
+                  <IonIcon style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}} size="large" icon={pauseCircle} />
                 </button>
               ) : (
                 <button
                   onClick={() => props.music.audioEl.current.play()}
                   style={{ background: "none" }}
                 >
-                  <IonIcon size="large" icon={playCircle} />
+                  <IonIcon style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}} size="large" icon={playCircle} />
                 </button>
               )}
               <button
@@ -108,13 +108,14 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
                 }
                 style={{ background: "none" }}
               >
-                <IonIcon size="large" icon={playSkipForward} />
+                <IonIcon style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}} size="large" icon={playSkipForward} />
               </button>
               <button
                 onClick={() => props.setaleatorioActive(!props.aleatorioActive)}
                 style={{ background: "none" }}
               >
-                <IonIcon
+                <IonIcon 
+                  style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}}
                   color={props.aleatorioActive ? "primary" : ""}
                   size="large"
                   icon={shuffle}
@@ -123,13 +124,13 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
             </div>
             <h1 className="tittleMusic">{props.musicData}</h1>
             <IonAccordionGroup ref={accordionGroup}>
-              <IonAccordion value="first">
-                <IonItem lines="none" slot="header" color="light">
+              <IonAccordion style={localStorage.getItem("temeDark")==="true"?{backgroundColor:"#222428"}:{}} value="first">
+                <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none" slot="header" >
                   <IonLabel>Musica disponible</IonLabel>
                 </IonItem>
                 <div className="ion-padding" slot="content">
                   {MusicList.map((data, index) => (
-                    <IonItem onClick={() => toggleAccordion(data, index)}>
+                    <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} onClick={() => toggleAccordion(data, index)}>
                       {data.tittle}
                     </IonItem>
                   ))}
@@ -148,7 +149,7 @@ const MusicaController: React.FC<MusicaControllerProps> = (props) => {
             />
           </div>
           <IonFooter>
-            <IonToolbar>
+            <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
               <IonTitle>Musica Obtenida de <a target="__blank" href="https://pixabay.com/es/music/search/lofi/">pixabay</a></IonTitle>
             </IonToolbar>
           </IonFooter>

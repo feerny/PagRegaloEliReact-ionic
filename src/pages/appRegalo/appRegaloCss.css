@@ -96,8 +96,9 @@
   -webkit-text-fill-color: transparent;
 }
 
-.contentCatsRandoms{
-  background-repeat: repeat;
-  background-image: url("https://i.pinimg.com/originals/23/57/6e/23576e2ce5925dbf5d13547857f7b585.png");
+
+
+.fondoDarkFilter{
+  filter: grayscale(100%);
 }
 
