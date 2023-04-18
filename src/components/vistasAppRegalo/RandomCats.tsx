@@ -38,6 +38,7 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
   const [imgUrl, setimgUrl] = useState<string>("");
   const [idImg, setidImg] = useState<string>("");
   const [isLoading, setisLoading] = useState<boolean>(false);
+  const [isLoadingImg, setisLoadingImg] = useState<boolean>(true);
   //funcion para comsumo de api
   const generateCat = async () => {
     //envia estado cargando y espera a que pase la consulta
@@ -111,8 +112,9 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
             {isLoading ? (
               <IonSpinner color={localStorage.getItem("temeDark")==="true"?"light":""} name="bubbles" />
             ) : (
-              <img width="370rem"  className={localStorage.getItem("temeDark")==="true"?"imgCatsDark":"imgCats"} src={imgUrl} alt={idImg}></img>
+              <img width="370rem" onLoad={()=>setisLoadingImg(false)}  className={localStorage.getItem("temeDark")==="true"?"imgCatsDark":"imgCats"} src={imgUrl} alt={idImg}></img>
             )}
+            {isLoading?null:isLoadingImg?<IonSpinner color={localStorage.getItem("temeDark")==="true"?"light":""} name="bubbles" />:null}
             <IonButton
             style={{backdropFilter: "blur(10px)"}}
               color={localStorage.getItem("temeDark")==="true"?"light":"dark"}
