@@ -265,7 +265,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         autoPlay
         onPlay={() => setisPlayMusic(true)}
         onPause={() => setisPlayMusic(false)}
-        muted={isOnPlayVideo ? true : true}
+        muted={isOnPlayVideo ? true : false}
         onEnded={() => (aleatorioActive ? clickNextAleatorio() : clickNext())}
         ref={(element) => {
           setmusic(element);
