@@ -122,8 +122,10 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   
   useIonViewDidEnter(()=>{
     if (localStorage.getItem("temeDark")==="true") {
+      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#222428")
       setdarkmode(true)
     }else{
+      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "")
       setdarkmode(false)
     }
   })
