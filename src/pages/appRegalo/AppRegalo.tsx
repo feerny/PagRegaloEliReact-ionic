@@ -17,7 +17,6 @@ import {
   IonTitle,
   IonToggle,
   IonToolbar,
-  useIonViewDidEnter,
 } from "@ionic/react";
 import {
   gift,
@@ -111,24 +110,10 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //funcion para modo oscuro
   const [darkmode, setdarkmode] = useState(false)
   const clickDarkTheme=(t:any)=>{
-    if (t.detail.checked===true) {
-      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#222428")
-      setdarkmode(true)
-    }else{
-      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "")
-      setdarkmode(false)
-    }
     localStorage.setItem("temeDark",`${t.detail.checked}`)
     setdarkmode(!darkmode)
-    
-    
   }
   useEffect(() => {
-    console.log("tema "+(darkmode?"dark":"default"));
-  }, [darkmode])
-  
-  useIonViewDidEnter(()=>{
-    
     if (localStorage.getItem("temeDark")==="true") {
       document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#222428")
       setdarkmode(true)
@@ -136,7 +121,9 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
       document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "")
       setdarkmode(false)
     }
-  })
+    console.log("tema "+(darkmode?"dark":"default"));
+  }, [darkmode])
+
 
   return (
     <IonContent >
