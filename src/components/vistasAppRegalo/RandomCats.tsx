@@ -111,11 +111,11 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
             {isLoading ? (
               <IonSpinner name="bubbles" />
             ) : (
-              <img width="370rem"  className="imgCats" src={imgUrl} alt={idImg}></img>
+              <img width="370rem"  className={localStorage.getItem("temeDark")==="true"?"imgCatsDark":"imgCats"} src={imgUrl} alt={idImg}></img>
             )}
             <IonButton
             style={{backdropFilter: "blur(10px)"}}
-              color="dark"
+              color={localStorage.getItem("temeDark")==="true"?"light":"dark"}
               fill="outline"
               expand="block"
               onClick={() => generateCat()}
