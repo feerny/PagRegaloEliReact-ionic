@@ -109,7 +109,7 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
           <div className="spinnerCats" >
             {/* si el estado es loading muestra un spinner */}
             {isLoading ? (
-              <IonSpinner name="bubbles" />
+              <IonSpinner color={localStorage.getItem("temeDark")==="true"?"light":""} name="bubbles" />
             ) : (
               <img width="370rem"  className={localStorage.getItem("temeDark")==="true"?"imgCatsDark":"imgCats"} src={imgUrl} alt={idImg}></img>
             )}

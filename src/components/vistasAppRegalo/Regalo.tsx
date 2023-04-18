@@ -79,7 +79,7 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
         >
           {OpenRegalo ? (
             imgLoad ? null : (
-              <IonSpinner className="imgRegaloSpinner" name="bubbles" />
+              <IonSpinner color={localStorage.getItem("temeDark")==="true"?"light":""} className="imgRegaloSpinner" name="bubbles" />
             )
           ) : null}
           {OpenRegalo ? (

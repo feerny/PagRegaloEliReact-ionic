@@ -321,7 +321,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
         e.stopPropagation();
         setvalueInputApp(e.target.value);
         //si entra pasa link pag principal
-        if (e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
+        if (e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4 || e.target.value.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT5) {
           props.setvalidationRoutes(1);      
           
           localStorage.setItem('number', `${1}`) 
@@ -348,7 +348,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
     }
 
     //si entra redireciona a la pagina principal
-    if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4) {
+    if (valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT1 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT2 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT3 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT4 || valueInputApp.toLowerCase()===process.env.REACT_APP_VALIDATIONTXT5) {
       setvalueInputApp("")
       props.setNumIteracion(props.NumIteracion + 1)
       
