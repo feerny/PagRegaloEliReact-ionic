@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   IonAccordion,
   IonAccordionGroup,
@@ -17,6 +17,7 @@ import {
   IonTitle,
   IonToggle,
   IonToolbar,
+  useIonViewDidEnter,
 } from "@ionic/react";
 import {
   gift,
@@ -107,6 +108,25 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
     props.setvalidationTrue("0");
     window.location.reload();
   };
+  //funcion para modo oscuro
+  const [darkmode, setdarkmode] = useState(false)
+  const clickDarkTheme=(t:any)=>{
+    localStorage.setItem("temeDark",`${t.detail.checked}`)
+    setdarkmode(!darkmode)
+    
+    
+  }
+  useEffect(() => {
+    console.log("tema "+(darkmode?"dark":"default"));
+  }, [darkmode])
+  
+  useIonViewDidEnter(()=>{
+    if (localStorage.getItem("temeDark")==="true") {
+      setdarkmode(true)
+    }else{
+      setdarkmode(false)
+    }
+  })
 
   return (
     <IonContent >
@@ -184,7 +204,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
               <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
                 <IonIcon slot="start" icon={moon} />
                 <IonLabel>Dark mode</IonLabel>
-                <IonToggle checked={localStorage.getItem("temeDark")==="true"?true:false} onIonChange={(t)=>localStorage.setItem("temeDark",`${t.detail.checked}`)
+                <IonToggle checked={localStorage.getItem("temeDark")==="true"?true:false} onIonChange={(t)=>clickDarkTheme(t)
                 }  color="medium"></IonToggle>
               </IonItem>
             </IonMenuToggle>

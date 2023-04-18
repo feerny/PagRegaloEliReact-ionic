@@ -17,6 +17,16 @@ import {
 import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
 
 const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
+  //estilo para fondo de regalo 
+  const styleRegalo={
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100%",
+    backgroundRepeat: "repeat",
+    backgroundImage: `${localStorage.getItem("temeDark")==="true"?"linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),":""}  url("https://img.freepik.com/vector-gratis/patron-cajas-regalo-rojo-transparente_1284-43016.jpg")`,
+  
+  }
   //al cargar componente quita el de images comtent para optimizar y rendimiento
   const [OpenRegalo, setOpenRegalo] = useState<boolean>(false);
   let localStorageItem=localStorage.getItem("openRegalo")||null;
@@ -65,13 +75,7 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
         <IonRefresherContent></IonRefresherContent>
       </IonRefresher>
         <div
-        className="fondoRegaloPage"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-          }}
+          style={styleRegalo}
         >
           {OpenRegalo ? (
             imgLoad ? null : (

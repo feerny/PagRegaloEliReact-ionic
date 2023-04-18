@@ -21,14 +21,14 @@ import axios from "axios";
 import { paw } from "ionicons/icons";
 import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
 const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
-  //estilo de fondo
+  //estilo de fondo 
   const contentCatsRandoms={
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
     backgroundRepeat: 'repeat',
-    backgroundImage: localStorage.getItem("temeDark")==="true"?'url("/assets/images/FondoGatosDark.png")':'url("/assets/images/FondoGatos.png")',
+    backgroundImage: `${localStorage.getItem("temeDark")==="true"?"linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),":""}  url("/assets/images/FondoGatos.png")`,
   }
   // Creamos el controlador para abortar la petición
   const controller = new AbortController();
@@ -103,7 +103,7 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
         <IonRefresherContent></IonRefresherContent>
       </IonRefresher>
         <div
-        
+          
           style={contentCatsRandoms}
         >
           <div className="spinnerCats" >

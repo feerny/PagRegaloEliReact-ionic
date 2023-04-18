@@ -4,10 +4,7 @@
     transition: all 3s ease;
 }
 
-.fondoRegaloPage{
-  background-repeat: repeat;
-  background-image: url("https://img.freepik.com/vector-gratis/patron-cajas-regalo-rojo-transparente_1284-43016.jpg");
-}
+
 
 .spinnerCats{
     text-align: center;
@@ -98,7 +95,4 @@
 
 
 
-.fondoDarkFilter{
-  filter: grayscale(100%);
-}
 
