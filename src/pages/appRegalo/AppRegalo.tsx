@@ -111,6 +111,13 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   //funcion para modo oscuro
   const [darkmode, setdarkmode] = useState(false)
   const clickDarkTheme=(t:any)=>{
+    if (t.detail.checked===true) {
+      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#222428")
+      setdarkmode(true)
+    }else{
+      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "")
+      setdarkmode(false)
+    }
     localStorage.setItem("temeDark",`${t.detail.checked}`)
     setdarkmode(!darkmode)
     
@@ -121,6 +128,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
   }, [darkmode])
   
   useIonViewDidEnter(()=>{
+    
     if (localStorage.getItem("temeDark")==="true") {
       document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#222428")
       setdarkmode(true)
