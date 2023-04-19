@@ -5,6 +5,7 @@ import {
   IonContent,
   IonHeader,
   IonIcon,
+  IonImg,
   IonMenuButton,
   IonPage,
   IonProgressBar,
@@ -59,6 +60,7 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
       })
       .finally(function () {
         //rompe el estado cargando e imprime un ok
+        setisLoadingImg(true)
         setisLoading(false);
         console.log("finalizo ok");
       });
@@ -112,9 +114,9 @@ const RandomCats: React.FC<CatsAndRegaloProps> = (props) => {
             {isLoading ? (
               <IonSpinner color={localStorage.getItem("temeDark")==="true"?"light":""} name="bubbles" />
             ) : (
-              <img width="370rem" onLoad={()=>setisLoadingImg(false)}  className={localStorage.getItem("temeDark")==="true"?"imgCatsDark":"imgCats"} src={imgUrl} alt={idImg}></img>
+              <IonImg onIonImgDidLoad={()=>setisLoadingImg(false)}  className={localStorage.getItem("temeDark")==="true"?"imgCatsDark":"imgCats"} src={imgUrl} alt={idImg}></IonImg>
             )}
-            {isLoading?null:isLoadingImg?<IonSpinner color={localStorage.getItem("temeDark")==="true"?"light":""} name="bubbles" />:null}
+            {isLoading ?null:isLoadingImg?<IonSpinner  color={localStorage.getItem("temeDark")==="true"?"light":""} name="bubbles" />:null}
             <IonButton
             style={{backdropFilter: "blur(10px)"}}
               color={localStorage.getItem("temeDark")==="true"?"light":"dark"}

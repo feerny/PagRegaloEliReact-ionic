@@ -1,10 +1,12 @@
 .imgCats{
     border: 5px dashed black;
     transition: all 3s ease;
+    width:350px;
 }
 .imgCatsDark{
   border: 5px dashed rgb(255, 255, 255);
   transition: all 3s ease;
+  width:350px;
 }
 
 
