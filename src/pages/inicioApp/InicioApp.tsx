@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage, IonRefresher, IonRefresherContent, RefresherEventDetail, useIonAlert  } from "@ionic/react";
+import { IonButton, IonContent, IonIcon, IonInput, IonItem, IonLabel, IonPage, IonRefresher, IonRefresherContent, RefresherEventDetail, useIonAlert, useIonViewDidEnter  } from "@ionic/react";
 import { arrowForwardOutline } from "ionicons/icons";
 import ReactAudioPlayer from "react-audio-player";
 import "./inicioAppCss.css";
 import { InicioAppProps } from "../../data/InicioAppProps";
 
 const InicioApp: React.FC<InicioAppProps> = (props) => {
+
+  useIonViewDidEnter(()=>{
+    localStorage.setItem('number', "0")
+  })
 
   const [message, setmessage] = useState<string>();
   const [valueInputApp, setvalueInputApp] = useState<string>("")
