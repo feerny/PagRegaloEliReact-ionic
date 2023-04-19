@@ -27,6 +27,7 @@ import {
   heart,
   musicalNotes,
   moon,
+  reader,
 } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Regalo from "../../components/vistasAppRegalo/Regalo";
@@ -37,8 +38,11 @@ import "./appRegaloCss.css";
 import ReactAudioPlayer from "react-audio-player";
 import MusicaControllerLazy from "../../components/modalMusica/MusicaControllerLazy";
 import { MusicList } from "../../data/dataMusic/MusicList";
+import ModalPoemaLazy from "../../components/modalPoema/ModalPoemaLazy";
 
 const AppRegalo: React.FC<AppRegaloProps> = (props) => {
+  //modal poema
+  const [isOpenPoema, setIsOpenPoema] = useState(false);
   //data de musica
   const [musicData, setmusicData] = useState({
     url: "https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",
@@ -108,55 +112,116 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
     window.location.reload();
   };
   //funcion para modo oscuro
-  const [darkmode, setdarkmode] = useState(false)
-  const clickDarkTheme=(t:any)=>{
-    localStorage.setItem("temeDark",`${t.detail.checked}`)
-    setdarkmode(!darkmode)
-  }
+  const [darkmode, setdarkmode] = useState(false);
+  const clickDarkTheme = (t: any) => {
+    localStorage.setItem("temeDark", `${t.detail.checked}`);
+    setdarkmode(!darkmode);
+  };
   useEffect(() => {
-    if (localStorage.getItem("temeDark")==="true") {
-      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#222428")
-      setdarkmode(true)
-    }else{
-      document?.querySelector('meta[name="theme-color"]')?.setAttribute("content", "")
-      setdarkmode(false)
+    if (localStorage.getItem("temeDark") === "true") {
+      document
+        ?.querySelector('meta[name="theme-color"]')
+        ?.setAttribute("content", "#222428");
+      setdarkmode(true);
+    } else {
+      document
+        ?.querySelector('meta[name="theme-color"]')
+        ?.setAttribute("content", "");
+      setdarkmode(false);
     }
-    console.log("tema "+(darkmode?"dark":"default"));
-  }, [darkmode])
-
+    console.log("tema " + (darkmode ? "dark" : "default"));
+  }, [darkmode]);
 
   return (
-    <IonContent >
-      <IonMenu contentId="main-content" >
-        <IonHeader >
-          <IonToolbar color={localStorage.getItem("temeDark")==="true"?"dark":""}>
-            <IonItem lines="none" color={localStorage.getItem("temeDark")==="true"?"dark":""}>
-              <IonIcon style={localStorage.getItem("temeDark")==="true"?{color:"white"}:{}} icon={heart} slot="start" />
-              <IonTitle  color={localStorage.getItem("temeDark")==="true"?"light":""}>Menu Eli</IonTitle>
+    <IonContent>
+      <IonMenu contentId="main-content">
+        <IonHeader>
+          <IonToolbar
+            color={localStorage.getItem("temeDark") === "true" ? "dark" : ""}
+          >
+            <IonItem
+              lines="none"
+              color={localStorage.getItem("temeDark") === "true" ? "dark" : ""}
+            >
+              <IonIcon
+                style={
+                  localStorage.getItem("temeDark") === "true"
+                    ? { color: "white" }
+                    : {}
+                }
+                icon={heart}
+                slot="start"
+              />
+              <IonTitle
+                color={
+                  localStorage.getItem("temeDark") === "true" ? "light" : ""
+                }
+              >
+                Menu Eli
+              </IonTitle>
             </IonItem>
           </IonToolbar>
         </IonHeader>
-        <IonContent class="ion-padding" color={localStorage.getItem("temeDark")==="true"?"dark":""}>
-          <IonList style={localStorage.getItem("temeDark")==="true"?{backgroundColor:"#222428"}:{}} >
-            <IonMenuToggle  onClick={() => clearLocalSesion()} >
-              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} routerLink="/all-activities/ComoEstas" lines="none">
+        <IonContent
+          class="ion-padding"
+          color={localStorage.getItem("temeDark") === "true" ? "dark" : ""}
+        >
+          <IonList
+            style={
+              localStorage.getItem("temeDark") === "true"
+                ? { backgroundColor: "#222428" }
+                : {}
+            }
+          >
+            <IonMenuToggle onClick={() => clearLocalSesion()}>
+              <IonItem
+                color={
+                  localStorage.getItem("temeDark") === "true" ? "dark" : ""
+                }
+                routerLink="/all-activities/ComoEstas"
+                lines="none"
+              >
                 <IonIcon slot="start" icon={trash} />
                 <IonLabel>Cerrar la sesión</IonLabel>
               </IonItem>
             </IonMenuToggle>
 
             {isClose ? null : (
-              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
+              <IonItem
+                color={
+                  localStorage.getItem("temeDark") === "true" ? "dark" : ""
+                }
+                lines="none"
+              >
                 <IonIcon slot="start" icon={list} />
-                <IonAccordionGroup  ref={accordionGroup}>
-                  <IonAccordion style={localStorage.getItem("temeDark")==="true"?{backgroundColor:"#222428"}:{}}  value="first">
-                    <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none" slot="header" >
+                <IonAccordionGroup ref={accordionGroup}>
+                  <IonAccordion
+                    style={
+                      localStorage.getItem("temeDark") === "true"
+                        ? { backgroundColor: "#222428" }
+                        : {}
+                    }
+                    value="first"
+                  >
+                    <IonItem
+                      color={
+                        localStorage.getItem("temeDark") === "true"
+                          ? "dark"
+                          : ""
+                      }
+                      lines="none"
+                      slot="header"
+                    >
                       <IonLabel>Secciones</IonLabel>
                     </IonItem>
                     <div className="ion-padding" slot="content">
                       <IonMenuToggle>
-                        <IonItem 
-                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
+                        <IonItem
+                          color={
+                            localStorage.getItem("temeDark") === "true"
+                              ? "dark"
+                              : ""
+                          }
                           onClick={(e, s = "#section0") => toggleAccordion(s)}
                         >
                           Antes de conocernos
@@ -164,7 +229,11 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                       </IonMenuToggle>
                       <IonMenuToggle>
                         <IonItem
-                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
+                          color={
+                            localStorage.getItem("temeDark") === "true"
+                              ? "dark"
+                              : ""
+                          }
                           onClick={(e, s = "#section25") => toggleAccordion(s)}
                         >
                           Primer Encuentro
@@ -172,7 +241,11 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                       </IonMenuToggle>
                       <IonMenuToggle>
                         <IonItem
-                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
+                          color={
+                            localStorage.getItem("temeDark") === "true"
+                              ? "dark"
+                              : ""
+                          }
                           onClick={(e, s = "#section38") => toggleAccordion(s)}
                         >
                           Cita en museo
@@ -180,7 +253,11 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
                       </IonMenuToggle>
                       <IonMenuToggle>
                         <IonItem
-                          color={localStorage.getItem("temeDark")==="true"?"dark":""}
+                          color={
+                            localStorage.getItem("temeDark") === "true"
+                              ? "dark"
+                              : ""
+                          }
                           onClick={(e, s = "#section66") => toggleAccordion(s)}
                         >
                           Año nuevo juntos
@@ -192,23 +269,49 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
               </IonItem>
             )}
             <IonMenuToggle onClick={() => setIsOpen(true)}>
-              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
+              <IonItem
+                color={
+                  localStorage.getItem("temeDark") === "true" ? "dark" : ""
+                }
+                lines="none"
+              >
                 <IonIcon slot="start" icon={musicalNotes} />
                 <IonLabel>Musica</IonLabel>
               </IonItem>
             </IonMenuToggle>
-            <IonMenuToggle >
-              <IonItem color={localStorage.getItem("temeDark")==="true"?"dark":""} lines="none">
+            <IonMenuToggle>
+              <IonItem
+                color={
+                  localStorage.getItem("temeDark") === "true" ? "dark" : ""
+                }
+                lines="none"
+              >
                 <IonIcon slot="start" icon={moon} />
                 <IonLabel>Dark mode</IonLabel>
-                <IonToggle checked={localStorage.getItem("temeDark")==="true"?true:false} onIonChange={(t)=>clickDarkTheme(t)
-                }  color="medium"></IonToggle>
+                <IonToggle
+                  checked={
+                    localStorage.getItem("temeDark") === "true" ? true : false
+                  }
+                  onIonChange={(t) => clickDarkTheme(t)}
+                  color="medium"
+                ></IonToggle>
+              </IonItem>
+            </IonMenuToggle>
+            <IonMenuToggle onClick={() => setIsOpenPoema(true)}>
+              <IonItem
+                color={
+                  localStorage.getItem("temeDark") === "true" ? "dark" : ""
+                }
+                lines="none"
+              >
+                <IonIcon slot="start" icon={reader} />
+                <IonLabel>Poema pa ti</IonLabel>
               </IonItem>
             </IonMenuToggle>
           </IonList>
         </IonContent>
       </IonMenu>
-      <IonTabs >
+      <IonTabs>
         <IonRouterOutlet id="main-content">
           <Route
             path="/AppRegalo/home"
@@ -235,7 +338,10 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           <Redirect exact from="/" to="/AppRegalo/home" />
         </IonRouterOutlet>
 
-        <IonTabBar color={localStorage.getItem("temeDark")==="true"?"dark":""}  slot="bottom">
+        <IonTabBar
+          color={localStorage.getItem("temeDark") === "true" ? "dark" : ""}
+          slot="bottom"
+        >
           <IonTabButton tab="home" href="/AppRegalo/home">
             <IonIcon icon={gift} />
             <IonLabel>Regalito</IonLabel>
@@ -268,6 +374,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
           setmusic(element);
         }}
       />
+      <ModalPoemaLazy setIsOpenPoema={setIsOpenPoema} isOpenPoema={isOpenPoema} />
       <MusicaControllerLazy
         clickNextAleatorio={clickNextAleatorio}
         aleatorioActive={aleatorioActive}

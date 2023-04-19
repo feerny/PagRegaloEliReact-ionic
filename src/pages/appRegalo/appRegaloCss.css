@@ -81,6 +81,12 @@
   justify-content: space-evenly;
 }
 
+.iconsModalPoema{
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @keyframes sliding {
   to {
       background-position: -2000vw;
