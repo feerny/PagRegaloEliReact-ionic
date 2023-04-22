@@ -1,0 +1,143 @@
+[33mcommit 7ddd1364b7fd3f8e5f95a469ab7cb089d849a364[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 29 08:09:19 2023 -0500
+
+    termine consumo de api y funciones para generacion de gatos randoms
+
+[33mcommit 424b745f30bfe6508e4f2d0a20c8088df56d8da9[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Fri Mar 24 14:54:00 2023 -0500
+
+    comente una funcion y cree funcion de prueba en RandomCast
+
+[33mcommit e305b31c071fad629dc36db6d28a91ad942c50e3[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 14:32:30 2023 -0500
+
+    agregue interface para app main y arregle cierre de sesion
+
+[33mcommit b57ea947c5492273001604129cfe3f1be4dc0fe1[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 12:10:59 2023 -0500
+
+    solucione error de pagina en blanco y cambie router2
+
+[33mcommit 6c6d626bafb27262664e7d5a0619b40f0f4e52d6[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:48:05 2023 -0500
+
+    solucione error de pagina en blanco y cambie router
+
+[33mcommit 96621037271c3e7bacadc6aacffda5462050d439[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:46:38 2023 -0500
+
+    solucione error de pagina en blanco y cambie router
+
+[33mcommit f75df56ce4109dc0bc6e038043e9c6d661559534[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:35:41 2023 -0500
+
+    solucione error de pagina en blanco3
+
+[33mcommit 5ac4f25eb06482892c497e24e3f418484ff4b85f[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:34:48 2023 -0500
+
+    solucione error de pagina en blanco2
+
+[33mcommit 44813df20bf905c158f917854979fef73ed9e7ac[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:32:22 2023 -0500
+
+    solucione error de pagina en blanco
+
+[33mcommit 7d1b04be96bb92bda054180607b8883dfdaa12aa[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:23:13 2023 -0500
+
+    solucione error de pagina en blanco
+
+[33mcommit 6a2072a95bc4e5252bc5fba51d4d4ec267fb03b2[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:22:22 2023 -0500
+
+    solucione error de pagina en blanco
+
+[33mcommit aea93ba1efcb6b591439256e0df291d203c56438[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:13:22 2023 -0500
+
+    cambie tipo enrutador
+
+[33mcommit 2cbf4a5542e7f7168be76cce5cea9491b9801b71[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:12:46 2023 -0500
+
+    cambie tipo enrutador
+
+[33mcommit 417116082fd04e6da03a9b53bc287f8eb675056a[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 11:08:31 2023 -0500
+
+    cambie tipo enrutador
+
+[33mcommit a728bee9b0e24b8f516c1e7d915d2bad643f9e23[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 10:54:39 2023 -0500
+
+    arrgle animacion de boton mensajes y agrege nueva validacion de ruta
+
+[33mcommit b4b97dca9c60d1dcd0a69d8f4a647aa6a503417f[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Wed Mar 22 10:13:13 2023 -0500
+
+    termine enrutador pagina principal, menu y cierre de sesion
+
+[33mcommit cc8ba465ecd863b56ecadbdd18296ae82f69d29b[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Tue Mar 21 16:33:43 2023 -0500
+
+    termine validaciones de mensajes y pase a pagina principa, falta creacion interfaz
+
+[33mcommit af0e94d4959bdf9ab9e9d3a5393fa2d93abbdc6c[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Tue Mar 21 16:33:12 2023 -0500
+
+    termine validaciones de mensajes y pase a pagina principa, falta creacion interfaz
+
+[33mcommit b3426cd597e41850ec9ae561d174ac054aefa145[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Tue Mar 21 11:42:11 2023 -0500
+
+    agrege variable de validacion mas segura
+
+[33mcommit 3777d2945ce08ccc63438cd8773fcd5aab754a9d[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Tue Mar 21 10:56:06 2023 -0500
+
+    termine validaciones de fallo y cree next de respuesta correcta con cambio de musica
+
+[33mcommit 10d6da30e08b67405177928762f8ce23aa3ab836[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Tue Mar 21 10:55:46 2023 -0500
+
+    termine validaciones de fallo y cree next de respuesta correcta con cambio de musica
+
+[33mcommit 0167e72cdf4dbda5eba7f7bfec3bb7feb834d6a9[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Thu Mar 16 16:45:09 2023 -0500
+
+    cambie velocidad de tipeo texto fallo
+
+[33mcommit 864d1b281705dff733065f8390cdf5dada339c43[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Thu Mar 16 16:41:38 2023 -0500
+
+    cambie velocidad de tipeo texto fallo
+
+[33mcommit 5fc9e51f427c92afa811f8b372702d197f9f28d3[m
+Author: feerny <luisfpe19@gmail.com>
+Date:   Thu Mar 16 16:33:31 2023 -0500
+
+    cambie sonido de fallo
