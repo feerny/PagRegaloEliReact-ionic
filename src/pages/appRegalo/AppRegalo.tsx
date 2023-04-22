@@ -119,10 +119,6 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
     setdarkmode(!darkmode);
   };
   useEffect(() => {
-    setmusicData({
-      url: "https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",
-      title: "Let It Go",
-    })
     if (localStorage.getItem("temeDark") === "true") {
       document
         ?.querySelector('meta[name="theme-color"]')
