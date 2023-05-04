@@ -48,6 +48,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
     url: "https://cdn.pixabay.com/audio/2021/12/16/audio_232a4bdedf.mp3",
     title: "Let It Go",
   });
+
   //funcion para cambiar de musica al finalizar
   const [numMusic, setnumMusic] = useState(0);
   const clickNext = () => {

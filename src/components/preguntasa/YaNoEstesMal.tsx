@@ -17,7 +17,7 @@ const YaNoEstesMal: React.FC = () => {
   return (
     <IonCol className="ion-col" size="auto">
       <h1 id="h1Init4" className="h1Init4">
-        Mira Tu Email
+        {localStorage.getItem("emailSend")==="true"?"ye te envie algoooo": "Mira Tu Email"}
         <IonIcon className="iconHappyBlack" icon={happy} />
       </h1>
       <IonGrid>

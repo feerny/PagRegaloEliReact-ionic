@@ -104,6 +104,28 @@
   -webkit-text-fill-color: transparent;
 }
 
+.custom-alertRegalo {
+  --background: #da0f0f;
+}
+
+.custom-alertRegalo .alert-title {
+  font-weight: bold;
+}
+
+.custom-alertRegalo .alert-sub-title {
+  font-weight: bold;
+}
+
+
+.custom-alertRegalo .alert-message {
+  color: #000000;
+
+}
+
+.custom-alertRegalo .buttonAlert {
+  color: #ffffff;
+}
+
 
 
 

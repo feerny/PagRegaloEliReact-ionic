@@ -420,7 +420,7 @@ const InicioApp: React.FC<InicioAppProps> = (props) => {
           <IonIcon icon={arrowForwardOutline} />
         </IonButton>
         {/* solo muestra la img en la 3 iteracion */}
-        {props.NumIteracion===3?<img className="imgEmoji" src="/assets/images/emoji.png" alt="emoji"/>:null}
+        {props.NumIteracion===3?<img className="imgEmoji" src="https://images.emojiterra.com/google/android-11/512px/1f914.png" alt="emoji"/>:null}
 
         <ReactAudioPlayer
         //cambia de musica dependiendo de la iteracion

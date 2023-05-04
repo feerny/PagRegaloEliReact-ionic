@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  IonAlert,
   IonButtons,
   IonContent,
   IonHeader,
@@ -17,6 +18,7 @@ import {
 import { CatsAndRegaloProps } from "../../data/catsAndRegaloProps/CatsAndRegaloProps";
 
 const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
+  const [isOpenAlert, setisOpenAlert] = useState(false)
   //estilo para fondo de regalo 
   const styleRegalo={
     display: "flex",
@@ -50,6 +52,8 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
     setTimeout(()=>localStorage.setItem("openRegalo", "true"),6000)
     setOpenRegalo(true);
     setstyleTapaRegalo("imgCubiertaRegaloRemove");
+    setTimeout(()=>setisOpenAlert(true),5000)
+
   }
   //funcion para refrescar la pagina
   function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
@@ -90,15 +94,31 @@ const Regalo: React.FC<CatsAndRegaloProps> = (props) => {
               alt="imageRegalo"
             />
           ) : null}
-          {localStorageItem==="true"?null:<IonImg
+          {localStorageItem==="true"?null:
+           <IonImg id="present-alert"
             onClick={() => clickOpenRegalo()}
             className={styleTapaRegalo}
             src="/assets/images/imgTapaRegalo.jpg"
           ></IonImg>}
         </div>
+        <IonAlert
+          isOpen={isOpenAlert}
+          header= 'Reglo pa ti'
+          subHeader= 'Con cariño'
+          cssClass= 'custom-alertRegalo'
+          message= 'Por ahora no puedo darte algo fisico pero cuando nos veamos te lo entregare con los demas te amoo'
+          buttons={[
+            {
+              text: 'wenu',
+              cssClass: 'buttonAlert',
+            }
+          ]}
+          onDidDismiss={() => setisOpenAlert(false)}
+      />
       </IonContent>
     </IonPage>
   );
 };
 
 export default Regalo;
+
