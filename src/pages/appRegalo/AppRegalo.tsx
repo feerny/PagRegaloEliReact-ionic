@@ -374,7 +374,7 @@ const AppRegalo: React.FC<AppRegaloProps> = (props) => {
         ref={(element) => {
           setmusic(element);
         }}
-      />
+      /> 
       <ModalPoemaLazy setIsOpenPoema={setIsOpenPoema} isOpenPoema={isOpenPoema} />
       <MusicaControllerLazy
         clickNextAleatorio={clickNextAleatorio}

@@ -594,11 +594,5 @@ export const dataCards: DataCards[] = [
     date: "",
     description:
       "Pronto tendremos muchos mas recuerdos juntos miamor y podremos compartir muchos mas momentos juntos mi vida, ya llevamos un año juntos y espero que estemos juntos muchos años mas, te amo demasiado mi niña hermosa, eres lo mejor que pudo llegar a mi vida este año ya quiero volver a verte y darte mil besos miamor, TE AMO.",
-  },{
-    image: "",
-    title: "Perdón",
-    date: "",
-    description:
-      "Eres una mujer muy especial, conseguirás todo lo que te propongas... nunca te rindas",
   }
 ];
